@@ -7,7 +7,7 @@ const routes = [
   {
     path: '/',
     name: 'AccountOverview',
-    component: ()=> import('../views/TestView.vue')
+    component: ()=> import('../views/LoginView.vue')
   }
 ]
 

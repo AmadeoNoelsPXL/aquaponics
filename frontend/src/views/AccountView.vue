@@ -122,8 +122,7 @@
             return {
             items: [
                 { name:  'Amadeo Noels', email: '11702320@student.pxl.be', role: "admin"},
-                { name: 'Josh Hofmann', email: 'Josh.hofmann@gmail.com', role: "President"},
-
+                { name: 'Josh Hofmann', email: 'Josh.hoffman@gmail.com', role: "President"},
             
             ]
             }
