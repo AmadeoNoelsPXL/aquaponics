@@ -1,13 +1,13 @@
 <template>
-    <b-container fluid>
+    <b-container fluid style="max-width:fit-content">
     <b-row>
-      <b-col>
-        <b-img fluid center src="../assets/aquaponics.jpg"></b-img>
+      <b-col style="max-width:fit-content">
+        <b-img fluid center src="../assets/aquaponics.jpg" style="max-height: inherit;"></b-img>
       </b-col>
       <b-col>
         <b-row>
           <div class="d-flex justify-content-start align-middle">
-            <p class="mr-3" style="">Sign In</p>
+            <p class="mr-3" ><b>Sign In</b></p>
             <img src="../assets/ownDesign.png" width="100" height="100">
           </div>
           <div>
@@ -19,14 +19,14 @@
             <b-form-row class="mb-2">
               <b-col>
                 <label for="email" class="justify-content-start" >Email</label>
-                <b-form-input placeholder="Type your Email" type="email">
+                <b-form-input placeholder="johndoe@email.com" type="email">
                 </b-form-input>
               </b-col>
             </b-form-row>
             <b-form-row class="mb-2">
               <b-col>
                 <label for="password" class="justify-content-start" >Password</label>
-                <b-form-input placeholder="Type your Password" type="password">
+                <b-form-input placeholder="johndoe123" type="password">
                 </b-form-input>
               </b-col>
             </b-form-row>
@@ -42,18 +42,3 @@
     </b-row>
   </b-container>
 </template>
-
-<script>
-  export default {
-    data() {
-      return {
-        types: [
-          'text',
-          'number',
-          'email',
-          'password',
-        ]
-      }
-    }
-  }
-</script>
