@@ -7,12 +7,14 @@ const routes = [
   {
     path: '/',
     name: 'AccountOverview',
-    component: ()=> import('../views/LoginView.vue')
+    component: ()=> import('../views/RegisterView.vue')
   }
 ]
 
 const router = new VueRouter({
-  routes
+  mode: 'history',
+  routes,
+  
 })
 
 export default router
