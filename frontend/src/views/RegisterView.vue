@@ -8,7 +8,7 @@
             <b-row>
             <div class="d-flex justify-content-start align-middle">
                 <p class="mr-3"><b>Register</b></p>
-                <img src="../assets/ownDesign.png" width="100" height="100">
+                <img src="../assets/ownDesign.png" width="35" height="25">
             </div>
             <div>
                 <div style='border-bottom:4px solid #1FBE85'></div>
