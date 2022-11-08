@@ -49,10 +49,17 @@ We solved this by using another SD card reader which allowed us to connect to ou
 2022/11/08 - Story V3 brainstorm idea
 Aquaponics 
 
+Personnel : 
 Owner: Phil is a small business owner and owns an aquaponics unit in a rural area. 
 Technician: Bob is a rookie technician and on his way to his first job. 
 Criminal: James is an aspiring criminal and is well on his way to paying off his student loans by selling stolen fish.
 Security: Carlos is a retired police officer and is currently working as a part-time security guard for Phil's aquaponics unit.
+
+Facility IOT Devices : 
+Motion Sensors - Scattered around the facility for movement detection.
+Rfid tag scanner - Placed by the entrance to the facility and within the motion sensors around the facility. 
+Smoke detector - Detects smoke and sends a notification to the owner that there is a fire or the possibly of one.
+CO2 detector - constantly runs and monitors co2 levels through the facility and are placed in as many locations as possible and co2 levels can be monitored within the application in real time.
 
 Bob gets to the aquaponics facility and scans his rfid tag.
 The door unlocks. 
@@ -63,8 +70,10 @@ Bob arrives and fixes the malfunction.
 Bob adds a report on his application and posts it. 
 Phil receives a notification that Bob has fixed the malfunctioning pump and sees the report that Bob made. 
 Phil also receives a reccommendation on replacement pumps and common problems.
+Bob walks around the facility and the rfid tag on his person pings his relative location to the motion Sensors around the fish tank area and other sections of the facility.
+The Motion Sensor has a rfid scanner that identifies Bob as a technican based on the rfid tag he has on his person.
 Bob continues monitoring all the aquaponics devices from his mobile phone whilst sipping an esspresso. 
-Bob signs out since it is now 5 o'clock and quitting time.
+Bob signs out via his rfid tag since it is now 5 o'clock and quitting time.
 Phil receives a notification that Bob has left the facility.
 Phil can see a detailed report of how many hours Bob has worked this week.
 Phil can also see which problems Bob has solved so far.
@@ -72,13 +81,13 @@ As Bob leaves the facility the locks on the door as well as motion sensors activ
 After Bob has left, James sees his chance to break into the facility.
 James tries to enter through the front door but finds that it is locked.
 Next, James breaks a window and climbs through.
-A motion sensor detects movement near tank five.
+A motion sensor detects movement near tank five due to the rfid scanner not detecting any valid tag when movement was detected.
 The motion sensor sends a notfication to Phil as well as Carlos.
 Carlos receives the notfication and goes to investigate the disturbance.
 Motion sensors update Carlos on the position of the disturbance at his request.
 It seems that the disturbance has moved from tank five to tank four. 
 Carlos deduces that the next disturbance will be at tank three.
-Carlos catches James stealing fish from the taks and detains him.
+Carlos catches James stealing fish from the tanks and detains him.
 Carlos writes a report and submits it on the application.
 Phil receives the notification that Carlos has detained a criminal.
 Phil also receives the report that Carlos has submitted.
