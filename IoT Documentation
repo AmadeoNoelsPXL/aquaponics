@@ -1,7 +1,7 @@
 Markdown file for general documentation
 
 
---Exercise 1 - Josh answers
+--Exercise 1
 
 -What does IoT entail
 *IoT or Internet of Things describes a network of physical devices that are connected and communicate, either using a wireless connection like Bluetooth or Wifi or a normal cable.
@@ -22,7 +22,7 @@ Markdown file for general documentation
 *Smartphones: Bascially a personal control panel that can communicate with most other iot devices.
 
 
---Exercise 2 - Josh answers
+--Exercise 2
 
 *Questions
 1. Why esp8266?
