@@ -1,0 +1,39 @@
+Markdown file for general documentation
+
+
+--Exercise 1 - Josh answers
+
+-What does IoT entail
+*IoT or Internet of Things describes a network of physical devices that are connected and communicate, either using a wireless connection like Bluetooth or Wifi or a normal cable.
+
+-Domains
+*Smart Homes
+*Wearables
+*Agriculture
+
+-Protocols
+*Message Queue Telemetry Protocol (MQTT): Lightweight publish/subscribe messaging transport good for devices with small code footprint and low bandwidth
+*Hypertext Tranfer Protocol (HTTP): Protocol for transferring hypermedia documents like HTML, designed for communication between web browsers and web servers
+
+-Devices
+*Any device with the word "Smart" in it.
+*Voice controllers like Amazon Alexa, Google Home Voice Controller, etc.
+*Smart Locks: Unlocking when rfid in radius.
+*Smartphones: Bascially a personal control panel that can communicate with most other iot devices.
+
+
+--Exercise 2 - Josh answers
+
+*Questions
+1. Why esp8266?
+2. What inspired you in the video?
+3. What is the connection to coffee?
+
+*Answers
+1. Programmability and price
+1. Easily expandible
+
+2. Bridging the world of software and hardware
+
+3. 1st exposure was the esspresso light model
+3. Price of a good coffee
