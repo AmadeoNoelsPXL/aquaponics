@@ -44,3 +44,14 @@ Today we created a wifi hotspot using a rasberry pi.
 Hilariously, we did this by using a keyboard. Problems we encountered today was the fact that we forgot to download etcher to flash the SD card.
 Furthermore, we had problems flashing the card. We could not initially get it working possibly because the SD card reader was broken. 
 We solved this by using another SD card reader which allowed us to connect to our own created network.
+
+------------------------------------------------------
+2022/11/08 - Story V3 brainstorm idea
+Aquaponics 
+
+Owner: Phil, Technician: Bob
+Phil is a small business owner and owns an aquaponics unit in a rural area. Bob is a rookie technician and on his way to his first job. He gets to the aquaponics facility
+and scans his rfid tag and the door unlocks. Phil gets a notification on his phone that the new technician has arrived at the aquaponics facility. Both Phil and Bob
+receive a notifcation that the pump in tank two is malfunctioning. Bob arrives and fixes the malfunction, he adds a report on his application and posts it. Phil receives a 
+notification that Bob has fixed the malfunctioning pump and sees the report that Bob made. Phil also receives a reccommendation on replacement pumps and common problems.
+Bob continues monitoring all the aquaponics devices from his mobile phone whilst sipping an esspresso. 
