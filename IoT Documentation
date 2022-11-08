@@ -37,3 +37,10 @@ Markdown file for general documentation
 
 3. 1st exposure was the esspresso light model
 3. Price of a good coffee
+
+
+2022/11/07 - connected to wifi gateway on raspberri pi using iotgateway img
+Today we created a wifi hotspot using a rasberry pi. 
+Hilariously, we did this by using a keyboard. Problems we encountered today was the fact that we forgot to download etcher to flash the SD card.
+Furthermore, we had problems flashing the card. We could not initially get it working possibly because the SD card reader was broken. 
+We solved this by using another SD card reader which allowed us to connect to our own created network.
