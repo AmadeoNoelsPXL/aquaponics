@@ -108,6 +108,7 @@ Motion Sensors - Scattered around the facility for movement detection.
 Rfid tag scanner - Placed by the entrance to the facility and within the motion sensors around the facility. 
 Weight sensor - To measure the weight of the fish in the tank.
 
+Tuesday, 10.01.2022
 Mara and Paul were awakened in the morning by a notification on their phone. The soil moistire sensor has detected that the plants don't have enough water. 
 Paul gets to the aquaponics facility and scans his rfid tag.
 The door unlocks and at the same time Mara gets a notification on her phone that Paul has arrived at the aquaponics facility.
@@ -115,6 +116,8 @@ Paul looks at his phone and sees that the pumps and the temp metre are working p
 Paul takes a closer look at the facility and discovers that a pipe is leaking, which means less water is getting to the plants. 
 Paul repairs the pipe and adds a report on his application. 
 Mara gets a notification that the problem with the soil moistire has been solved. 
+
+Monday, 20.04.2022
 Jon arrives at the aquaponics facility and scans his rfid tag.
 Mara gets a notification that that Jon has arrived at the aquaponics facility.
 Jon monitors all the aquaponics devices from his mobile phone while smoking a cigarette.  
@@ -127,13 +130,17 @@ In the mean time the firefighters manages to extinguish the fire.
 Jon adds a report on the application that the fire has been put out. 
 He also enters a command that he is very sorry about the incident and that luckily nothing was damaged.
 Jon continues his farmwork without smoking any cigarettes anymore.
+In the evening Mara is lying in her bed and takes a look at the reports which has been posted on the application.
+Shaking her head, she falls asleep and wonders what is in store for her tomorrow.
+
+Friday, 02.08.2022
+Jon arrives at the aquaponics facility. 
 Jon takes the fish out of the tank to prepare them for the market and puts in new young fish. 
 Mara gets a notfication from the weight sensor, because the weight of the tank has changed drastically. 
 Now she knows that Jon has prapered the fish for the market. 
 At 5 o'clock Jon signs out via his rfid tag.
 Mara receives a notification that Jon has left the facility.
-In the evening Mara is lying in her bed and takes a look at the reports which has been posted on the application.
-Shaking her head, she falls asleep and wonders what is in store for her tomorrow. 
+ 
 
 Group work (Lena & Amadeo) => 9/11/2022
 To get started, we started by creating a simple blink led component. We did this by guiding ourselves through the program via the Files => examples => basics => blink buttons. This opened a new window where by using the upload button we could install the provided hardware on one of our ESPs.
