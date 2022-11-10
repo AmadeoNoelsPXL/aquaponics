@@ -13,7 +13,7 @@ problems we have overcome today:
 <p>We created some injects which send strings via the mqtt out to the mqtt in which is connected with a debugger and shows the injected value in the debug messages.
 It's important that the mqtt in topic is the same as the mqtt out topic.<p>
 
- ![Tux, the Linux mascot](/images/introNode.png)
+ ![Tux, the Linux mascot](../images/introNode.png)
 
 ***MQTT exploration with wildcards***
 <p> When a client subscribes to a topic, it can subscribe to the exact topic of a published message, or it can use wildcards to subscribe to multiple topics at once.
