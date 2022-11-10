@@ -13,16 +13,16 @@ problems we have overcome today:
 We created some injects which send strings via the mqtt out to the mqtt in which is connected with a debugger and shows the injected value in the debug messages.
 It's important that the mqtt in topic is the same as the mqtt out topic. 
 
-MQTT exploration with wildcards
+***MQTT exploration with wildcards***
 When a client subscribes to a topic, it can subscribe to the exact topic of a published message, or it can use wildcards to subscribe to multiple topics at once.
 +: A single-level wildcard replaces one topic level. test/a/+/b -> test/a/ab/b, test/a/ac/b
 #: The multi-level wildcard covers many topic levels. The multi-level wildcard must be placed as the last character in the topic and preceded by a forward slash. test/# -> test/a, test/b
 
-HVAC simulation/integartor
+***HVAC simulation/integartor***
 We started of with a slider connected to a mqtt out, which makes it possible for the user to choose the temperature. An mqtt in will send the choosen temperature to an gauge. 
 For the AC an other mqtt in is connected to a switch which separetes the values above 20 and equal-smaller then 20 to make choose specific action depending on the temperature. 
 The switch leads to two changes which change the value to On or Off. This changes are connected to an mqtt out which sends the state of the AC to an mqtt in which sends it to a text which shows the state on the user interface. 
 
-HVAC hardware
+***HVAC hardware***
 We connected the ESP8266 with a breadboard. On the breadboard the DHT11 Temperature Sensor Module is plugged in. 
 
