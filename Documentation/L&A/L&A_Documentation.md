@@ -20,10 +20,6 @@ It's important that the mqtt in topic is the same as the mqtt out topic.<p>
   <img src="images/payloadIntroNode.png" width="100" /> 
 </p>
 
-![Tux, the Linux mascot](images/debugIntroNode.png)
-
-![Tux, the Linux mascot](images/payloadIntroNode.png)
-
 ***MQTT exploration with wildcards***
 <p> When a client subscribes to a topic, it can subscribe to the exact topic of a published message, or it can use wildcards to subscribe to multiple topics at once.
 \ +: A single-level wildcard replaces one topic level. test/a/+/b -> test/a/ab/b, test/a/ac/b
