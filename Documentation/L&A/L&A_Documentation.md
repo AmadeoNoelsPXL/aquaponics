@@ -9,7 +9,7 @@ problems we have overcome today:
 
 ## 9/11/2022
 
-Node Intro
+***Node Intro***
 We created some injects which send strings via the mqtt out to the mqtt in which is connected with a debugger and shows the injected value in the debug messages.
 It's important that the mqtt in topic is the same as the mqtt out topic. 
 
