@@ -14,7 +14,9 @@ problems we have overcome today:
 It's important that the mqtt in topic is the same as the mqtt out topic.<p>
 
 ![Tux, the Linux mascot](images/introNode.png)
+<br>
 ![Tux, the Linux mascot](images/debugIntroNode.png)
+<br>
 ![Tux, the Linux mascot](images/payloadIntroNode.png)
 
 ***MQTT exploration with wildcards***
