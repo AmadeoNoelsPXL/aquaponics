@@ -12,6 +12,10 @@ problems we have overcome today:
 ***Node Intro***
 <p>We created some injects which send strings via the mqtt out to the mqtt in which is connected with a debugger and shows the injected value in the debug messages.
 It's important that the mqtt in topic is the same as the mqtt out topic.<p>
+ <figure>
+  <img src="images/introNode.png" alt="my alt text"/>
+  <figcaption>Test</figcaption>
+</figure>
 
  ![Tux, the Linux mascot](images/introNode.png)
 
