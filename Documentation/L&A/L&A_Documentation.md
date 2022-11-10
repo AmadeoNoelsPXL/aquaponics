@@ -15,8 +15,8 @@ It's important that the mqtt in topic is the same as the mqtt out topic.
 
 MQTT exploration with wildcards
 When a client subscribes to a topic, it can subscribe to the exact topic of a published message, or it can use wildcards to subscribe to multiple topics at once.
-'+' : A single-level wildcard replaces one topic level. test/a/+/b -> test/a/ab/b, test/a/ac/b
-'#' : The multi-level wildcard covers many topic levels. The multi-level wildcard must be placed as the last character in the topic and preceded by a forward slash. test/# -> test/a, test/b
++ : A single-level wildcard replaces one topic level. test/a/+/b -> test/a/ab/b, test/a/ac/b
+# : The multi-level wildcard covers many topic levels. The multi-level wildcard must be placed as the last character in the topic and preceded by a forward slash. test/# -> test/a, test/b
 
 HVAC simulation/integartor
 We started of with a slider connected to a mqtt out, which makes it possible for the user to choose the temperature. An mqtt in will send the choosen temperature to an gauge. 
