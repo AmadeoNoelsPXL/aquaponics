@@ -1,5 +1,5 @@
 
- # 8/11/2022
+ ## 8/11/2022
 To get started, we started by creating a simple blink led component. We did this by guiding ourselves through the program via the Files => examples => basics => blink buttons. This opened a new window where by using the upload button we could install the provided hardware on one of our ESPs.
 After this we moved on to installing a server so we could have it interact with a client at a later stage. To implement this server we used the following steps: file => examples => ESP8266WebServer => HelloServer. If we click the upload button after this, our piece of self-written software will be implemented on the ESP we currently have attached to our computer.
 After we had implemented the server, we got to work on creating a client. We did this using the following steps File => examples => ESP8266WIFI => WIFI. We initialized in the setup method the input of the key pin as well as the output of the led pin. Then in the loop method we added code to check the state of the button so that the light could be adjusted depending on the current state.
