@@ -28,3 +28,5 @@ The switch leads to two changes which change the value to On or Off. This change
 ***HVAC hardware***
 <p>We connected the ESP8266 with a breadboard. On the breadboard the DHT11 Temperature Sensor Module is plugged in.<p>
 
+ ## 10/11/2022
+ 
