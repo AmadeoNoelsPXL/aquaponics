@@ -55,7 +55,7 @@ The switch leads to two changes which change the value to On or Off. This change
  
   ***Text receiver***
  
- ![Tux, the Linux mascot](images/ textNodeRedScheme.png)
+ ![Tux, the Linux mascot](images/textNodeRedScheme.png)
 
  
  After this, we went to the NODE-red to implement the functionalities.
