@@ -39,6 +39,9 @@ The switch leads to two changes which change the value to On or Off. This change
 
  
  After this, we went to the NODE-red to implement the functionalities.
+ We create a mqqt in which is connected to the audio input as well as a debugger and a text.
+ Every 5 seconds the state of the button is checked and the possible display options are: "pressed" or "released".
+ The Audio out will speak out the state of the button on the user interface.
  
  ![Tux, the Linux mascot](images/Sound.png)
  
