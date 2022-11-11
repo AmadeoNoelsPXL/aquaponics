@@ -45,3 +45,9 @@ The switch leads to two changes which change the value to On or Off. This change
  
  ![Tux, the Linux mascot](images/Sound.png)
  
+ In the image below, you can see how the button is implemented on our breadboard.
+ 
+  ![Tux, the Linux mascot](images/breadboardSound.png)
+
+ 
+ 
