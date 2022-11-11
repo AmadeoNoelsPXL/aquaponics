@@ -71,10 +71,20 @@ The switch leads to two changes which change the value to On or Off. This change
 After this, we went to the NODE-red to implement the functionalities.
 We inserted a text input that wich is connected to ESP8266 and by mqtt listening to the topic we recevied to the console but for some raison the text could not be displayed by the OLED, after several experimentation we found that is is faulty display. Next we started working on manuallly wiring the pins to the ESP8266.
 
+***Send message through the internet to your phone/Internet-Push-Button***
+ 
+<p>
+We started with creating a new channel on discord and then went to the bot and 
+We dowloaded the template of node-red-contrib-discord-advanced after this we inserted a discordMessagemanager where we used the token we could received from the discord chanel and the chanelId. Then we used an mqqt in which reveceid the state of our button. This is connected to a switch which filter the data so that only the pressed state will cause an action. This is connected to a change were we set the message which we want to sent to the discord chanel. As last the discordmessageManager send the value of the change to the discord chanel. 
+</p>
+
+![Tux, the Linux mascot](images/messageDiscordScheme.png)
+
+
 ***problems faced today***
 <p> Today we had to deal with the fact that our raspberry pi could not offer us internet. On this, we asked for help from the teacher to solve this problem. This was easily done by first setting up an ssh connection to our network (ssh 192.168.12.1 -l iot) and then performing a reboot (sudo reboot).</p>
 
- 
+
  
  
  
