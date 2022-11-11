@@ -62,6 +62,7 @@ The switch leads to two changes which change the value to On or Off. This change
  <img src="images/breadboardSound.png" alt="drawing" width="200"/>
  
   ***Text receiver***
+  
  
 ![Tux, the Linux mascot](images/textNodeRedScheme.png)
 ![Tux, the Linux mascot](images/TextNodeRedGUI.png)
@@ -69,6 +70,9 @@ The switch leads to two changes which change the value to On or Off. This change
  
 After this, we went to the NODE-red to implement the functionalities.
 We inserted a text input that wich is connected to ESP8266 and by mqtt listening to the topic we recevied to the console but for some raison the text could not be displayed by the OLED, after several experimentation we found that is is faulty display. Next we started working on manuallly wiring the pins to the ESP8266.
+
+***problems faced today***
+
 
  
  
