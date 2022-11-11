@@ -37,7 +37,7 @@ The switch leads to two changes which change the value to On or Off. This change
  
  We started implementing the button. For this, we added code in the setup.cpp.
  
- ![Tux, the Linux mascot](images/payloadIntroNode.png)
+ ![Tux, the Linux mascot](images/setup.cpp.png)
 
  
  
