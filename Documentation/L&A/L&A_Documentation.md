@@ -33,7 +33,7 @@ The switch leads to two changes which change the value to On or Off. This change
 
  ## 10/11/2022
  
- We started declaring the button in our home directory more specific in the setup.cpp.
+ We started declaring the button in directory /home/iot/iot-system/demo01/test01, more specific in the setup.cpp.
  
   ![Tux, the Linux mascot](images/setup.cpp.png)
 
