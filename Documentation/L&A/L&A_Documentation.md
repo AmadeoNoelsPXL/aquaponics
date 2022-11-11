@@ -55,6 +55,8 @@ The switch leads to two changes which change the value to On or Off. This change
  
   ***Text receiver***
  
+ 
+ 
 
  
  
