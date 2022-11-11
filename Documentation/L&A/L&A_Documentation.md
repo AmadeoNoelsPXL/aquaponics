@@ -52,6 +52,9 @@ The switch leads to two changes which change the value to On or Off. This change
  In the image below, you can see how the button is implemented on our breadboard.
  
  <img src="images/breadboardSound.png" alt="drawing" width="200"/>
+ 
+  ***Text receiver***
+ 
 
  
  
