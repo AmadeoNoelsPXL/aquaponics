@@ -33,6 +33,11 @@ The switch leads to two changes which change the value to On or Off. This change
 
  ## 10/11/2022
  
+ We started declaring the button in our home directory.
+ 
+  ![Tux, the Linux mascot](setup.cpp.png)
+
+ 
  After this, we went to the NODE-red to implement the functionalities.
  
  ![Tux, the Linux mascot](images/Sound.png)
