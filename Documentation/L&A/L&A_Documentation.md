@@ -31,9 +31,14 @@ The switch leads to two changes which change the value to On or Off. This change
 ***HVAC hardware***
 <p>We connected the ESP8266 with a breadboard. On the breadboard the DHT11 Temperature Sensor Module is plugged in.<p>
 
- ## 11/11/2022
+## 11/11/2022
+
+***Exploring Io Tempower Services and Commands***
  
-  ***Button to sound and notification***
+
+ 
+ 
+ ***Button to sound and notification***
  
  We started declaring the button in directory /home/iot/iot-system/demo01/test01, more specific in the setup.cpp.
  
