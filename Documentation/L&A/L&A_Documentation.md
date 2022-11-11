@@ -19,8 +19,8 @@ It's important that the mqtt in topic is the same as the mqtt out topic.<p>
 
 
 ***MQTT exploration with wildcards***
-<p> When a client subscribes to a topic, it can subscribe to the exact topic of a published message, or it can use wildcards to subscribe to multiple topics at once.
-+: A single-level wildcard replaces one topic level. test/a/+/b -> test/a/ab/b, test/a/ac/b
+<p> When a client subscribes to a topic, it can subscribe to the exact topic of a published message, or it can use wildcards to subscribe to multiple topics at once.<br>
++: A single-level wildcard replaces one topic level. test/a/+/b -> test/a/ab/b, test/a/ac/b <br>
 #: The multi-level wildcard covers many topic levels. The multi-level wildcard must be placed as the last character in the topic and preceded by a forward slash. test/# -> test/a, test/b <p>
 
 ***HVAC simulation/integartor***
