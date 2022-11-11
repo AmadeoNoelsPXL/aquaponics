@@ -72,7 +72,7 @@ After this, we went to the NODE-red to implement the functionalities.
 We inserted a text input that wich is connected to ESP8266 and by mqtt listening to the topic we recevied to the console but for some raison the text could not be displayed by the OLED, after several experimentation we found that is is faulty display. Next we started working on manuallly wiring the pins to the ESP8266.
 
 ***problems faced today***
-
+<p> Today we had to deal with the fact that our raspberry pi could not offer us internet. On this, we asked for help from the teacher to solve this problem. This was easily done by first setting up an ssh connection to our network (ssh 192.168.12.1 -l iot) and then performing a reboot (sudo reboot).</p>
 
  
  
