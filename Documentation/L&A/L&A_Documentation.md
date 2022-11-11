@@ -35,7 +35,7 @@ The switch leads to two changes which change the value to On or Off. This change
  
  We started declaring the button in our home directory.
  
-  ![Tux, the Linux mascot](setup.cpp.png)
+  ![Tux, the Linux mascot](images/setup.cpp.png)
 
  
  After this, we went to the NODE-red to implement the functionalities.
