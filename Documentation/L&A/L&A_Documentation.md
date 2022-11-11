@@ -31,7 +31,9 @@ The switch leads to two changes which change the value to On or Off. This change
 ***HVAC hardware***
 <p>We connected the ESP8266 with a breadboard. On the breadboard the DHT11 Temperature Sensor Module is plugged in.<p>
 
- ## 10/11/2022
+ ## 11/11/2022
+ 
+  ***Button to sound and notification***
  
  We started declaring the button in directory /home/iot/iot-system/demo01/test01, more specific in the setup.cpp.
  
@@ -42,6 +44,8 @@ The switch leads to two changes which change the value to On or Off. This change
  We create a mqqt in which is connected to the audio input as well as a debugger and a text.
  Every 5 seconds the state of the button is checked. The possible display options are: "pressed" or "released".
  The Audio out will speak out the state of the button on the user interface.
+ 
+
  
  ![Tux, the Linux mascot](images/Sound.png)
  
