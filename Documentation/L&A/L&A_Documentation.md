@@ -84,6 +84,12 @@ We dowloaded the template of node-red-contrib-discord-advanced after this we ins
 ***problems faced today***
 <p> Today we had to deal with the fact that our raspberry pi could not offer us internet. On this, we asked for help from the teacher to solve this problem. This was easily done by first setting up an ssh connection to our network (ssh 192.168.12.1 -l iot) and then performing a reboot (sudo reboot).</p>
 
+ ## 14/11/2022
+ 
+ ***create bindings***
+ 
+ 
+ 
 
  
  
