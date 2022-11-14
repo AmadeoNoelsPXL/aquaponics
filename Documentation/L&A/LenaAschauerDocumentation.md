@@ -111,6 +111,8 @@ Today our lesson was a lot better. We knew our way around and it was a lot of fu
 
 ## Lecture 4 – 11.11.2022
 
+The task descriptions can be found in our <a href=https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L&A/L&A_Documentation.md#11112022>Pair-Report</a>. 
+
 **Scaling and testing + nice to have" discussion, personal notes**
 What will be issues scaling (system size, number of systems, management)?
 - How to handle privacy and security?
