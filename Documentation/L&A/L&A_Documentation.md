@@ -2,12 +2,14 @@
  ## 8/11/2022
 
 ***Arduino IDE, drivers + Arduino Hello World (just blink on Wemos D1 Mini) <br>***
-First we installed Arduino IDE. After that we added the esp8266 repository to our program. Last but not least we installed the ch340 driver.
+We started by installing Arduino IDE. You have to teach the Arduino IDE to handle the Wemos D1 Mini Board. So first go to File -> Preferences and click on the icon next to "Additional board manager URLs". In the window that pops up, enter the following in a separate line: https://arduino.esp8266.com/stable/package_esp8266com_index.json
+<br>Then we went to Tools -> Board -> Board Manager, searched for "esp8266" and install the package. If the board is not recognized, then  the ch340 driver for the USB-to-serial adapter missing, which we installed. 
 
-To get started, we started by creating a simple blink led component. We did this by guiding ourselves through the program via the Files => examples => basics => blink buttons. This opened a new window where by using the upload button we could install the provided hardware on one of our ESPs.
+<br>We started by creating a simple blink led component. We did this by guiding ourselves through the program via the Files => examples => basics => blink buttons. This opened a new window where by using the upload button we could install the provided hardware on one of our ESPs.
 After this we moved on to installing a server so we could have it interact with a client at a later stage. To implement this server we used the following steps: file => examples => ESP8266WebServer => HelloServer. If we click the upload button after this, our piece of self-written software will be implemented on the ESP we currently have attached to our computer.
 
 ***Wemos D1 Mini, pinout and general intro info, Breadboards and dupont cables***
+The heart of our Wemos D1 Mini Board is the ESP8266EX chip. This is a powerful 32 bit microcontroller with integrated W-LAN interface.
 
 
 ***Wifi connect / Led on/off on Webserver***
