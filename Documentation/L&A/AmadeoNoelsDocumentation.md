@@ -21,6 +21,8 @@ For me, everything was new so everything we learned today is a totally new exper
 ***9/11/2022***
 <p>
   
+Today I got to work on the basics of Node-Red. I started by sending simple messages to a debug. Later, I created several lines that depending on the wildcard were either going to display the message or not.
+  
 [9/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L%26A/L%26A_Documentation.md/#9112022)  
 </p>
 
