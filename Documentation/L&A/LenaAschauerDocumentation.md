@@ -132,6 +132,8 @@ What role will play
 - MQTT can be used for integration and security
 - Stories can be used for testing 
 
+**Nice To Have:**
+
 **IoTempower - 3 questions, 3 recommendations, 3 feature requests**
 
 **Reflection**<br>
