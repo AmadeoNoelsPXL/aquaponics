@@ -1,21 +1,16 @@
 
 ## Lena Aschauer
-What type of programming experience?
+<br>What type of programming experience?<br>
 Basic skills in Java, C, Python
-
-<br>What have you done with micro controllers, which ones have you used? (Like Arduino, ESP8266, Particle/Photon)
+<br>What have you done with micro controllers, which ones have you used? (Like Arduino, ESP8266, Particle/Photon)<br>
 I haven’t used any micro controllers. 
-
-<br>Which single board computers do you know/have you used (Raspberry Pi, Orange Pi, Beaglebone, Labrador)?
+<br>Which single board computers do you know/have you used (Raspberry Pi, Orange Pi, Beaglebone, Labrador)?<br>
 I haven’t used any board computers. 
-
-<br>Who is a maker or part of a maker community? What do you like, would you like about it? How could it relate to this class?
+<br>Who is a maker or part of a maker community? What do you like, would you like about it? How could it relate to this class?<br>
 I had crafts in junior high school, which I enjoyed. It's nice to be able to work with your own hands. IoT represents the interface between hard and software, so I assume that we need it to connect hardware components.
-
-<br>What do you already know about IoT? 
+<br>What do you already know about IoT? <br>
 I have to say, I didn’t really know anything about it. I know that objects like Alexa and smart cars belong to it but not more. 
-
-<br>What are your expectations from this class?
+<br>What are your expectations from this class?<br>
 That we learn here how we can optimally connect and optimize the hardware components in our project with the software.
 
 ## Lecture 1 – 07.11.2022
