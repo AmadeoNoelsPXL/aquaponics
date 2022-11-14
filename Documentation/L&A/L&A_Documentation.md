@@ -115,7 +115,7 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
   -> solution : resizing and crunching the firmware on the raspbarry pi to make it smaller  
 
  ***Moisture Sensor***
- 
+ Jon helped us with the setup. Just to make sure we don't fuck it up again.
  
  
  
