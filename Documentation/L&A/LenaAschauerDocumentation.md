@@ -133,3 +133,11 @@ What role will play
 - Stories can be used for testing 
 
 **IoTempower - 3 questions, 3 recommendations, 3 feature requests**
+
+**Reflection**<br>
+I didn't think today's lesson was that great. We had some problems with setting the IoTEmpower, which cost us a lot of time. After that, we got to work. We managed to complete some tasks including the button to sound and notification. We had a lot of fun with the task: Send message through the internet to your phone/Internet push button. We solved it by creating a discord server to which messages are sent by clicking on a button. But unfortunately the day was also a bit boring. Since we had only one display available we had to work together with the other pairs and could not do very much. Hopefully this will be better next time. On the whole, it was interesting to see how the steps that we had done in the previous lessons Manuel can now be done easily with a few commands. 
+
+## Lecture 5 – 11.11.2022
+
+**Reflection**<br>
+Today actually went exactly like the last lesson. In the morning we talked about our portfolios. Then we continued to work on our tasks and were able to finish the work with the touch sensor and moisture sensor. Luckily, there were no problems.  Our colleagues Jon and Josh gave us a few tips to get to our goal faster. This was especially helpful in assembling the breadboard. The time went by very fast and so it was time to say goodbye to our professor Ulrich at the end of the lesson. I have learned a lot about IoT in the last week and I am very happy about it. 
