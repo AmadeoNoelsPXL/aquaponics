@@ -8,10 +8,10 @@ We started by installing Arduino IDE. You have to teach the Arduino IDE to handl
 After this we moved on to installing a server so we could have it interact with a client at a later stage. To implement this server we used the following steps: file => examples => ESP8266WebServer => HelloServer. If we click the upload button after this, our piece of self-written software will be implemented on the ESP we currently have attached to our computer.
 
 ***Wemos D1 Mini, pinout and general intro info, Breadboards and dupont cables*** <br>
-The heart of our Wemos D1 Mini Board is the ESP8266EX chip. This is a powerful 32 bit microcontroller with integrated W-LAN interface. The D1 Mini is  versatile because it is inexpensive, WiFi-enabled, and fully compatible with the Arduino platform.
+The heart of our Wemos D1 Mini Board is the ESP8266EX chip. This is a powerful 32 bit microcontroller with integrated W-LAN interface. The D1 Mini is  versatile because it is inexpensive, WiFi-enabled, and fully compatible with the Arduino platform. The D1 Mini has an ESP8266 at its core, which means that it can do many of the things an Arduino board can do (analog input, digital input, I2C, etc.).
 
-An overview about the pins: 
-<img src="images/WemosD1Pinout.jpg" alt="drawing" width="400"/> <br>
+An overview about the pins: <br>
+<img src="images/WemosD1Pinout.jpg" alt="drawing" width="500"/> <br>
 
 Breadboard:
 A Breadboard is simply a board for prototyping or building circuits on. It allows you to place components and connections on the board to make circuits without soldering. The holes in the breadboard take care of your connections by physically holding onto parts or wires where you put them and electrically connecting them inside the board. <br>
@@ -19,13 +19,13 @@ A Breadboard is simply a board for prototyping or building circuits on. It allow
 Dupont cables:
 Jumper wires are simply wires that have connector pins at each end, allowing them to be used to connect two points to each other without soldering. Jumper wires are typically used with breadboards and other prototyping tools in order to make it easy to change a circuit as needed. <br>
 
+***Wifi connect***
+The D1 Mini can handle WiFi communication. The WiFi communication enables the D1 Mini to act as a local server and so much more. We implementet the D1 Mini as a WiFi server by communicating between a device and the D1 Mini by communicating on a local host webpage. 
 
-***Wifi connect / Led on/off on Webserver***
+
+***Led on/off on Webserver***
 After we had implemented the server, we got to work on creating a client. We did this using the following steps File => examples => ESP8266WIFI => WIFI. We initialized in the setup method the input of the key pin as well as the output of the led pin. Then in the loop method we added code to check the state of the button so that the light could be adjusted depending on the current state. <br>
 
-problems we have overcome today:
--	We encountered many problems in the beginning for setting up the arduino application. The lecturer did this quite quickly without considering the students in the process.
--	Because we often did not fully understand what was expected of us in class, we needed a lot of feedback from the teacher to redirect us here and there and help us on our way to obtaining the solutions
 
 Pull-ups and touch buttons
 
@@ -34,6 +34,12 @@ Second ESP8266 with button as Webclient, controlling Webserver
 Second LED
 
 Second button
+
+
+<br>***problems we have overcome today:***
+-	We encountered many problems in the beginning for setting up the arduino application. The lecturer did this quite quickly without considering the students in the process.
+-	Because we often did not fully understand what was expected of us in class, we needed a lot of feedback from the teacher to redirect us here and there and help us on our way to obtaining the solutions
+
 
 ## 9/11/2022
 
