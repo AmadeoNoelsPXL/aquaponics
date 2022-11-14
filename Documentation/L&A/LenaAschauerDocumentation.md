@@ -1,6 +1,6 @@
 
 ## Lena Aschauer
-<br>What type of programming experience?<br>
+<br>*What type of programming experience?*<br>
 Basic skills in Java, C, Python<br>
 What have you done with micro controllers, which ones have you used? (Like Arduino, ESP8266, Particle/Photon)<br>
 I haven’t used any micro controllers. 
