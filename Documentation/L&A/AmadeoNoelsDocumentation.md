@@ -4,6 +4,7 @@ Currently, I have already worked on 2 projects. In 1 project there we already us
 Right now, my view on IOT systems is that they are used for simplifying our lives and thereby making our lives a lot more pleasant by being able to give us advice on problems that may arise. For example, like a smart refrigerator that can opzichtly make an order for refilling the milk.
 I expect to learn a lot of new things from the classes, because I haven't done anything with Internet of Things until now. So I am very curious about everything we will cover in this block. I am looking forward to learning about what happens behind when we use IOT systems in our daily lives.
 </p>
+
 ***7/11/2022***
 <p>
 Today I came across all kinds of attributes for creating different types of smart devices. I am lucky to be in a group with people like Josh, started with a K and ended with an e, Luthando, who I can go to and ask all my questions I had about all these new attributes.
