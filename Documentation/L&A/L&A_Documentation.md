@@ -90,11 +90,22 @@ We dowloaded the template of node-red-contrib-discord-advanced after this we ins
  ***touch sensor***
  
  We created a new folder in the home directory under /home/iot/iot-systems/demo01/TouchSensor
- We changed the setup.cpp file to the following 
+ We changed the setup.cpp file to the following:
  
  ![Tux, the Linux mascot](images/touchSensorline.png)
  
- touchSensorline.png
+  After that we deployed it to the ESP8266. We went to the Node-red where we created an mqqt in with is connected to a debug
+  
+  
+
+  
+Like you can see in the picture above we used the analog function to get the values. Here we used the filter_binarize which turns analog values to binaries. So only the state pressed or unpressed is showed in the debug.
+
+
+ 
+
+ 
+ 
  
  We tried to follow the guid from the lecture but we faced a problem :
   - there is not enough space on the raspberry pi
