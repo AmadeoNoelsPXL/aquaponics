@@ -89,6 +89,8 @@ We dowloaded the template of node-red-contrib-discord-advanced after this we ins
   
  ***touch sensor***
  
+ We created a touch sensor by putting a wire into the analog pin of the ESP8266.
+ 
   <img src="images/TouchSensor.png" alt="drawing" width="200"/>
  
  
