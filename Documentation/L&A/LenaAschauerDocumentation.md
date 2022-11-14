@@ -126,8 +126,8 @@ What would you like to see for scaling up? (What is not so great currently?)
 - Single accounts for each user -> more privacy and less problems mit deployment
 
 What role will play
-– Simulations can be used for testing
-– MQTT can be used for integration and security
-– Stories can be used for testing 
+- Simulations can be used for testing
+- MQTT can be used for integration and security
+- Stories can be used for testing 
 
 **IoTempower - 3 questions, 3 recommendations, 3 feature requests**
