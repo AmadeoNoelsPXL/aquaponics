@@ -86,7 +86,8 @@ We dowloaded the template of node-red-contrib-discord-advanced after this we ins
 
  ## 14/11/2022
  
- ***create bindings***
+  
+ ***touch sensor***
  
  
  
