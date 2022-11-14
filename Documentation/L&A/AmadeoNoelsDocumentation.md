@@ -30,7 +30,7 @@ Vandaag was een moeilijke dag, onze leerkracht had voor de hele klas iets voorbe
 
 ***14/11/2022***
 <p>
-Vandaag ben ik aan de slag gegaan met het creeeren van een touch sensor. Dit verliep vrij eenvoudig met dank aan een goede handleiding die te vinden was op het youtube kanaal van Ulrich Norbisrath.
+Today I set to work creating a touch sensor. This was quite easy thanks to a good tutorial found on Ulrich Norbisrath's youtube channel.
 
 [14/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L%26A/L&A_Documentation.md/#14112022)
 
