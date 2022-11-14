@@ -15,7 +15,7 @@ Today I came across all kinds of attributes for creating different types of smar
 Today we split into 2 groups to work on creating our first web server that provides a connection between a button that is pressed and causes a light to turn on or off on the other side.
 For me, everything was new so everything we learned today is a totally new experience that I gained. For me personally, it was often not clear what we were expected to present now
 </p>
-[11/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L%26A/L&A_Documentation.md/#11112022)
+[8/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L%26A/L&A_Documentation.md/#11112022)
 
 ***9/11/2022***
 <p>
