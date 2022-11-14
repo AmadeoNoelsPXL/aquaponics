@@ -109,3 +109,25 @@ What are other intersting iotempower gateway services?<br>
 **Reflection**<br>
 Today our lesson was a lot better. We knew our way around and it was a lot of fun. It was great to work step by step towards the goal. For our first tasks we had to create MQTT connections between different nodes and try the general logic of the environment. Afterwards we moved on to connecting actual devices to these MQTT connections and displaying the data on our NODE Red UI. We tried diverse combinations on the breadboard, built the connections, created a user interface. We were very energetic and had a small moment of success after each step. We were also able to help a few of our classmates, such as Lyle, Nihal, and Christian, who were having trouble creating the connections. But we also received help from our professor. We don't understand the tasks 100% yet, but we understand the connections between nodes, the hardware as well as the software. In between we also had some problems with the Node-RED, because we unintentionally overwrote our flows. We also had someone else unintentionally logging into our network and deleting our flows. But in the end we mastered everything. 
 
+## Lecture 4 – 11.11.2022
+
+**Scaling and testing + nice to have" discussion, personal notes**
+What will be issues scaling (system size, number of systems, management)?
+- How to handle privacy and security?
+- What about the documentation?
+- What when several people deploy at the same moment?
+- Is there enough bandwidth?
+
+How can we do testing?
+- Use stories and implement them
+- simulate environments
+
+What would you like to see for scaling up? (What is not so great currently?)
+- Single accounts for each user -> more privacy and less problems mit deployment
+
+What role will play
+– Simulations can be used for testing
+– MQTT can be used for integration and security
+– Stories can be used for testing 
+
+**IoTempower - 3 questions, 3 recommendations, 3 feature requests**
