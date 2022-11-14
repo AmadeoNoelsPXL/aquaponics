@@ -89,7 +89,7 @@ We dowloaded the template of node-red-contrib-discord-advanced after this we ins
   
  ***touch sensor***
  
- ![Tux, the Linux mascot](images/ touchSensorline.png)
+ ![Tux, the Linux mascot](images/touchSensorline.png)
  
  touchSensorline.png
  
