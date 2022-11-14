@@ -93,23 +93,7 @@ Today I got my first insight into working with IoT. I had nothing to do with it 
 
 ## Lecture 2 – 08.11.2022
 
-The topics can be found in our <a href=https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L&A/L&A_Documentation.md#8112022>Pair-Report</a>. 
-
-Arduino IDE, drivers + Arduino Hello World (just blink on Wemos D1 Mini)
-
-Wemos D1 Mini, pinout and general intro info, Breadboards and dupont cables
-
-Wifi connect
-
-Led on/off on Webserver
-
-Pull-ups and touch buttons
-
-Second ESP8266 with button as Webclient, controlling Webserver
-
-Second LED
-
-Second button
+The task descriptions can be found in our <a href=https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L&A/L&A_Documentation.md#8112022>Pair-Report</a>. 
 
 **Reflection**<br>
 Our first day was not exactly optimal. We got acquainted with the hardware and the programs, which took quite a long time and still not everything was clear to us. But we got through it and when we put our hands on everything it got a lot better. The professor was also very supportive. It was especially difficult for us to understand the professor's assignment correctly. Therefore, it often happened that we did something wrong or did something completely different than we should have done. But the professor always brought us back on the right track and also supported us with our "extra tasks". But also our colleagues Josh and Malu supported us well and always came to our aid when we were stuck. at the end of the day we definitely knew our way around a lot better. [...]  We learned how to make a light on an ESP8266 shine, how to set up a web client and server, and how to (almost) break an ESP8266. Be careful with the 5 Volt.
