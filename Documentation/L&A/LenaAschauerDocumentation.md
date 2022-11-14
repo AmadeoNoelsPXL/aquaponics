@@ -64,7 +64,6 @@ Network dependence
 Associated costs
 
 **ESP8266**<br>
-
 Why esp8266?
 Has changed his live. You can easily program this network and attach LEDs sensors etc. to it. Everything is affordable.  It’s the bridge from software to hardware. 
 
@@ -78,7 +77,6 @@ Espresso Light was the first version – changed how we design and build things 
 Take a look at our table.
 
 **Gateway setup log**<br>
-
 We started of by downloading the image for the raspberry pi which our professors provide for us. After some problems we were able to flash the image via the flashing software balena etcher to the rpi. Then we were able to connect the rpi with the wifi and so we had our own local network.
 
 It was also very exciting to set up our own IoTempower gateway. This will certainly help us in our project, since we want to work with a Raspberry Pi. However, we also had problems, because the flashing of the pi image to the SD card crashed every time. In the end it turned out that our wifi card was unfortunately broken. 
