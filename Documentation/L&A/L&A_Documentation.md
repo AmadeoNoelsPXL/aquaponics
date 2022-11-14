@@ -11,8 +11,7 @@ After this we moved on to installing a server so we could have it interact with 
 The heart of our Wemos D1 Mini Board is the ESP8266EX chip. This is a powerful 32 bit microcontroller with integrated W-LAN interface. The D1 Mini is  versatile because it is inexpensive, WiFi-enabled, and fully compatible with the Arduino platform.
 
 An overview about the pins: 
-
-![Tux, the Linux mascot](images/WemosD1Pinout.jpg) <br>
+<img src="images/WemosD1Pinout.jpg" alt="drawing" width="400"/> <br>
 
 Breadboard:
 A Breadboard is simply a board for prototyping or building circuits on. It allows you to place components and connections on the board to make circuits without soldering. The holes in the breadboard take care of your connections by physically holding onto parts or wires where you put them and electrically connecting them inside the board. <br>
