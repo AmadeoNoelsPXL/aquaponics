@@ -89,6 +89,10 @@ We dowloaded the template of node-red-contrib-discord-advanced after this we ins
   
  ***touch sensor***
  
+ ![Tux, the Linux mascot](images/ touchSensorline.png)
+ 
+ touchSensorline.png
+ 
  We tried to follow the guid from the lecture but we faced a problem :
   - there is not enough space on the raspberry pi
   -> solution : resizing and crunching the firmware on the raspbarry pi to make it smaller  
