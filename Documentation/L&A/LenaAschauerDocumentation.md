@@ -21,12 +21,10 @@ That we learn here how we can optimally connect and optimize the hardware compon
 ## Lecture 1 – 07.11.2022
 
 **What does the Internet of Things entail?**
-
 A simple Internet of Things definition is that it is a huge worldwide network of connected objects. These 'things' are embedded with sensors, processors and software to collect and share data about the way they are used and about the environment around them. An Internet of Things platform integrates data from the different devices and applies analytics to share the most valuable information with applications built to address specific needs.
 https://www.nanowerk.com/smart/internet-of-things-explained.php
 
 **Domains:**<br>
-
 Industrial - IIoT monitors the quality of any product at each stage, from procurement to the final delivery. Moreover, it corrects and prevents risks in the product lifecycle.
 
 Medical - tracking how many patients are in a hospital, receiving the correct medicine for a patient, and monitoring their health at a distance, also known as Telemedicine
@@ -49,7 +47,6 @@ Home Security  - The key driver behind smart and secure homes is IoT. A variety 
 Activity Trackers - Smart home security cameras provide alerts and peace of mind. Activity trackers are sensor devices that can monitor and transmit key health indicators in real-time. You can track and manage your blood pressure, appetite, physical movement and oxygen levels.
 
 **#LikeABosch**<br>
-
 Wearables – Smartphone connected with fridge
 Smart Cities – autonomous cars 
 
