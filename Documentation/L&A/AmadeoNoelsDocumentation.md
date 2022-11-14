@@ -24,15 +24,6 @@ For me, everything was new so everything we learned today is a totally new exper
 [9/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L%26A/L%26A_Documentation.md/#9112022)  
 </p>
 
-***10/11/2022***
-<p>
-
-[10/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L%26A/L&A_Documentation.md/#10112022)
-
-</p>
-
-
-
 ***11/11/2022***
 <p>
 Vandaag was een moeilijke dag, onze leerkracht had voor de hele klas iets voorbereid wat we samen gingen installeren. Helaas lukte dit niet en is er heel wat tijd overheen gegaan vooraleer de les terug hervat kon worden. Vandaag hebben we ons vooral bezig gehouden met het implementeren van een discord bot wat ons eigenlijk zeer goed afging. We vonden op youtube een zeer goede tutorial die ons makkelijk doorheen het hele proces leidde. 
