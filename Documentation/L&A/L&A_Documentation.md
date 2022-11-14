@@ -42,6 +42,56 @@ After we had implemented the server, we got to work on creating a client. We did
 
 ## 9/11/2022
 
+
+**Scenario**<br>
+Personnel : <br>
+Owner: Mara sells fresh vegetables and fish at markets, which come from her aquaponics unit in a rural area. 
+Employee: Jon is a farmer and has been taking care of Mara's aquaponics unit since 5 years. He is also a chain smoker.
+Technican: Paul is a young student who is currently working as a part-time technican for Mara's aquaponics unit.
+
+Facility IOT Devices : <br>
+Soil Moisture Sensor - Detects over-saturated patches of soil
+Pump - Measures how much water flows into a tank
+Flame sensor - Detects flames within the facility.  
+Temp Metre - detect and regulate temperature in the facility
+Motion Sensors - Scattered around the facility for movement detection.
+Rfid tag scanner - Placed by the entrance to the facility and within the motion sensors around the facility. 
+Weight sensor - To measure the weight of the fish in the tank.
+
+Tuesday, 10.01.2022<br>
+Mara and Paul were awakened in the morning by a notification on their phone. The soil moistire sensor has detected that the plants don't have enough water. 
+Paul gets to the aquaponics facility and scans his rfid tag.
+The door unlocks and at the same time Mara gets a notification on her phone that Paul has arrived at the aquaponics facility.
+Paul looks at his phone and sees that the pumps and the temp metre are working properly. 
+Paul takes a closer look at the facility and discovers that a pipe is leaking, which means less water is getting to the plants. 
+Paul repairs the pipe and adds a report on his application. 
+Mara gets a notification that the problem with the soil moistire has been solved. 
+
+Monday, 20.04.2022<br>
+Jon arrives at the aquaponics facility and scans his rfid tag.
+Mara gets a notification that that Jon has arrived at the aquaponics facility.
+Jon monitors all the aquaponics devices from his mobile phone while smoking a cigarette.  
+After that Jon starts his farmwork by harvesting lettuce and tomatoes.  
+While at work, Jon continues to smoke and be careless. He throws his cigarette on a pile of hay and fire starts. 
+Mara gets an notification from the flame sensor that flames has been detected at the facility. 
+At the same time an emergency call is sent to the fire department.
+Mara checks the application and sees that the a motion sensor has detected a lot of movement in the facility, so she knows, that the firefighters have arrived. 
+In the mean time the firefighters manages to extinguish the fire.  
+Jon adds a report on the application that the fire has been put out. 
+He also enters a command that he is very sorry about the incident and that luckily nothing was damaged.
+Jon continues his farmwork without smoking any cigarettes anymore.
+In the evening Mara is lying in her bed and takes a look at the reports which has been posted on the application.
+Shaking her head, she falls asleep and wonders what is in store for her tomorrow.
+
+Friday, 02.08.2022<br>
+Jon arrives at the aquaponics facility. 
+Jon takes the fish out of the tank to prepare them for the market and puts in new young fish. 
+Mara gets a notfication from the weight sensor, because the weight of the tank has changed drastically. 
+Now she knows that Jon has prapered the fish for the market. 
+At 5 o'clock Jon signs out via his rfid tag.
+Mara receives a notification that Jon has left the facility.
+
+
 ***Node Intro***
 <p>We created some injects which send strings via the mqtt out to the mqtt in which is connected with a debugger and shows the injected value in the debug messages.
 It's important that the mqtt in topic is the same as the mqtt out topic.<p>
