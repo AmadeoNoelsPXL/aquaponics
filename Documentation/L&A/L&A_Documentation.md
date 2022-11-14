@@ -96,6 +96,7 @@ We dowloaded the template of node-red-contrib-discord-advanced after this we ins
  
   After that we deployed it to the ESP8266. We went to the Node-red where we created an mqqt in with is connected to a debug
   
+  ![Tux, the Linux mascot](images/TouchSensorNodeRed.png)
   
 
   
