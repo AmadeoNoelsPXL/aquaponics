@@ -129,7 +129,7 @@ The switch leads to two changes which change the value to On or Off. This change
 
 **Edge:** This is about processing, analyzing and storing data close to where it is generated to enable easy real-time analysis and response.<br>
 
-**Swarm:**Swarm Intelligence systems are decentralized, self-organized algorithms used to resolve complex problems with dynamic properties, incomplete information, and limited computation capabilities. Swarm Intelligence can enable a collection of multiple IoT devices to work together and exchange information, thereby achieving greater utility.<br>
+**Swarm:** Swarm Intelligence systems are decentralized, self-organized algorithms used to resolve complex problems with dynamic properties, incomplete information, and limited computation capabilities. Swarm Intelligence can enable a collection of multiple IoT devices to work together and exchange information, thereby achieving greater utility.<br>
 
 **Fog:** This refers to a layer located between the cloud and the edge. Fog is in the ability to capture information from the edge layer before it reaches the cloud. This aims to decide which driven information is relevant and which is not. This allows the relevant data to be stored in the cloud while the unnecessary information can be removed.<br>
  
