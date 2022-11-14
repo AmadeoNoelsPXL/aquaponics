@@ -64,6 +64,9 @@ The switch leads to two changes which change the value to On or Off. This change
 ***HVAC hardware***
 <p>We connected the ESP8266 with a breadboard. On the breadboard the DHT11 Temperature Sensor Module is plugged in.<p>
 
+ IoT Architecture:<br>
+  <img src="images/TouchSensor.png" alt="drawing" width="500"/>
+ 
 ## 11/11/2022
 
 ***Exploring Io Tempower Services and Commands***
