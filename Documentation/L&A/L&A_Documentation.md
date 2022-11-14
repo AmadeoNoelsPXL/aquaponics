@@ -89,6 +89,9 @@ We dowloaded the template of node-red-contrib-discord-advanced after this we ins
   
  ***touch sensor***
  
+ We created a new folder in de home directory under /home/iot/iot-systems/demo01/TouchSensor
+ We changed the setup.cpp file to the following 
+ 
  ![Tux, the Linux mascot](images/touchSensorline.png)
  
  touchSensorline.png
