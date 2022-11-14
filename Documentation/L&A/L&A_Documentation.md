@@ -89,6 +89,10 @@ We dowloaded the template of node-red-contrib-discord-advanced after this we ins
   
  ***touch sensor***
  
+ We tried to follow the guid from the lecture but we faced several problems:
+  - there is not enough space on the raspberry pi
+  -> solution : formatting the raspbarry pi  
+ 
  
  
 
