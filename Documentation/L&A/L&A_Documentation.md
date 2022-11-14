@@ -107,20 +107,15 @@ Like you can see in the picture above we used the analog function to get the val
  
 After that we deployed it to the ESP8266. We went to the Node-red where we created an mqqt in with is connected to a debug
   
-![Tux, the Linux mascot](images/TouchSensorNodeRed.png)
-  
-
-
-
-
- 
-
- 
+![Tux, the Linux mascot](images/TouchSensorNodeRed.png) 
  
  
  We tried to follow the guid from the lecture but we faced a problem :
   - there is not enough space on the raspberry pi
   -> solution : resizing and crunching the firmware on the raspbarry pi to make it smaller  
+
+ ***Moisture Sensor***
+ 
  
  
  
