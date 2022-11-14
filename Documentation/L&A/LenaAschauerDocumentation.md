@@ -93,6 +93,8 @@ Today I got my first insight into working with IoT. I had nothing to do with it 
 
 ## Lecture 2 – 08.11.2022
 
+The topics can be found in our <a href=https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L&A/L&A_Documentation.md#8112022>Pair-Report</a>. 
+
 Arduino IDE, drivers + Arduino Hello World (just blink on Wemos D1 Mini)
 
 Wemos D1 Mini, pinout and general intro info, Breadboards and dupont cables
