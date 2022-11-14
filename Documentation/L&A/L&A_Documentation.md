@@ -43,7 +43,7 @@ After we had implemented the server, we got to work on creating a client. We did
 ## 9/11/2022
 
 
-**Scenario**<br>
+***Scenario***<br>
 Personnel : <br>
 Owner: Mara sells fresh vegetables and fish at markets, which come from her aquaponics unit in a rural area. 
 Employee: Jon is a farmer and has been taking care of Mara's aquaponics unit since 5 years. He is also a chain smoker.
@@ -114,8 +114,14 @@ The switch leads to two changes which change the value to On or Off. This change
 ***HVAC hardware***
 <p>We connected the ESP8266 with a breadboard. On the breadboard the DHT11 Temperature Sensor Module is plugged in.<p>
 
- IoT Architecture:<br>
+ ***IoT Architecture:<br>***
   <img src="images/IoTArchitecture.jpg" alt="drawing" width="500"/>
+ 
+ 
+***HVAC in hardware with MQTT - temperature reporter***
+ 
+***HVAC in hardware with MQTT - relay switch***
+
  
 ## 11/11/2022
 
