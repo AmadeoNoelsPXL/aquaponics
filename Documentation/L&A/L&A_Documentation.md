@@ -19,21 +19,21 @@ A Breadboard is simply a board for prototyping or building circuits on. It allow
 Dupont cables:
 Jumper wires are simply wires that have connector pins at each end, allowing them to be used to connect two points to each other without soldering. Jumper wires are typically used with breadboards and other prototyping tools in order to make it easy to change a circuit as needed. <br>
 
-***Wifi connect***
+***Wifi connect***<br>
 The D1 Mini can handle WiFi communication. The WiFi communication enables the D1 Mini to act as a local server and so much more. We implementet the D1 Mini as a WiFi server by communicating between a device and the D1 Mini by communicating on a local host webpage. 
 
 
-***Led on/off on Webserver***
+***Led on/off on Webserver***<br>
 After we had implemented the server, we got to work on creating a client. We did this using the following steps File => examples => ESP8266WIFI => WIFI. We initialized in the setup method the input of the key pin as well as the output of the led pin. Then in the loop method we added code to check the state of the button so that the light could be adjusted depending on the current state. <br>
 
 
-Pull-ups and touch buttons
+***Pull-ups and touch buttons***<br>
 
-Second ESP8266 with button as Webclient, controlling Webserver
+***Second ESP8266 with button as Webclient, controlling Webserver*** <br>
 
-Second LED
+***Second LED***<br>
 
-Second button
+***Second button***<br>
 
 
 <br>***problems we have overcome today:***
