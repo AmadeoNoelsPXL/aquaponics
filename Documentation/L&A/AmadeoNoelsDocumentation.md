@@ -20,7 +20,7 @@ For me, everything was new so everything we learned today is a totally new exper
 
 ***9/11/2022***
 <p>
-[9/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L%26A/L&A_Documentation.md/#9112022)
+[9/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L%26A/L%26A_Documentation.md#9112022)
 </p>
 
 
