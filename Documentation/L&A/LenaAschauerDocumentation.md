@@ -102,14 +102,14 @@ Our first day was not exactly optimal. We got acquainted with the hardware and t
 
 The task descriptions can be found in our <a href=https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L&A/L&A_Documentation.md#9112022>Pair-Report</a>. 
 
-Node-RED intro:<br>
-What is Node-RED in your first impression?
+**Node-RED intro:<br>**
+What is Node-RED in your first impression?<br>
 Node-Red was very clear for me. The operation is easy to understand, with the individual nodes, the area where you connect them together and the debug window.
 
-What do you think you could use it for?
+What do you think you could use it for?<br>
 For me Node-Red looks like you can plan your network there. Exactly how the individual components are connected to each other and how they are used. Also what settings you have to make and their interrelationships.
 
-What are other intersting iotempower gateway services?
+What are other intersting iotempower gateway services?<br>
 
 **Reflection**<br>
 Today our lesson was a lot better. We knew our way around and it was a lot of fun. It was great to work step by step towards the goal. We picked out a solution for the breadboard, built the connections, created a user interface. We were very energetic and had a small moment of success after each step. We were also able to help a few of our classmates, such as Lyle, Nihal, and Christian, who were having trouble creating the connections. But we also received help from our professor. We don't understand the tasks 100% yet, but we understand the connections between nodes, the hardware as well as the software. In between we also had some problems with the Node-RED, because we unintentionally overwrote our flows. We also had someone else unintentionally logging into our network and deleting our flows. But in the end we mastered everything. 
