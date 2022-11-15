@@ -40,3 +40,8 @@ Today I set to work creating a touch sensor. This was quite easy thanks to a goo
 [14/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L%26A/L&A_Documentation.md/#14112022)
 </p>
 
+***15/11/2022***
+<p>
+Today we started introducing ourselves to the teacher. Then we got to work on making a small presentation to introduce our project to the teacher. In the meantime, I installed ubuntu on my laptop that we would need later in the day.
+</p>
+
