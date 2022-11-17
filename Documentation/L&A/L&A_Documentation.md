@@ -248,8 +248,8 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
       => sudo make install
       
  ***installeren mqtbroker:***
- <p></p>
- ***installern mqtcreator:***
+ <br>
+ ***installeren mqtcreator:***
    
  
  
