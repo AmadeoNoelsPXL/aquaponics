@@ -231,8 +231,8 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
    ***install on the raspberry pi***
    <p>
     - installeren van de dependencies met volgend commando:
-    sudo apt install doxygen iwyu clang-format cmake-format libmagic-dev libbackward-cpp-dev libdw-dev libdwarf-dev binutils-dev librange-v3-dev libssl-dev    libeasyloggingpp-dev libbluetooth-dev nlohmann-json3-dev : in de iot-system folder
- </p>
+    sudo apt install doxygen iwyu clang-format cmake-format libmagic-dev libbackward-cpp-dev libdw-dev libdwarf-dev binutils-dev librange-v3-dev libssl-dev     libeasyloggingpp-dev libbluetooth-dev nlohmann-json3-dev : in de iot-system folder </p>
+ 
    ***compiling snodec:***
    - aanmaken van een folder: iotprojs
    - daarin nieuwe map: snodec
