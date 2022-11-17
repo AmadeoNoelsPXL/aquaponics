@@ -144,6 +144,13 @@ I didn't think today's lesson was that great. We had some problems with setting 
 **Reflection**<br>
 Today actually went exactly like the last lesson. In the morning we talked about our portfolios. Then we continued to work on our tasks and were able to finish the work with the touch sensor and moisture sensor. Luckily, there were no problems.  Our colleagues Jon and Josh gave us a few tips to get to our goal faster. This was especially helpful in assembling the breadboard. The professor was also able to solve the problem with setting the IoTEmpires over the weekend, which took him a lot of time.  Speaking of time, it passed very quickly and so it was time to say goodbye to our professor Ulrich at the end of the lesson. I have learned a lot about IoT in the last week and I am very happy about it, thank you!
 
-##Lecture 6 - 15.11.2022
+## Lecture 6 - 15.11.2022
+
 **Reflection**<br>
 Today was exciting and frustrating at the same time. We got a short introduction to SNode.C and then started setting up the virtual machines. Yes, and that was a challenge. We spent almost 6 hours and mine is still not working. In the beginning it went pretty well and I was able to help some colleagues like Christian and Amadeo. But after that my versions didn't fit anymore and that's when the problems started. In the end we were all happy that the class was over. Hopefully it will be better next time. 
+
+
+## Lecture 7 - 17.11.2022
+
+**Reflection**<br>
+Today we went deep and learned a lot about how to use SNode.C to "link" an MQTT broker instance to a web server instance. To begin we had to install various development tools on the Raspberry Pi. Then we executed some commands together in the terminal and worked step by step on build.  Also the single parts of the code to build a webserver were explained to us in a very understandable way. The class was very informative, but it was also quite a lot of info at once. By the end of the day, we all had our heads spinning. 
