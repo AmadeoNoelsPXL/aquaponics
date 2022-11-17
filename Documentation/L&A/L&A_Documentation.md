@@ -226,6 +226,26 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
  Jon helped us with the setup. Just to make sure we don't fuck it up again.
  </p>
  
+  ## 17/11/2022
+  
+   ***install on the raspberry pi***
+    - installeren van de dependencies met volgend commando:
+    sudo apt install doxygen iwyu clang-format cmake-format libmagic-dev libbackward-cpp-dev libdw-dev libdwarf-dev binutils-dev librange-v3-dev libssl-dev    libeasyloggingpp-dev libbluetooth-dev nlohmann-json3-dev : in de iot-system folder
+   - installeren mqtbroker:
+   - aanmaken van een folder: iotprojs
+   - daarin nieuwe map: snodec
+   - installeren van git
+   - clone van de repository: https://github.com/VolkerChristian/snode.c
+   - aanmaken nieuwe folder: mqttbroker 
+   - clone van de repository: https://github.com/VolkerChristian/mqttbroker
+   - terug naar snodec
+   - nieuwe folder aanmaken build 
+   - commando: cmake ../snode.c/ => zoeken naar Clist <=> 
+   - commando: make -j 16 (threads) => compiling snode
+   - 
+     
+   - installern mqtcreator:
+   - 
  
  
 
