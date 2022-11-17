@@ -231,7 +231,7 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
    ***install on the raspberry pi***
     - installeren van de dependencies met volgend commando:
     sudo apt install doxygen iwyu clang-format cmake-format libmagic-dev libbackward-cpp-dev libdw-dev libdwarf-dev binutils-dev librange-v3-dev libssl-dev    libeasyloggingpp-dev libbluetooth-dev nlohmann-json3-dev : in de iot-system folder
-   - installeren mqtbroker:
+   ***compiling snodec:***
    - aanmaken van een folder: iotprojs
    - daarin nieuwe map: snodec
    - installeren van git
@@ -242,10 +242,12 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
    - nieuwe folder aanmaken build 
    - commando: cmake ../snode.c/ => zoeken naar Clist <=> 
    - commando: make -j 16 (threads) => compiling snode
-   - 
-     
-   - installern mqtcreator:
-   - 
+   - build directory
+      => sudo make install
+      
+ ***installeren mqtbroker:***
+ ***installern mqtcreator:***
+   
  
  
 
