@@ -226,6 +226,12 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
  Jon helped us with the setup. Just to make sure we don't fuck it up again.
  </p>
  
+ ## 15/11/2022
+ 
+ 
+ 
+ 
+ 
   ## 17/11/2022
   
    ***install on the raspberry pi***
