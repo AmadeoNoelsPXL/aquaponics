@@ -45,3 +45,8 @@ Today I set to work creating a touch sensor. This was quite easy thanks to a goo
 Today we started introducing ourselves to the teacher. Then we got to work on making a small presentation to introduce our project to the teacher. In the meantime, I installed ubuntu on my laptop that we would need later in the day. I started by following the powerpoint offered to us for installing and qtcreator. Unfortunately, I had installed the wrong version of Ubuntu which prevented me from completing the full slides.
 </p>
 
+***17/11/2022***
+<p>
+
+</p>
+
