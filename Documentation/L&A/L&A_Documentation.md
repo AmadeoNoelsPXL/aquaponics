@@ -261,6 +261,8 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
 
 ***create an mqqtbrokerwebserver application***
 
+***problems faced today***
+
  
  
 
