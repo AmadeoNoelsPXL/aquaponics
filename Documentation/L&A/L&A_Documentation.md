@@ -381,12 +381,22 @@ in the file mqttwebfrontend.cpp:
  in the file mqttwebfrontend.cpp
  
  --> mqttWebView.get("/clients", [] APPLICATION(req, res){
- MqttModel::instance().getConnectedClients()
+ const std::list<iot::mqtt:packets::Connect>& connectList = MqttModel::instance().getConnectedClients();
+ MqttModel::instance().getConnectedClients();
+ std::string responseString;
+ 
+ for(const iot::mqtt:packets::Connect& connection : connectionList){
+  connection.getClientId();
+ 
+ });
+ 
+ res.send(responseString);
  });
  
  --> header file is missing 
  
  --> add an include 'MqttModel.h
+ 
  
  
  
