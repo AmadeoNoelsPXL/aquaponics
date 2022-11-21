@@ -253,9 +253,14 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
    - build directory
       => sudo make install
       
- ***installeren mqtbroker:***
- <br>
- ***installeren mqtcreator:***
+***installeren mqtbroker:***
+<br>
+***installeren mqtcreator:***
+
+## 21/11/2022
+
+
+
    
  
  
