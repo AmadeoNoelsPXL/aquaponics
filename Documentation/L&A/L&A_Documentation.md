@@ -296,7 +296,7 @@ split screen : right side split view
 
 implement webfrontend
 --> create unencryped 
-add an include 
+add an include (express/legacy/in ...)
 
 copy express line and past it at the end of the line just before "return core:SNodeC::start();
  --> rename legacy to mqttWebView
@@ -308,6 +308,12 @@ copy express line and past it at the end of the line just before "return core:SN
  
  add library : 
   --> CMakeLists.txt (first one) --> find package() src/apps/CMakeLists.txt -> http-server-express
+ 
+ add it in the find package
+ 
+ mqttwebfrontend --> add library --> target_link_libraries
+ 
+ mqttwebfrontend.cpp --> add functionality -->  mqttWebView.listen() -> copy mqttlistenLegancyServer to the mqttWebView.listen()
  
  
  
