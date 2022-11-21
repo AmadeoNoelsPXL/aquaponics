@@ -324,6 +324,77 @@ in the file mqttwebfrontend.cpp:
  VLOG(0) << "#############" << "Here we are" << req.originalUrl;
  res.send("Response FROM MQTTWebView");
  });
+ 
+ mqttfrontend --> right click --> add new  --> c/c++ --> c++ Class --> specify name ('MqttModel')
+ line 51 --> add MqttModel.cpp
+ line 53 --> add MqttModel.h
+ 
+ build application 
+ 
+ file MqttModel.h
+ include 'iot/mqtt/packets/Connect.h'
+ --> private : add MqttModel()
+ --> public : 
+    --> static MqttModel & instance(); --> righ click -> refacor -> add definiation MqttModel.cpp
+    --> void addConnectedClient(iot::mqtt::packets::Connect& connect); -> right click -> refactor
+ 
+ MqttModel&MqttModel::create(){
+ static MqttModel mqttModel;
+ --> static means only one time created  
+ return mqttModel;
+ }
+ 
+ in the file SocketContext.h:
+ 
+ add includ 'iot/mqtt/server/broker/Broker.h'
+ 
+ --> private : 
+    --> void onConnect(iot::mqtt::packets::Connect& connect) override{
+      --> connectionList.push_back(connect);
+      --> 
+      }
+    --> void onPlublish(iot::mqtt::packets::Publish& publish) override;
+    
+ refactor fase 
+ 
+ onConnect method:
+    --> MqttModel::instance().addConnectedClient(connect);
+    
+ implement method addConnectedClient
+ 
+ in the file MqttModel.h
+ 
+ add include <list>
+ 
+ --> public
+    --> const std::list<iot::mqtt::packets::Connect>& getConnectedClients();
+ 
+ --> protected:
+    --> std::list<iot::mqtt::packets::Connect> connectionList;
+ 
+ in the file MqqtModel.cpp :
+ 
+ --> const std::list<iot::mqtt::packets::Connect>& MqttModel::getConnectedClients(){
+ return connectionList;
+ }
+ 
+ in the file mqttwebfrontend.cpp
+ 
+ --> mqttWebView.get("/clients", [] APPLICATION(req, res){
+ MqttModel::instance().getConnectedClients()
+ });
+ 
+ --> header file is missing 
+ 
+ --> add an include 'MqttModel.h
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
 
 
   
