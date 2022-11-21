@@ -285,6 +285,14 @@ add_subdirectory mqttwebfrontend
 
 mqttbroker (main) -> set it as active project 
 
+rename mqttbroker.cpp in mqttwebfrontend directory
+ --> right click --> Rename --> mqttwebfrontend.cpp
+
+add webfunctionality
+
+--> go to snode.c in the filesystem 
+ source directory ==> src/apps/testpost.cpp
+split screen : right side split view
 
 ***problems faced today***
 
