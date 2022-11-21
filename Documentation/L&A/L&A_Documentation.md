@@ -259,14 +259,8 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
 
 ## 21/11/2022
 
+***create an mqqtbrokerwebserver application***
 
-
-   
- 
- 
-
- 
- 
  
  
 
