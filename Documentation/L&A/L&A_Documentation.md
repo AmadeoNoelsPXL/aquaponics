@@ -301,6 +301,16 @@ add an include
 copy express line and past it at the end of the line just before "return core:SNodeC::start();
  --> rename legacy to mqttWebView
  --> als server instance to mqttwebview
+ 
+ error thrown : during link fase 
+  --> we didn't link the webfrontend application to a library 
+  --> !!! needed for the webfrontendapplication
+ 
+ add library : 
+  --> CMakeLists.txt (first one) --> find package() src/apps/CMakeLists.txt -> http-server-express
+ 
+ 
+ 
 
 ***problems faced today***
 
