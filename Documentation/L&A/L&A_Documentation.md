@@ -294,6 +294,14 @@ add webfunctionality
  source directory ==> src/apps/testpost.cpp
 split screen : right side split view
 
+implement webfrontend
+--> create unencryped 
+add an include 
+
+copy express line and past it at the end of the line just before "return core:SNodeC::start();
+ --> rename legacy to mqttWebView
+ --> als server instance to mqttwebview
+
 ***problems faced today***
 
 --> not possible to run the file : he cannnot find files snodec::mqqt
