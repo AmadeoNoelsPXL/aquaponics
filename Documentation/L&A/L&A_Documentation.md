@@ -261,7 +261,34 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
 
 ***create an mqqtbrokerwebserver application***
 
+create new directory => mqqtwebfrontend
+right click -> add new -> General -> Empty File -> chose -> name the file -> CMakeLists.txt
+copy existing CmakeLists.txt to the new CMakeLists.txt -> only adapt the parts that need to be adapted
+CMakeLists.txt
+--> line 51 & 53 : rename variable to mqttwebfrontend
+--> line 57 : rename variable to mqttwebfrontend
+--> line 60 : change targetname to mqqtwebfrontend
+--> line 65 : change name to mqqtwebfrontend 
+--> line 73 : change broker to mqqtwebfrontend
+--> line 77 : change to mqttwebfrontend
+--> 
+
+copy mqttbroker folder content:
+--> cpp && h copy (5) them to the mqqtwebfrontend
+
+binary directory /usr/local/bin
+
+--> integrate directory in the whole project 
+
+--> root CMakeLists.txt file 
+add_subdirectory mqttwebfrontend
+
+mqttbroker (main) -> set it as active project 
+
+
 ***problems faced today***
+
+--> not possible to run the file : he cannnot find files snodec::mqqt
 
  
  
