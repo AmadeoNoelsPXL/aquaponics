@@ -315,6 +315,8 @@ copy express line and past it at the end of the line just before "return core:SN
  
  mqttwebfrontend.cpp --> add functionality -->  mqttWebView.listen() -> copy mqttlistenLegancyServer to the mqttWebView.listen()
  
+ test the build : directory --> ./mqttwebfrontend --> error legacyin is required --> ./mqttwebfrontend legacyin local --port 1883 tlsin  local --port 8883 legacyun local --path /tmp/mqttwebfrontend mqttwebview local --port 8080
+ 
  
  
 
