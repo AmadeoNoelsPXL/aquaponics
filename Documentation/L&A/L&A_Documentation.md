@@ -261,7 +261,7 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
 
 ***create an mqqtbrokerwebserver application***
 
-1. create new directory => mqqtwebfrontend
+1. create new directory => mqqtwebfrontend <br>
 right click -> add new -> General -> Empty File -> chose -> name the file -> CMakeLists.txt
 copy existing CmakeLists.txt to the new CMakeLists.txt -> only adapt the parts that need to be adapted
 CMakeLists.txt
