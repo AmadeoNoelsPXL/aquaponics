@@ -141,10 +141,16 @@ The switch leads to two changes which change the value to On or Off. This change
 ## 11/11/2022
 
 ***Exploring Io Tempower Services and Commands***
-<p>
+
+ **Tool support**
+ 
+ **Documentation - rfid, pwm, servo, distance, single rgb**
   
 </p>
  
+ 1. Study about tool support in IoTempower - Which commands are there, write down your first idea what they do and if or where you could use them (some of them give you extra information, when you call them with help)
+2. Check out the documentation server (if you installed it on your own pc, you can start it with iot doc serve. Attention, the search does not work locally as it is a local webserver without CGI support ). Open "Commands" and search how to use the rfid reader, PWM, a servo motor, ultrasonic distance sensor (RCWL-1601), and a single rgb led (you probably don't even need Google here, but if you are interested about more, feel free to find some more information about the hardware you are actually using) - note the example code you intend to use for both as well as some important remarks about wiring.
+For all following tasks, use IoTempower's built in drivers (check Commands in documentation and setup.cpp ) to create your devices. You often find hints and wiring instructions already inside the Commands documentation.
 
  
  
