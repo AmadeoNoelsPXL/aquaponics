@@ -228,7 +228,7 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
  
  ## 15/11/2022
  
- 
+ Set up virtual machine
  
  
  
