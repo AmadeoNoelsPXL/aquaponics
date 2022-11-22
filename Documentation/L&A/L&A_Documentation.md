@@ -259,143 +259,141 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
 
 ## 21/11/2022
 
-***create an mqqtbrokerwebserver application***
+***create an mqqtbrokerwebserver application*** <br>
 
-create new directory => mqqtwebfrontend
-right click -> add new -> General -> Empty File -> chose -> name the file -> CMakeLists.txt
-copy existing CmakeLists.txt to the new CMakeLists.txt -> only adapt the parts that need to be adapted
-CMakeLists.txt
---> line 51 & 53 : rename variable to mqttwebfrontend
---> line 57 : rename variable to mqttwebfrontend
---> line 60 : change targetname to mqqtwebfrontend
---> line 65 : change name to mqqtwebfrontend 
---> line 73 : change broker to mqqtwebfrontend
---> line 77 : change to mqttwebfrontend
---> 
+create new directory => mqqtwebfrontend <br>
+right click -> add new -> General -> Empty File -> chose -> name the file -> CMakeLists.txt<br>
+copy existing CmakeLists.txt to the new CMakeLists.txt -> only adapt the parts that need to be adapted<br>
+CMakeLists.txt<br>
+--> line 51 & 53 : rename variable to mqttwebfrontend<br>
+--> line 57 : rename variable to mqttwebfrontend<br>
+--> line 60 : change targetname to mqqtwebfrontend<br>
+--> line 65 : change name to mqqtwebfrontend <br>
+--> line 73 : change broker to mqqtwebfrontend<br>
+--> line 77 : change to mqttwebfrontend<br>
 
-copy mqttbroker folder content:
---> cpp && h copy (5) them to the mqqtwebfrontend
+copy mqttbroker folder content:<br>
+--> cpp && h copy (5) them to the mqqtwebfrontend<br>
 
-binary directory /usr/local/bin
+binary directory /usr/local/bin <br>
 
---> integrate directory in the whole project 
+--> integrate directory in the whole project <br>
 
---> root CMakeLists.txt file 
-add_subdirectory mqttwebfrontend
+--> root CMakeLists.txt file <br>
+add_subdirectory mqttwebfrontend<br>
 
-mqttbroker (main) -> set it as active project 
+mqttbroker (main) -> set it as active project <br>
 
-rename mqttbroker.cpp in mqttwebfrontend directory
- --> right click --> Rename --> mqttwebfrontend.cpp
+rename mqttbroker.cpp in mqttwebfrontend directory<br>
+ --> right click --> Rename --> mqttwebfrontend.cpp<br>
 
-add webfunctionality
+**add webfunctionality**<br>
 
---> go to snode.c in the filesystem 
- source directory ==> src/apps/testpost.cpp
-split screen : right side split view
+--> go to snode.c in the filesystem <br>
+ source directory ==> src/apps/testpost.cpp<br>
+split screen : right side split view<br>
 
-implement webfrontend
---> create unencryped 
-add an include (express/legacy/in ...)
+**implement webfrontend**<br>
 
-copy express line and past it at the end of the line just before "return core:SNodeC::start();
- --> rename legacy to mqttWebView
- --> als server instance to mqttwebview
- 
- error thrown : during link fase 
-  --> we didn't link the webfrontend application to a library 
-  --> !!! needed for the webfrontendapplication
- 
- add library : 
-  --> CMakeLists.txt (first one) --> find package() src/apps/CMakeLists.txt -> http-server-express
- 
- add it in the find package
- 
- mqttwebfrontend --> add library --> target_link_libraries
- 
- mqttwebfrontend.cpp --> add functionality -->  mqttWebView.listen() -> copy mqttlistenLegancyServer to the mqttWebView.listen()
- 
- test the build : directory --> ./mqttwebfrontend --> error legacyin is required --> ./mqttwebfrontend legacyin local --port 1883 tlsin  local --port 8883 legacyun local --path /tmp/mqttwebfrontend mqttwebview local --port 8080 -w
- 
-the command : ./mqttwebfrontend can now be used because there is a config file present
+--> create unencryped <br><br>
+add an include (express/legacy/in ...)<br>
 
-in the file mqttwebfrontend.cpp: 
- --> mqttWebView.get("/test", [] APPLICATION(req, res){
- VLOG(0) << "#############" << "Here we are" << req.originalUrl;
- res.send("Response FROM MQTTWebView");
- });
+copy express line and past it at the end of the line just before "return core:SNodeC::start();<br>
+ --> rename legacy to mqttWebView<br>
+ --> als server instance to mqttwebview<br>
  
- mqttfrontend --> right click --> add new  --> c/c++ --> c++ Class --> specify name ('MqttModel')
- line 51 --> add MqttModel.cpp
- line 53 --> add MqttModel.h
+ error thrown : during link fase <br>
+  --> we didn't link the webfrontend application to a library <br>
+  --> !!! needed for the webfrontendapplication<br>
  
- build application 
+ add library : <br>
+  --> CMakeLists.txt (first one) --> find package() src/apps/CMakeLists.txt -> http-server-express<br>
  
- file MqttModel.h
- include 'iot/mqtt/packets/Connect.h'
- --> private : add MqttModel()
- --> public : 
-    --> static MqttModel & instance(); --> righ click -> refacor -> add definiation MqttModel.cpp
-    --> void addConnectedClient(iot::mqtt::packets::Connect& connect); -> right click -> refactor
+ add it in the find package<br>
  
- MqttModel&MqttModel::create(){
- static MqttModel mqttModel;
- --> static means only one time created  
- return mqttModel;
- }
+ mqttwebfrontend --> add library --> target_link_libraries<br>
  
- in the file SocketContext.h:
+ mqttwebfrontend.cpp --> add functionality -->  mqttWebView.listen() -> copy mqttlistenLegancyServer to the mqttWebView.listen()<br>
  
- add includ 'iot/mqtt/server/broker/Broker.h'
+ test the build : directory --> ./mqttwebfrontend --> error legacyin is required --> ./mqttwebfrontend legacyin local --port 1883 tlsin  local --port 8883 legacyun local --path /tmp/mqttwebfrontend mqttwebview local --port 8080 -w<br>
  
- --> private : 
-    --> void onConnect(iot::mqtt::packets::Connect& connect) override{
-      --> connectionList.push_back(connect);
-      --> 
-      }
-    --> void onPlublish(iot::mqtt::packets::Publish& publish) override;
+the command : ./mqttwebfrontend can now be used because there is a config file present<br>
+
+in the file mqttwebfrontend.cpp: <br>
+ --> mqttWebView.get("/test", [] APPLICATION(req, res){<br>
+ VLOG(0) << "#############" << "Here we are" << req.originalUrl;<br>
+ res.send("Response FROM MQTTWebView");<br>
+ });<br>
+ 
+ mqttfrontend --> right click --> add new  --> c/c++ --> c++ Class --> specify name ('MqttModel')<br><br><br>
+ line 51 --> add MqttModel.cpp<br><br>
+ line 53 --> add MqttModel.h<br>
+ 
+ **build application**
+ 
+ file MqttModel.h<br>
+ include 'iot/mqtt/packets/Connect.h'<br>
+ --> private : add MqttModel()<br>
+ --> public : <br>
+    --> static MqttModel & instance(); --> righ click -> refacor -> add definiation MqttModel.cpp<br>
+    --> void addConnectedClient(iot::mqtt::packets::Connect& connect); -> right click -> refactor<br>
+ 
+ MqttModel&MqttModel::create(){<br>
+ static MqttModel mqttModel;<br>
+ --> static means only one time created  <br>
+ return mqttModel;<br>
+ }<br>
+ 
+ in the file SocketContext.h:<br>
+ 
+ add includ 'iot/mqtt/server/broker/Broker.h'<br>
+ 
+ --> private : <br>
+    --> void onConnect(iot::mqtt::packets::Connect& connect) override{<br>
+      --> connectionList.push_back(connect);<br>
+      }<br>
+    --> void onPlublish(iot::mqtt::packets::Publish& publish) override;<br>
     
- refactor fase 
+ refactor fase <br>
  
- onConnect method:
-    --> MqttModel::instance().addConnectedClient(connect);
+ onConnect method:<br>
+    --> MqttModel::instance().addConnectedClient(connect);<br>
     
- implement method addConnectedClient
+ implement method addConnectedClient<br>
  
- in the file MqttModel.h
+ in the file MqttModel.h<br>
  
- add include <list>
+ add include <list><br>
  
- --> public
-    --> const std::list<iot::mqtt::packets::Connect>& getConnectedClients();
+ --> public<br>
+    --> const std::list<iot::mqtt::packets::Connect>& getConnectedClients();<br>
  
- --> protected:
-    --> std::list<iot::mqtt::packets::Connect> connectionList;
+ --> protected:<br>
+    --> std::list<iot::mqtt::packets::Connect> connectionList;<br>
  
- in the file MqqtModel.cpp :
+ in the file MqqtModel.cpp :<br>
  
- --> const std::list<iot::mqtt::packets::Connect>& MqttModel::getConnectedClients(){
- return connectionList;
- }
+ --> const std::list<iot::mqtt::packets::Connect>& MqttModel::getConnectedClients(){<br>
+ return connectionList;<br>
+ }<br>
  
- in the file mqttwebfrontend.cpp
+ in the file mqttwebfrontend.cpp<br>
  
- --> mqttWebView.get("/clients", [] APPLICATION(req, res){
- const std::list<iot::mqtt:packets::Connect>& connectList = MqttModel::instance().getConnectedClients();
- MqttModel::instance().getConnectedClients();
- std::string responseString;
+ --> mqttWebView.get("/clients", [] APPLICATION(req, res){<br>
+ const std::list<iot::mqtt:packets::Connect>& connectList = MqttModel::instance().getConnectedClients();<br>
+ MqttModel::instance().getConnectedClients();<br>
+ std::string responseString;<br>
  
- for(const iot::mqtt:packets::Connect& connection : connectionList){
-  connection.getClientId();
+ for(const iot::mqtt:packets::Connect& connection : connectionList){<br>
+  connection.getClientId();<br>
+ });<br>
  
- });
+ res.send(responseString);<br>
+ });<br>
  
- res.send(responseString);
- });
+ --> header file is missing <br>
  
- --> header file is missing 
- 
- --> add an include 'MqttModel.h
+ --> add an include 'MqttModel.h<br>
  
  
  <img src="images/Code_example.jpg" alt="drawing" width="500"/> <br>
@@ -413,7 +411,7 @@ in the file mqttwebfrontend.cpp:
  
  
 
-***problems faced today***
+***problems faced today***<br>
 
 --> not possible to run the file : he cannnot find files snodec::mqqt
 
