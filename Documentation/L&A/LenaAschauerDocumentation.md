@@ -132,9 +132,12 @@ What role will play
 - MQTT can be used for integration and security
 - Stories can be used for testing 
 
-**Nice To Have:**
-
-**IoTempower - 3 questions, 3 recommendations, 3 feature requests**
+Nice To Have
+- scalability
+- connectivity
+- security
+- dynamic nature
+- analyzing
 
 **Reflection**<br>
 I didn't think today's lesson was that great. We had some problems with setting the IoTEmpower, which cost us a lot of time. After that, we got to work. We managed to complete some tasks including the button to sound and notification. We had a lot of fun with the task: Send message through the internet to your phone/Internet push button. We solved it by creating a discord server to which messages are sent by clicking on a button. But unfortunately the day was also a bit boring. Since we had only one display available we had to work together with the other pairs and could not do very much. Hopefully this will be better next time. On the whole, it was interesting to see how the steps that we had done in the previous lessons Manuel can now be done easily with a few commands. 
@@ -154,3 +157,9 @@ Today was exciting and frustrating at the same time. We got a short introduction
 
 **Reflection**<br>
 Today we went deep and learned a lot about how to use SNode.C to "link" an MQTT broker instance to a web server instance. To begin we had to install various development tools on the Raspberry Pi. Then we executed some commands together in the terminal and worked step by step on build.  Also the single parts of the code to build a webserver were explained to us in a very understandable way. The class was very informative, but it was also quite a lot of info at once. By the end of the day, we all had our heads spinning. 
+
+## Lecture 8 - 21.11.2022
+
+**Reflection**<br>
+Today we have looked very closely at how to learn to use SNode.C to "link" a MQTT broker instance to a web server instance. Professor Volker has implemented the code step by step with us. We had some problems building the CMake project in the beginning. But with the help of our professor we managed it. After that came the next challenge, to integrate the code appropriately. It was a challenge for us to figure out which part of the code to put in which file. But in the end we were able to do it. 
+
