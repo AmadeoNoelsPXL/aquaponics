@@ -165,17 +165,6 @@ Today we have looked very closely at how to learn to use SNode.C to "link" a MQT
 
 ## Lecture 9 - 23.11.2022
 
-## We have to stop mqtt boot to not being started during boot.<br> ##
--> have to edit the iot>lib>system_boot>raspi-boot.sh file on the rpi. <br>
-delete: <br>
-new-window -d -n MQTT<br>
-su- $IOTEMPOWER_USER -c 'echo iot exec mqtt broker' <br>
-new-window -d -n cloudcm
-su - $IOTEMPOWER_USER -c 'echo iot exec cloudmd_starter'<br>
-
-command cd .local/bin <br>
-command ./nodered_starter <br>
-command ps -aef | grep node-red <br>
-command node-red <br>
-
+**Reflection**<br>
+Today we started of by editing the raspi-boot.sh, so the mqttbroker doesn't start anymore while booting. Then we manage to start the mqttbroker via our terminal. 
 
