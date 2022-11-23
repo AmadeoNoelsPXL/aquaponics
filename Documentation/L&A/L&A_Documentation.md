@@ -138,20 +138,14 @@ The switch leads to two changes which change the value to On or Off. This change
 ***HVAC in hardware with MQTT - relay switch***
 
  
-## 11/11/2022
-
-***Exploring Io Tempower Services and Commands***
-
- **Tool support**
- 
- **Documentation - rfid, pwm, servo, distance, single rgb**
+## 11/11/2022 
   
 </p>
- 
- 1. Study about tool support in IoTempower - Which commands are there, write down your first idea what they do and if or where you could use them (some of them give you extra information, when you call them with help)
-
+**IoTempower introduction**
+IoTempower is a framework and environment for everyone to explore and develop for the Internet of Things (IoT). It supports existing IoT deployments and brings mechanisms for over the air (OTA) updates and automatic multi-device deployment. All with a permissable license (and using only libraries with permissable licenses).
 IoTempower includes a lot of small scripts to simplify a plethora of tasks supporting the deployment of a small IoT system or MQTT-based IoT environment. <br>
 
+**Tool support*
 run/iot: To enter a command in the IoTempower-environmen. You need to use the exec keyword too -> iot exec accesspoint. <br>
 menu (F2): Overview over the the most important IoTempower tools via a menu. You can use it to deploy or adapt things. -> iot menu <br>
 accesspoint: You can use it to turn built-in WiFi into an accesspoint. You need a root access. -> iot exec accesspoin <br>
@@ -166,9 +160,22 @@ mqtt_listen: Subscribe to a topic to get all configuration data from the environ
 mqtt_send: Publish to a given topic (or the node topic of the current node directory) deriving all configuration data from the current environment.
 doc_server: To see the documentation of the server. -> iot doc serve <br>
 
-2. Check out the documentation server (if you installed it on your own pc, you can start it with iot doc serve. Attention, the search does not work locally as it is a local webserver without CGI support ). Open "Commands" and search how to use the rfid reader, PWM, a servo motor, ultrasonic distance sensor (RCWL-1601), and a single rgb led (you probably don't even need Google here, but if you are interested about more, feel free to find some more information about the hardware you are actually using) - note the example code you intend to use for both as well as some important remarks about wiring.
-For all following tasks, use IoTempower's built in drivers (check Commands in documentation and setup.cpp ) to create your devices. You often find hints and wiring instructions already inside the Commands documentation.
+**Documentation - rfid, pwm, servo, distance, single rgb**
 
+*rfid reader:* <br>
+Can be used to create a new mfrc522 rfid/nfc tag reader device connected via SPI. It will report the data read as well as uuid and pic. Use the set topic to write a to the tag. name, how to address it in the mqtt network -> mfrc522(name); <br>
+Wiring: Wemos D1 Mini,mfrc522,NodeMCU,rfid-rc522,board <br>
+3V3-3.3V, D8-sda, D7-MOSI, D6-MISO, D5-SCK, D0-RST, G-GND, N/C-IRQ <br>
+
+*PWM:*
+
+*a servo motor:*
+
+*ultrasonic distance sensor (RCWL-1601):*
+
+*ingle rgb led:*
+
+note the example code you intend to use for both as well as some important remarks about wiring.
  
  
  ***Button to sound and notification***
