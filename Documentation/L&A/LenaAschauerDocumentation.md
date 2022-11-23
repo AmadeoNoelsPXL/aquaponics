@@ -160,7 +160,7 @@ I started of by downloading the VMWare Workstation 16 Player and downloading the
 
 <img src="images/VMwareWorkstation.PNG" alt="drawing" width="500"/> <br>
 
-**Install all necessary tools and libraries for SNode.C**
+**Install all necessary tools and libraries for SNode.C**<br>
 I went to the terminal and installed the following packages: 
 - build-essential needed to compile code.
 - manpages-dev contains documentation about all std-library functions and classes.
@@ -168,12 +168,13 @@ I went to the terminal and installed the following packages:
 - clang C Language Family Frontend for the Low Level Virtual Machine LLVM. 
 - qtcreator a versatile Integrated Development Environment IDE. 
 
-Install all Hard Dependencies:
+Install all Hard Dependencies:<br>
 - libeasyloggingpp-dev for logging.
 - libssl-dev for SSL and TLS encrypted data exchange.
 - pkg-config package for cmake used to search for already installed libraries.
 - nlohmann-json3-dev for JavaScript Optiont Notation (JSON) support.<br>
-Install all Soft Dependencies:
+
+Install all Soft Dependencies:<br>
 - clang-format to format the source code consistently.
 - cmake-format to format all CMakeLists.txt files consistently.
 - doxygen to create the documentation.
@@ -183,23 +184,23 @@ Install all Soft Dependencies:
 - libmariadb-dev for database access.<br>
 
 
-**Clone SNode.C from github**
+**Clone SNode.C from github**<br>
 With the git clone command I cloned the git repository into my projects/snocde.c directory. 
 git clone https://github.com/VolkerChristian/snode.c
 
-**Compile and install SNode.C**
+**Compile and install SNode.C**<br>
 I imported the SNode.C into the QT Creator and build and installed SNode.C.
 <img src="images/snode.PNG" alt="drawing" width="500"/> <br>
 
-**Clone MQTTBroker from github**
+**Clone MQTTBroker from github**<br>
 With the git clone command I cloned the git repository into my projects/mqttbroker directory. 
 git clone https://github.com/VolkerChristian/mqttbroker
 
-**Compile and install MQTTBroker**
+**Compile and install MQTTBroker**<br>
 I imported the MQTTBroker int to the QT Creator and build and install MQTTBroker.
 <img src="images/mqttwebfrontend.PNG" alt="drawing" width="500"/> <br>
 
-**Learn commandline arguments of SNode.C applications using --help-all**
+**Learn commandline arguments of SNode.C applications using --help-all**<br>
 Usage: snode.c [OPTIONS] [SUBCOMMAND] <br>
 General Options:<br>
   -h,--help: Print this help message and exit <br>
@@ -226,7 +227,7 @@ testapp<br>
     cluster: Options for clustering <br>
     connection: Options for established connections<br>
 
-**Finding bugs in the source code and/or the slides**
+**Finding bugs in the source code and/or the slides**<br>
 Run settings - system-wide use: <br>
 <img src="images/RunSettings.PNG" alt="drawing" width="500"/> <br>
 
