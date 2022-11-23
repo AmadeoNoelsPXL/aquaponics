@@ -163,3 +163,19 @@ Today we went deep and learned a lot about how to use SNode.C to "link" an MQTT 
 **Reflection**<br>
 Today we have looked very closely at how to learn to use SNode.C to "link" a MQTT broker instance to a web server instance. Professor Volker has implemented the code step by step with us. We had some problems building the CMake project in the beginning. But with the help of our professor we managed it. After that came the next challenge, to integrate the code appropriately. It was a challenge for us to figure out which part of the code to put in which file. But in the end we were able to do it. 
 
+## Lecture 9 - 23.11.2022
+
+## We have to stop mqtt boot to not being started during boot.<br> ##
+-> have to edit the iot>lib>system_boot>raspi-boot.sh file on the rpi. <br>
+delete: <br>
+new-window -d -n MQTT<br>
+su- $IOTEMPOWER_USER -c 'echo iot exec mqtt broker' <br>
+new-window -d -n cloudcm
+su - $IOTEMPOWER_USER -c 'echo iot exec cloudmd_starter'<br>
+
+command cd .local/bin <br>
+command ./nodered_starter <br>
+command ps -aef | grep node-red <br>
+command node-red <br>
+
+
