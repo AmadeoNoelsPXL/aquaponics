@@ -152,10 +152,10 @@ Today actually went exactly like the last lesson. In the morning we talked about
 **Short presentation of <a href=https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L&A/L&A_Documentation.md#9112022>IoT-scenarious</a>(10 min each)**
 
 
-**Short presentation of the current state of projects (15-20 min each)**
+**Short presentation of the current state of projects (15-20 min each)**<br>
 Google docs: https://docs.google.com/presentation/d/1AB9427Mz43Jxqp1JAkuUrCHxulFLlcXiawb3ESTPtyg/edit#slide=id.gc6f9e470d_0_0
 
-**Install Windows Subsystem for Linux (Debian)**
+**Install Windows Subsystem for Linux (Debian)**<br>
 I started of by downloading the VMWare Workstation 16 Player and downloading the latest Debian version. I added the Debian VW into the Workstation. 
 
 <img src="images/VMwareWorkstation.PNG" alt="drawing" width="500"/> <br>
