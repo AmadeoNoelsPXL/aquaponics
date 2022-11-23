@@ -149,6 +149,21 @@ Today actually went exactly like the last lesson. In the morning we talked about
 
 ## Lecture 6 - 15.11.2022
 
+**Short presentation of IoT-scenarious (10 min each)**
+
+**Short presentation of the current state of projects (15-20 min each)**
+
+Install Windows Subsystem for Linux (Debian)
+Install all necessary tools and libraries for SNode.C
+Clone SNode.C from github
+Compile and install SNode.C
+Clone MQTTBroker from github
+Compile and install MQTTBroker
+Learn commandline arguments of SNode.C applications using --help-all
+Test MQTTBroker using mosquitto_sub and mosquitto_pub
+Finding bugs in the source code and/or the slides
+
+
 **Reflection**<br>
 Today was exciting and frustrating at the same time. We got a short introduction to SNode.C and then started setting up the virtual machines. Yes, and that was a challenge. We spent almost 6 hours and mine is still not working. In the beginning it went pretty well and I was able to help some colleagues like Christian and Amadeo. But after that my versions didn't fit anymore and that's when the problems started. In the end we were all happy that the class was over. Hopefully it will be better next time. 
 
