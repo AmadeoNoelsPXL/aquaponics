@@ -140,12 +140,12 @@ The switch leads to two changes which change the value to On or Off. This change
  
 ## 11/11/2022 
 
-**IoTempower introduction**
+***IoTempower introduction***
  
 IoTempower is a framework and environment for everyone to explore and develop for the Internet of Things (IoT). It supports existing IoT deployments and brings mechanisms for over the air (OTA) updates and automatic multi-device deployment. All with a permissable license (and using only libraries with permissable licenses).
 IoTempower includes a lot of small scripts to simplify a plethora of tasks supporting the deployment of a small IoT system or MQTT-based IoT environment. <br>
 
-**Tool support**
+***Tool support***
 
 run/iot: To enter a command in the IoTempower-environmen. You need to use the exec keyword too -> iot exec accesspoint. <br>
 menu (F2): Overview over the the most important IoTempower tools via a menu. You can use it to deploy or adapt things. -> iot menu <br>
@@ -161,7 +161,7 @@ mqtt_listen: Subscribe to a topic to get all configuration data from the environ
 mqtt_send: Publish to a given topic (or the node topic of the current node directory) deriving all configuration data from the current environment.
 doc_server: To see the documentation of the server. -> iot doc serve <br>
 
-**Documentation - rfid, pwm, servo, distance, single rgb**
+***Documentation - rfid, pwm, servo, distance, single rgb***
 
 *rfid reader:* <br>
 Can be used to create a new mfrc522 rfid/nfc tag reader device connected via SPI. It will report the data read as well as uuid and pic. Use the set topic to write a to the tag. name, how to address it in the mqtt network -> mfrc522(name); <br>
