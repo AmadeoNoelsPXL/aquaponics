@@ -139,13 +139,14 @@ The switch leads to two changes which change the value to On or Off. This change
 
  
 ## 11/11/2022 
-  
-</p>
+
 **IoTempower introduction**
+ 
 IoTempower is a framework and environment for everyone to explore and develop for the Internet of Things (IoT). It supports existing IoT deployments and brings mechanisms for over the air (OTA) updates and automatic multi-device deployment. All with a permissable license (and using only libraries with permissable licenses).
 IoTempower includes a lot of small scripts to simplify a plethora of tasks supporting the deployment of a small IoT system or MQTT-based IoT environment. <br>
 
-**Tool support*
+**Tool support**
+
 run/iot: To enter a command in the IoTempower-environmen. You need to use the exec keyword too -> iot exec accesspoint. <br>
 menu (F2): Overview over the the most important IoTempower tools via a menu. You can use it to deploy or adapt things. -> iot menu <br>
 accesspoint: You can use it to turn built-in WiFi into an accesspoint. You need a root access. -> iot exec accesspoin <br>
