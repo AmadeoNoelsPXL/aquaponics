@@ -149,6 +149,23 @@ The switch leads to two changes which change the value to On or Off. This change
 </p>
  
  1. Study about tool support in IoTempower - Which commands are there, write down your first idea what they do and if or where you could use them (some of them give you extra information, when you call them with help)
+
+IoTempower includes a lot of small scripts to simplify a plethora of tasks supporting the deployment of a small IoT system or MQTT-based IoT environment. <br>
+
+run/iot: To enter a command in the IoTempower-environmen. You need to use the exec keyword too -> iot exec accesspoint. <br>
+menu (F2): Overview over the the most important IoTempower tools via a menu. You can use it to deploy or adapt things. -> iot menu <br>
+accesspoint: You can use it to turn built-in WiFi into an accesspoint. You need a root access. -> iot exec accesspoin <br>
+upgrade: update the IoTempower, to install the latest version -> iot upgrade <br>
+install: You can use it to reinstall the IoTempower environment -> iot install <br>
+console_serial: You can use it to see in a a serial console  the debug output of a serially connected node. <br>
+initialize: You can use it to flash a serially connected node and initialize it at the same time. Same as deploy serial<br>
+adopt: You can use it for a flashed Wemos D1 Mini to wirelessly flash the IoTempower microcontroller without attaching it to the rpi. same as the deploy adopt. <br>
+deploy: You can update your software of the IoTempower node after changes.<br>
+mqtt_broker: Use it to start a local mqtt broker or mosquitto. <br>
+mqtt_listen: Subscribe to a topic to get all configuration data from the environment. <br>
+mqtt_send: Publish to a given topic (or the node topic of the current node directory) deriving all configuration data from the current environment.
+doc_server: To see the documentation of the server. -> iot doc serve <br>
+
 2. Check out the documentation server (if you installed it on your own pc, you can start it with iot doc serve. Attention, the search does not work locally as it is a local webserver without CGI support ). Open "Commands" and search how to use the rfid reader, PWM, a servo motor, ultrasonic distance sensor (RCWL-1601), and a single rgb led (you probably don't even need Google here, but if you are interested about more, feel free to find some more information about the hardware you are actually using) - note the example code you intend to use for both as well as some important remarks about wiring.
 For all following tasks, use IoTempower's built in drivers (check Commands in documentation and setup.cpp ) to create your devices. You often find hints and wiring instructions already inside the Commands documentation.
 
