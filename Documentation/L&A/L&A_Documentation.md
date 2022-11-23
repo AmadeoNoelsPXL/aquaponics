@@ -164,19 +164,28 @@ doc_server: To see the documentation of the server. -> iot doc serve <br>
 
 *rfid reader:* <br>
 Can be used to create a new mfrc522 rfid/nfc tag reader device connected via SPI. It will report the data read as well as uuid and pic. Use the set topic to write a to the tag. name, how to address it in the mqtt network -> mfrc522(name); <br>
-Wiring: Wemos D1 Mini,mfrc522,NodeMCU,rfid-rc522,board <br>
-3V3-3.3V, D8-sda, D7-MOSI, D6-MISO, D5-SCK, D0-RST, G-GND, N/C-IRQ <br>
+Example: mfrc522(reader); TData of a supported RFID/tag will be reported in node_topic/reader and uid in node_topic/reader/uid (works on most NFC tags) as well as picc in node_topic/reader/uid. <br>
+Wiring: Wemos D1 Mini,mfrc522,NodeMCU,rfid-rc522,board - 3V3-3.3V, D8-sda, D7-MOSI, D6-MISO, D5-SCK, D0-RST, G-GND, N/C-IRQ <br>
 
-*PWM:*
+*PWM:* <br>
+Can be used to control the given pin with pulse width modulation (PWM). A different frequency (max. 5000) can be chosen for each port. <br>
+-> pwm(name, pin, frequency=1000); <br>
+Example: pwm(blue, ONBOARDLED, 2000);  The brightness of the onboard-led can be set to 50% sending 512 to [nodename]/blue/set. <br>
 
-*a servo motor:*
+*a servo motor:* <br>
+Can be used to create a new servo motor controller. The name it can be addressed via MQTT in the network. <br>
+-> servo(name, pin, min_us=600, max_us=2400, turn_time_ms=700); <br>
+Example: servo(m1, D4); A motor can be controlled via sending to the mqtt-broker to the topic "node_topic/m1/set" the angle to turn the motor to. <br>
 
-*ultrasonic distance sensor (RCWL-1601):*
+*ultrasonic distance sensor (RCWL-1601):* <br>
+Can be used to create a RCWL-1601 ultrasonic distance measuring device. It reads the distance in mm.<br>
+-> hcsr04(name, trigger_pin, echo_pin, timeout_us=30000); <br>
+Example: hcsr04(distance, D5, D6).with_precision(10); -> Meassures distance between the sensor and an object and react to changes that are bigger or equal to 10mm;<br>
 
-*ingle rgb led:*
-
-note the example code you intend to use for both as well as some important remarks about wiring.
- 
+*single rgb led:* <br>
+Can be used to create a  rgb device object for an rgb-led connected to the pins pin_r (red pin), pin_g (green pin) and pin_b (blue pin). <br>
+-> rgb_single(name, pin_r, pin_g, pin_b, invert=false); <br>
+Example: rgb_single(rgb1, D3, D4, D2); The RGB LED can be switched to red via sending to the mqtt-broker to the topic living room/tvlights/rgb1/rgb/set the command red. <br>
  
  ***Button to sound and notification***
  
