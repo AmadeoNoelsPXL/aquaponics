@@ -429,7 +429,7 @@ in the file mqttwebfrontend.cpp: <br>
 delete: <br>
 new-window -d -n MQTT<br>
 su- $IOTEMPOWER_USER -c 'echo iot exec mqtt broker' <br>
-new-window -d -n cloudcm
+new-window -d -n cloudcm <br>
 su - $IOTEMPOWER_USER -c 'echo iot exec cloudmd_starter'<br>
 
 command cd .local/bin <br>
