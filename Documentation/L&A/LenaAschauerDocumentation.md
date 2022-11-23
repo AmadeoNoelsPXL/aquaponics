@@ -152,22 +152,87 @@ Today actually went exactly like the last lesson. In the morning we talked about
 **Short presentation of <a href=https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L&A/L&A_Documentation.md#9112022>IoT-scenarious</a>(10 min each)**
 
 
-**Short presentation of the current <a href=https://docs.google.com/presentation/d/1AB9427Mz43Jxqp1JAkuUrCHxulFLlcXiawb3ESTPtyg/edit#slide=id.gc6f9e470d_0_0>IoT-scenarious</a> (15-20 min each)**
+**Short presentation of the current state of projects (15-20 min each)**
+Google docs: https://docs.google.com/presentation/d/1AB9427Mz43Jxqp1JAkuUrCHxulFLlcXiawb3ESTPtyg/edit#slide=id.gc6f9e470d_0_0
+
+**Install Windows Subsystem for Linux (Debian)**
+I started of by downloading the VMWare Workstation 16 Player and downloading the latest Debian version. I added the Debian VW into the Workstation. 
+
+<img src="images/VMwareWorkstation.PNG" alt="drawing" width="500"/> <br>
+
+**Install all necessary tools and libraries for SNode.C**
+I went to the terminal and installed the following packages: 
+- build-essential needed to compile code.
+- manpages-dev contains documentation about all std-library functions and classes.
+- cmake automates build process of applications and libraries
+- clang C Language Family Frontend for the Low Level Virtual Machine LLVM. 
+- qtcreator a versatile Integrated Development Environment IDE. 
+
+Install all Hard Dependencies:
+- libeasyloggingpp-dev for logging.
+- libssl-dev for SSL and TLS encrypted data exchange.
+- pkg-config package for cmake used to search for already installed libraries.
+- nlohmann-json3-dev for JavaScript Optiont Notation (JSON) support.<br>
+Install all Soft Dependencies:
+- clang-format to format the source code consistently.
+- cmake-format to format all CMakeLists.txt files consistently.
+- doxygen to create the documentation.
+- iwyu to prove that all required include files are explicitly included.
+- libbluetooth-dev for bluetooth transport.
+- libmagic-dev for mime-type-detection of files.
+- libmariadb-dev for database access.<br>
 
 
-Install Windows Subsystem for Linux (Debian)
-Install all necessary tools and libraries for SNode.C
-Clone SNode.C from github
-Compile and install SNode.C
-Clone MQTTBroker from github
-Compile and install MQTTBroker
-Learn commandline arguments of SNode.C applications using --help-all
-Test MQTTBroker using mosquitto_sub and mosquitto_pub
-Finding bugs in the source code and/or the slides
+**Clone SNode.C from github**
+With the git clone command I cloned the git repository into my projects/snocde.c directory. 
+git clone https://github.com/VolkerChristian/snode.c
+
+**Compile and install SNode.C**
+I imported the SNode.C into the QT Creator and build and installed SNode.C.
+<img src="images/snode.PNG" alt="drawing" width="500"/> <br>
+
+**Clone MQTTBroker from github**
+With the git clone command I cloned the git repository into my projects/mqttbroker directory. 
+git clone https://github.com/VolkerChristian/mqttbroker
+
+**Compile and install MQTTBroker**
+I imported the MQTTBroker int to the QT Creator and build and install MQTTBroker.
+<img src="images/mqttwebfrontend.PNG" alt="drawing" width="500"/> <br>
+
+**Learn commandline arguments of SNode.C applications using --help-all**
+Usage: snode.c [OPTIONS] [SUBCOMMAND] <br>
+General Options:<br>
+  -h,--help: Print this help message and exit <br>
+  --help-all: Expand all help <br>
+  -s,--show-config: Show current configuration and exit <br>
+  -w{/home/debian/etc/snode.c/conf/snode.c.conf},--write-config{/home/debian/etc/snode.c/conf/snode.c.conf}: Write config file<br>
+  -l,--log-file [/home/debian/etc/snode.c/log/snode.c.log]: Log to file <br>
+  -d,-f{false},--daemonize,--foreground{false}: Start application as daemon<br>
+  -k,--kill: Kill running daemon<br>
+  -e,--enforce-log-file: Enforce writing of logs to file for foreground applications<br>
+  -c,--config [/home/debian/etc/snode.c/conf/snode.c.conf]: Read an config file<br>
+
+Application Options:<br>
+  --web-root [path] REQUIRED: Root directory of the web site<br>
+
+Subcommands:<br>
+testapp<br>
+  Configuration for instance 'testapp'<br>
+  Options:<br>
+    --backlog [backlog]: Listen backlog<br>
+    --accepts-per-tick [count]: Accepts per tick<br>
+  Subcommands:<br>
+    local: Bind options <br>
+    cluster: Options for clustering <br>
+    connection: Options for established connections<br>
+
+**Finding bugs in the source code and/or the slides**
+Run settings - system-wide use: <br>
+<img src="images/RunSettings.PNG" alt="drawing" width="500"/> <br>
 
 
 **Reflection**<br>
-Today was exciting and frustrating at the same time. We got a short introduction to SNode.C and then started setting up the virtual machines. Yes, and that was a challenge. We spent almost 6 hours and mine is still not working. In the beginning it went pretty well and I was able to help some colleagues like Christian and Amadeo. But after that my versions didn't fit anymore and that's when the problems started. In the end we were all happy that the class was over. Hopefully it will be better next time. 
+Today was exciting and frustrating at the same time. We got a short introduction to SNode.C and then started setting up the virtual machines. Yes, and that was a challenge. We spent almost 6 hours and mine is still not working. I started of by downloading the virtual Box and integrated to it an image our professor Harrer Martin provided to us. In the beginning everything walked ve In the beginning it went pretty well and I was able to help some colleagues like Christian and Amadeo. But after that my versions didn't fit anymore and that's when the problems started. In the end I had to restart the installation of a new Image. (explanation) In the end we were all happy that the class was over. Hopefully it will be better next time. 
 
 
 ## Lecture 7 - 17.11.2022
