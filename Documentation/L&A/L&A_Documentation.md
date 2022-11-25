@@ -496,4 +496,32 @@ command ps -aef | grep node-red <br>
 command node-red <br>
 command mqttbroker
  
+ ## 25/11/2022
  
+ *** XEA - BSP-Connection - Server/Client***
+ 
+ We created a new Certificated. <br>
+ We used default CA template. <br>
+(Extensions) In the Key identifier, we need to select the Subject Key Identifier.<br>
+(Key usage) Select the CRL Sign<br>
+(Subject) fill all fields and create key.<br>
+ Export File Certificate (.crt)<br>
+
+ <img src="images/Subject_Certificate.jpg" alt="Subject_Certificate" width="500"/> <br>
+ 
+ We created a new Certificate<br>
+ we used the TLS-client template.<br>
+ Export File Certificate PEM chain (*pem)<br>
+ 
+ We created a new Certificated.<br>
+ We used the TLS-server template<br>
+ DNS:local<br>
+ Export File Certificate PEM chain (*pem) <br>
+ 
+ After that go to Private Key<br>
+ Choose Client / Server and export PEM encryped (*.pem)<br>
+
+Terminal: <br>
+cd temp/certs/new<br>
+mqttbroker tlsin tls --cert-chain GM-IoT-Server.pem --cert-chain GM-IoT-Server.pem --ca-cert-file GM-IoT-Root_CA.crt<br>
+mosquitto_sub -t /# --cert GM-IoT-Client.pem --key GM-IoT-Client-Key.pem
