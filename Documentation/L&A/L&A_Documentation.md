@@ -188,6 +188,17 @@ Can be used to create a  rgb device object for an rgb-led connected to the pins 
 -> rgb_single(name, pin_r, pin_g, pin_b, invert=false); <br>
 Example: rgb_single(rgb1, D3, D4, D2); The RGB LED can be switched to red via sending to the mqtt-broker to the topic living room/tvlights/rgb1/rgb/set the command red. <br>
  
+ ***text receiver on display***
+ <p> 
+For this task, we got to work with showing an entered text on a display. It was not clear to us how to establish connection between the display and the d1. For this we consulted google to look for an example. After this we looked for the right implementations for coding the web server and the OLED display. Unfortunately, we could not get it working so we switched to NODE-RED to provide an implementation for a button that sent a message when pressed. 
+
+We also had to program a function to send entered text from node red to an OLED display connected to the d1. At first it was difficult to get the wiring right. We even had to look for schematics of the OLED display to understand how to connect the thing to the d1 mini. Then we got libraries and coded the web server and the OLED display so it was ready to use, but to no avail: it didn't work at all. I tried to see if it had something to do with the program, we flashed to wemos but still nothing, we asked for help and still nothing. So, while my team/pair partner switched to sending a message via node red via pressing a button. We tried a few more times with the OLED because we were losing time, but finally we gave in and quit and proceeded to create the program for the push button.
+
+We did this by implementing it a button that would cause pressing the button to send a trigger to the setup file so that when it receives this trigger it can push the message to the NODE-RED 
+
+We did not succeed in this task either and so we consulted our colleagues from our other pair in the group. They stood by us with advice and assistance so we still managed to complete this task successfully.
+</p>
+ 
  ***Button to sound and notification***
  
  We started declaring the button in directory /home/iot/iot-system/demo01/test01, more specific in the setup.cpp.
