@@ -106,13 +106,26 @@ Day 2
 
 15/11
 
-We installed the windows subsystem for Linux which is a Debian installation and installed the libraries we were assigned to install. I also had to introduce my self as well as participate in an introductory presentation in presenting a scenario about our supposed future IOT system.  After having Debian installed, I did a few exercises whereby I had to install the snode.c framework by cloning it and installing it in a local installation using Qt Creator. However, to make use of Qt Creator We had to configure the compiler to use GCC or Clang in order to build the framwork. After the build was correctly completed successfully. There will be an folder with the build components alongside the original snode.c folder. After that I did an exercise where by we had to run an http client but had to run a legacy server first before I could run the client. After getting the build to work with the help of the lecturer since I was new to the snode.c framework. After that we went Qt Creator and deploy the snode.c project which install the entire framework globally , meaning on the entire sub system (root folder) so that the framework is not constrained to an interior folder.  Lastly for the day after deploying the framework we had to clone another repository which is the mqtt broker repository. After that we had to build like with the snode.c framework and after the build was complete. I had to then dig with the folders of the build to find and configure the mqtt broker before we could run the broker before any messages could be sent to the broker.
+Presentation of IOT Scenaio: 
+...
+
+
+Presentation of current state of project:
+..
 
 Day 3 
 
 17/11
 
--..What happened pair wise... 
+-..What happened pair wise... Please document here Josh 
+Checkout, complie and install SNode.C and MQTTBroker on the Raspberry PI:
+..
+
+Analyse and understand the C++ code of the demo application httpsever:
+...
+
+Analyse and understand the C++ code of the demo mqttbroker:
+...
 
 Week 3
 
@@ -120,22 +133,36 @@ Day 1
 
 21/11
 
-One of our pair partners (Josias Hoffman) has received help from another team to install the updated clones of the two repos onto our raspberry pi. However, we are having troubles installing stuff system wide such as the snod.c framework but so we as a team cannot continue further but I hope to catchup later. I am learning about the mqtt broker architecture and how this links with snode.c framework but since our pi is not properly configured, I cannot continue on the actual pi.
+Kind of Tutorial: Create and mqttbrokerwebsercver application 
+One of our pair partners (Josias Hoffman) has received help from another team to install the updated clones of the two repos onto our raspberry pi. However, we are having troubles installing stuff system wide such as the snod.c framework but so we as a team cannot continue further but I hope to catchup later. We are learning about the mqtt broker architecture and how this links with snode.c framework but since our pi is not properly configured, we cannot continue on the actual pi.
  
-But at the end of the day Wehad to get help from the lecture and he sent us his configured mqtt broker program and pushed it to git hub. So, I clone that updated file.
+But at the end of the day Wehad to get help from the lecture and he sent us his configured mqtt broker program and pushed it to git hub. So, we cloned that updated file.
 
 Day 2
 
 23/11
 
-We are going to disable the mosquitto broker from running automatically on the raspberry pi. So we are going to use our mqtt broker that was coded the day before. Such as by going into the system files. Also we are trying to have node red run but we are running into issues , the starter does not function as intended, it seems it was already in use. To see how we can see what is running , we used a command , “ps -aef | grep node -red”.  To make sure the snode.c and the mqttbroker files install system wide on the pi we run the command sudo “filename” make install. We had to compile the files beforehand. We focused on some project work wereby we had to implement some of the IOT concepts we learnt into our overarching project.
+Replace the mosquitto MQTT broker on the Raspberry-Pi by the SNode.C based mqttbroker appplication: 
+We are going to disable the mosquitto broker from running automatically on the raspberry pi. So we are going to use our mqtt broker that was coded the day before. Such as by going into the system files. Also we are trying to have node red run but we are running into issues , the starter does not function as intended, it seems it was already in use. To see how we can see what is running , we used a command , “ps -aef | grep node -red”.  To make sure the snode.c and the mqttbroker files install system wide on the pi we run the command sudo “filename” make install. We had to compile the files beforehand.
+
+Project Work
+We focused on some project work wereby we had to implement some of the IOT concepts we learnt into our overarching project.
 
 Day 3 
 
 24/11
 .....
+Create Root-CA Certificate/Key pair, Tuturial 
+...Check my documenetation and rewrite for group/pairs
+
+Create two Endcertificate/Key pairs: One for the Server the other for the Client Side, Tutorial:
+...Check my documenetation and rewrite for group/pairs
+
+Use these Certificates to secure the communication between mqttbroker and mosquitto_sub/pub, Tutorial:
+The lecturer mainly performed this task so we mainly watched and had not really implemented the task as we did the previous two taks.
 
 Day 4
 
 25/11
-.....
+Conclusion:
+We are closing the module with a short feedback session and all. We are also having a short demo of how a voice assistant would be implemented.
