@@ -249,5 +249,12 @@ Today we have looked very closely at how to learn to use SNode.C to "link" a MQT
 ## Lecture 9 - 23.11.2022
 
 **Reflection**<br>
-Today we started of by editing the raspi-boot.sh, so the mqttbroker doesn't start anymore while booting. Then we manage to start the mqttbroker via our terminal. 
+Today we started of by editing the raspi-boot.sh, so the mqttbroker doesn't start anymore while booting. Then we manage to start the mqttbroker via our terminal. After that we continued our documentation. 
 
+## Lecture 10 - 24.11.2022
+
+**Reflection**<br>
+
+## Lecture 11 - 25.11.2022
+
+**Reflection**<br>
