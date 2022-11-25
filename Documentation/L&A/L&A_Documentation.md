@@ -234,9 +234,11 @@ We dowloaded the template of node-red-contrib-discord-advanced after this we ins
  ## 14/11/2022
  
  ***RFID reader***
+<p>
 We started flashing our RFID reader. Unfortunately, we had no idea on how to send the data we obtained from reader to the MQTT. We did not get it working despite suspecting our RFID reader might be broken and so we tried to do the same with another group's RFID reader. This did work.
 
 We had the help of us other pair in the group to complete this task. Problems that came up with this task were: an RFID reader that did not work, soldering the wemos incorrectly. 
+</p>
 
 
 
