@@ -498,7 +498,7 @@ command mqttbroker
  
  ## 25/11/2022
  
- *** XEA - BSP-Connection - Server/Client***
+ ***XEA - BSP-Connection - Server/Client***
  
  We created a new Certificated. <br>
  We used default CA template. <br>
