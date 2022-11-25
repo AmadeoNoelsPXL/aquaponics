@@ -258,3 +258,4 @@ Today we started of by editing the raspi-boot.sh, so the mqttbroker doesn't star
 ## Lecture 11 - 25.11.2022
 
 **Reflection**<br>
+Today we connected a Server and Client with the help of Certificates. We created the certificates and used the mosquitto.
