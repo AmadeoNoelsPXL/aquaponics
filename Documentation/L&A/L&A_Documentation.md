@@ -524,4 +524,33 @@ command mqttbroker
 Terminal: <br>
 cd temp/certs/new<br>
 mqttbroker tlsin tls --cert-chain GM-IoT-Server.pem --cert-chain GM-IoT-Server.pem --ca-cert-file GM-IoT-Root_CA.crt<br>
-mosquitto_sub -t /# --cert GM-IoT-Client.pem --key GM-IoT-Client-Key.pem
+mosquitto_sub -t /# --cert GM-IoT-Client.pem --key GM-IoT-Client-Key.pem <br>
+ 
+ ###Alexa###
+ 
+ Create Amazon account. <br>
+ Go to link: developer.amazon.com/alexa <br>
+ go to create a new skill > Custom > Alexa-hosted (Node.js) -> create skill <br>
+ Start from Scratch <br>
+ Skill Inocation Name: iot scenarioi
+ (Interaction Model) Create custom intent -> switchKitchenLights
+ Sample Utterances: turn on the lights in the kitchen
+ (Code) Intendhandler: Add to exports.handler switchKitchenLightsIntendHandler
+ 
+ const AWS = require('aws-sdk');
+ 
+ var iotData = new AWS.iotData({
+  endpoint : "our.mqttbroker.at"
+ });
+ 
+ cpmst switchKitchenLightsIntendHandler = {
+  canHandle() {
+   return true;
+  }
+  handle(handlerInout, error){}
+ }
+ 
+ 
+ 
+ 
+ 
