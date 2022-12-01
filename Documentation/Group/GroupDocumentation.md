@@ -60,4 +60,16 @@ We export with encryption because then it is password encrypted.
  
 We are configure the mqtt broker to work , server with the certificates but the lectuere is busy with that.
 
+Project Implementation:
+
+We also did part of the project implementation with some assistance such as wiring the two esp8266’s with the temperature and scale.
+ 
+
+Also, We worked as a  team to get node red running and have the mqtt topics configured as shown in the node red screen shot. We had to make use of the IOTEmpower framework as we had no framework of our own.
+ 
+Also, along my team we flashed the two esp’s with code that would have us read the temperature , humidity and weight of the scale and pass that to node-red as shown in the setup.cpp files shown below.
+
+  
+Lastly After the flashing and after receiving data we were able to pass data using these topics and having the program running and then having a temporary node-red UI as a stand in for front end display the data. I just quickly put that together since there was not enough time to fill flesh out the system.
+
 
