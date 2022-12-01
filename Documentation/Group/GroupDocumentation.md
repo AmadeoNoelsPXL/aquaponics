@@ -43,7 +43,7 @@ Please find all the images blow of the hardware implementation.
 
 <img src="Images/Integration1Hardware.jpeg" width=250 height=250/><br/>
 
-Also please find the node rd flow for the emtire implementation.
+Also please find the node red flow for the entire implementation.
 
 <img src="Images/noderedintegrationnode3.png" width=700 height=250/>
  
