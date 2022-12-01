@@ -1,13 +1,13 @@
-Week 1 
+# Week 1 
 
 
 
 
-Week 2
+# Week 2
 
-14/11
+## 14/11
 
-IOT Integration task :
+### IOT Integration task :
 
 We are getting the RFID Reader wemos d1 flashed. The Wemos d1 that will be used for the RFID scanner is flashed however we tried to research on how to send data of what the RFID reader is receiving via MQTT.  Still didn’t work but because our RFID reader is actual damaged in a matter we do not understand, and we tested with another teams RFID reader and the program actual works. The lecturer tried to re soldered er the RFID reader, but it failed, and the RFID reader does not work. We are now trying to connect the relay to a female wemos but the wemos was incorrectly soldered so we are using a different one. We are now getting the relay and lock to work.  We have configured the relay to function with the lock so that we could send mqtt messages from node red and receive them on the programmed wemos d1 mini with the topic Relay_Shield/Lock/set as shown in the screen shot with the node red flow which is referenced in the images folder , the image is RelayNodeRed.
 
@@ -22,11 +22,11 @@ We now trying to now integrate the buzzer and we have to use another wemos and a
 Refer to all the images for the hardware as Integration[number]Hardware and for the node red flow as noderedintegrationnode3 in the images folder.
  
  
-Week 3
+# Week 3
 
-24/11
+## 24/11
 
-Tutorial : Create Root-CA, Endcertificate, Use these Certificates to secure the communication between mqttbroker and the mosquitto_sub/pub task : 
+### Tutorial : Create Root-CA, Endcertificate, Use these Certificates to secure the communication between mqttbroker and the mosquitto_sub/pub task : 
 
 IWe installed XCA which is a certificate management software and was instructed to make a root certificate and a client and server certificate. We along with our groupmates explored the architecture/system of how certificates work. 
 
@@ -60,7 +60,7 @@ We export with encryption because then it is password encrypted.
  
 We are configure the mqtt broker to work , server with the certificates but the lectuere is busy with that.
 
-Project Implementation:
+### Project Implementation:
 
 We also did part of the project implementation with some assistance such as wiring the two esp8266’s with the temperature and scale.
  
