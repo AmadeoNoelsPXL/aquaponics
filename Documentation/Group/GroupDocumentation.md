@@ -108,12 +108,24 @@ We are configure the mqtt broker to work , server with the certificates but the 
 
 We also did part of the project implementation with some assistance such as wiring the two esp8266’s with the temperature and scale.
  
+<img src="Images/Project1Hardware.jpeg" width=450 height=450/><br/>
+
+<img src="Images/Project2Hardware.jpeg" width=450 height=450/>
 
 Also, We worked as a  team to get node red running and have the mqtt topics configured as shown in the node red screen shot. We had to make use of the IOTEmpower framework as we had no framework of our own.
+
+<img src="Images/ProjCodeImplementation1.png" width=450 height=450/>
  
 Also, along my team we flashed the two esp’s with code that would have us read the temperature , humidity and weight of the scale and pass that to node-red as shown in the setup.cpp files shown below.
 
+<img src="Images/ProjCodeImplemntation4.png" width=450 height=450/><br/>
+
+<img src="Images/ProjCodeImplemntation5.png" width=450 height=450/>
   
 Lastly After the flashing and after receiving data we were able to pass data using these topics and having the program running and then having a temporary node-red UI as a stand in for front end display the data. I just quickly put that together since there was not enough time to fill flesh out the system.
+
+<img src="Images/ProjCodeImplemntation3.png" width=450 height=450/><br/>
+
+<img src="Images/ProjCodeImplemntation2.png" width=450 height=450/>
 
 
