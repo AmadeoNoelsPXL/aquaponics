@@ -26,11 +26,12 @@ Week 3
 
 24/11
 
+Tutorial : Create Root-CA, Endcertificate, Use these Certificates to secure the communication between mqttbroker and the mosquitto_sub/pub task : 
 
-I installed XCA which is a certificate management software and was instructed to make a root certificate and a client and server certificate. I along with my classmates explored the architecture/system of how certificates work. 
+IWe installed XCA which is a certificate management software and was instructed to make a root certificate and a client and server certificate. We along with our groupmates explored the architecture/system of how certificates work. 
 
 
-I am also learning how to actually create the certificate within our local linux subsystems and not via the raspberry pi for tutorial purposes.
+We are also learning how to actually create the certificate within our local linux subsystems and not via the raspberry pi for tutorial purposes.
 
 
 We are creating a certificate which will be a root CA certificate and defining its basic characteristics
@@ -58,4 +59,5 @@ We also need to export the keys to unlock the certificates.
 We export with encryption because then it is password encrypted.
  
 We are configure the mqtt broker to work , server with the certificates but the lectuere is busy with that.
+
 
