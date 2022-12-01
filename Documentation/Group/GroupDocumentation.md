@@ -53,36 +53,55 @@ Also please find the node rd flow for the emtire implementation.
 
 ### Tutorial : Create Root-CA, Endcertificate, Use these Certificates to secure the communication between mqttbroker and the mosquitto_sub/pub task : 
 
-IWe installed XCA which is a certificate management software and was instructed to make a root certificate and a client and server certificate. We along with our groupmates explored the architecture/system of how certificates work. 
+We installed XCA which is a certificate management software and was instructed to make a root certificate and a client and server certificate. We along with our groupmates explored the architecture/system of how certificates work. 
 
+<img src="Images/CertificatesDiagram.png" width=650 height=350/>
 
 We are also learning how to actually create the certificate within our local linux subsystems and not via the raspberry pi for tutorial purposes.
 
+<img src="Images/CreationofRootCA.png" width=250 height=250/>
 
 We are creating a certificate which will be a root CA certificate and defining its basic characteristics
 
+<img src="Images/RootCACertificateSpecifics.png" width=350 height=350/>
 
 We are always generating a new key for each certificate we make. 
 
+<img src="Images/KeyGenerationRootCA.png" width=350 height=350/>
 
 More definition we are giving to the Root CA
 
+<img src="Images/ExtraDefeinitionRootCA.png" width=450 height=450/>
 
-Summary of the details of my root CA
+We also selected the key usage for the Root Certrificate
 
-Now we are going to create to end certificates for web application purposes.
+<img src="Images/RootCAKeyUsage.png" width=450 height=550/>
+
+Summary of the details of the root CA
+
+<img src="Images/RootCACertificateSummary.png" width=350 height=350/>
+
+Now we are going to create to end certificates for web application purposes , A MQTT Server Certificate and a MQTT Client Certifcate to be specific.
 
 This is my MQTT Server Certificate Summary 
+
+<img src="Images/MQTTServerCertificateSummary.png" width=450 height=350/>
  
 MQTT Client Certificate Summary 
  
+<img src="Images/MQTTClientCertificateSummary.png" width=450 height=350/>
+
 We are show two scenarios with an httpserver and the interactions with the certificates.
 We are exporting the root CA using the PEM format 
 We are also exporting the end entity certificate (Server and Client) but we a different method which is the pem chain which has all certificates upto the root. 
  
+<img src="Images/CertificateSavedFolder.png" width=550 height=350/>
+
 We also need to export the keys to unlock the certificates.
 We export with encryption because then it is password encrypted.
  
+<img src="Images/KeysSavedFolder.png" width=550 height=350/> 
+
 We are configure the mqtt broker to work , server with the certificates but the lectuere is busy with that.
 
 ### Project Implementation:
