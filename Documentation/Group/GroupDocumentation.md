@@ -23,3 +23,39 @@ Refer to all the images for the hardware as Integration[number]Hardware and for 
  
  
 Week 3
+
+24/11
+
+
+I installed XCA which is a certificate management software and was instructed to make a root certificate and a client and server certificate. I along with my classmates explored the architecture/system of how certificates work. 
+
+
+I am also learning how to actually create the certificate within our local linux subsystems and not via the raspberry pi for tutorial purposes.
+
+
+We are creating a certificate which will be a root CA certificate and defining its basic characteristics
+
+
+We are always generating a new key for each certificate we make. 
+
+
+More definition we are giving to the Root CA
+
+
+Summary of the details of my root CA
+
+Now we are going to create to end certificates for web application purposes.
+
+This is my MQTT Server Certificate Summary 
+ 
+MQTT Client Certificate Summary 
+ 
+We are show two scenarios with an httpserver and the interactions with the certificates.
+We are exporting the root CA using the PEM format 
+We are also exporting the end entity certificate (Server and Client) but we a different method which is the pem chain which has all certificates upto the root. 
+ 
+We also need to export the keys to unlock the certificates.
+We export with encryption because then it is password encrypted.
+ 
+We are configure the mqtt broker to work , server with the certificates but the lectuere is busy with that.
+
