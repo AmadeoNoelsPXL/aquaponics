@@ -353,7 +353,9 @@ in the file mqttwebfrontend.cpp: <br>
  
 ## 23/11/2022
 
-### We have to stop mqtt boot to not being started during boot.<br> ##
+### Replace the mosquitto MQTT broker on the Raspberry PI by the Snode.C-based mqttbroker application:
+ 
+We have to stop mqtt boot to not being started during boot.<br> ##
 -> have to edit the iot>lib>system_boot>raspi-boot.sh file on the rpi. <br>
 delete: <br>
 new-window -d -n MQTT<br>
