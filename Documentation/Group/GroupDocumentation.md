@@ -16,6 +16,16 @@
  
 This the <a href= https://docs.google.com/document/d/1s6Q4YwDniuX3-o7bFId8eT2VyiTMTn_2Ks8KojxuRqM/edit >link <a/> to our table which staes all the devices. 
  
+### Gateway setup log
+
+We started of by downloading the image for the raspberry pi which our professors provide for us. After some problems we were able to flash the image via the flashing software balena etcher to the rpi. Then we were able to connect the rpi with the wifi and so we had our own local network.
+
+It was also very exciting to set up our own IoTempower gateway. This will certainly help us in our project, since we want to work with a Raspberry Pi. However, we also had problems, because the flashing of the pi image to the SD card crashed every time. In the end it turned out that our wifi card was unfortunately broken.
+
+### Gateway service offered
+
+After that we took a look at the provided services. We have now access to IoTempower via a web browser. Via ioTempower we are able to use Node-RED and the Node-RED UI as well as the file-system of IoTempower and a documentation about everything.
+ 
 ## 9/11
 
 ### IoT Architecture
