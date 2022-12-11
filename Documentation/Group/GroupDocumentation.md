@@ -185,22 +185,23 @@ install on the raspberry pi
 compiling snodec:
 
 <ul> 
- <li> aanmaken van een folder: iotprojs</li>
-<li> daarin nieuwe map: snodec</li>
-<li> installeren van git</li>
-<li> clone van de repository: https://github.com/VolkerChristian/snode.c</li>
-<li> aanmaken nieuwe folder: mqttbroker</li>
-<li> clone van de repository:</li>  <li> https://github.com/VolkerChristian/mqttbroker</li>
-<li> terug naar snodec</li>
-<li> nieuwe folder aanmaken build</li>
-<li> commando: cmake ../snode.c/ => zoeken naar Clist <=></li>
-<li> commando: make -j 16 (threads) => compiling snode</li>
+<li> Create a new folder: iotprojs</li>
+<li> Therein a new map: snodec</li>
+<li> Install git</li>
+<li> Clone the repository: https://github.com/VolkerChristian/snode.c</li>
+<li> Create new folder: mqttbroker</li>
+<li> Clone the repository:</li>  <li> https://github.com/VolkerChristian/mqttbroker</li>
+<li> cd back to snodec</li>
+<li> Create a new folder build</li>
+<li> command: cmake ../snode.c/ => zoeken naar Clist <=></li>
+<li> command: make -j 16 (threads) => compiling snode</li>
 <li> build directory => sudo make install</li>
  
 </ul>
 
-installeren mqtbroker:
-installeren mqtcreator:
+install mqttbroker:
+ 
+install mqttcreator:
 
 # Week 3
  
