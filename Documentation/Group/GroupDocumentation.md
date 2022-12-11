@@ -1,3 +1,13 @@
+# <i>Group Documentation <i/>
+
+# Group Members:
+
+- Lena Aschauer 
+- Amadeo Noels 
+- Luthando Mashigo 
+- Josias Hoffman
+ 
+ 
 # Week 1 
 
 ## 9/11
