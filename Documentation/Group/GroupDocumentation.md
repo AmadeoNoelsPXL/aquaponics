@@ -70,6 +70,175 @@ Please find all the images blow of the hardware implementation.
 Also please find the node red flow for the entire implementation.
 
 <img src="Images/noderedintegrationnode3.png" width=700 height=250/>
+
+## 17/11
+
+# Checkout, compile and install SNode.C and the MQTTBrkoer on the Rasperry-PI
+
+install on the raspberry pi
+
+- installeren van de dependencies met volgend commando: sudo apt install doxygen iwyu clang-format cmake-format libmagic-dev libbackward-cpp-dev libdw-dev libdwarf-dev binutils-dev librange-v3-dev libssl-dev libeasyloggingpp-dev libbluetooth-dev nlohmann-json3-dev : in de iot-system folder
+
+compiling snodec:
+
+<ul> 
+ <li> aanmaken van een folder: iotprojs</li>
+<li> daarin nieuwe map: snodec</li>
+<li> installeren van git</li>
+<li> clone van de repository: https://github.com/VolkerChristian/snode.c</li>
+<li> aanmaken nieuwe folder: mqttbroker</li>
+<li> clone van de repository:</li>  <li> https://github.com/VolkerChristian/mqttbroker</li>
+<li> terug naar snodec</li>
+<li> nieuwe folder aanmaken build</li>
+<li> commando: cmake ../snode.c/ => zoeken naar Clist <=></li>
+<li> commando: make -j 16 (threads) => compiling snode</li>
+<li> build directory => sudo make install</li>
+ 
+</ul>
+
+installeren mqtbroker:
+installeren mqtcreator:
+ 
+## 21/11/2022
+
+***create an mqqtbrokerwebserver application*** <br>
+
+create new directory => mqqtwebfrontend <br>
+right click -> add new -> General -> Empty File -> chose -> name the file -> CMakeLists.txt<br>
+copy existing CmakeLists.txt to the new CMakeLists.txt -> only adapt the parts that need to be adapted<br>
+CMakeLists.txt<br>
+--> line 51 & 53 : rename variable to mqttwebfrontend<br>
+--> line 57 : rename variable to mqttwebfrontend<br>
+--> line 60 : change targetname to mqqtwebfrontend<br>
+--> line 65 : change name to mqqtwebfrontend <br>
+--> line 73 : change broker to mqqtwebfrontend<br>
+--> line 77 : change to mqttwebfrontend<br>
+
+copy mqttbroker folder content:<br>
+--> cpp && h copy (5) them to the mqqtwebfrontend<br>
+
+binary directory /usr/local/bin <br>
+
+--> integrate directory in the whole project <br>
+
+--> root CMakeLists.txt file <br>
+add_subdirectory mqttwebfrontend<br>
+
+mqttbroker (main) -> set it as active project <br>
+
+rename mqttbroker.cpp in mqttwebfrontend directory<br>
+ --> right click --> Rename --> mqttwebfrontend.cpp<br>
+
+**add webfunctionality**<br>
+
+--> go to snode.c in the filesystem <br>
+ source directory ==> src/apps/testpost.cpp<br>
+split screen : right side split view<br>
+
+**implement webfrontend**<br>
+
+--> create unencryped <br><br>
+add an include (express/legacy/in ...)<br>
+
+copy express line and past it at the end of the line just before "return core:SNodeC::start();<br>
+ --> rename legacy to mqttWebView<br>
+ --> als server instance to mqttwebview<br>
+ 
+ error thrown : during link fase <br>
+  --> we didn't link the webfrontend application to a library <br>
+  --> !!! needed for the webfrontendapplication<br>
+ 
+ add library : <br>
+  --> CMakeLists.txt (first one) --> find package() src/apps/CMakeLists.txt -> http-server-express<br>
+ 
+ add it in the find package<br>
+ 
+ mqttwebfrontend --> add library --> target_link_libraries<br>
+ 
+ mqttwebfrontend.cpp --> add functionality -->  mqttWebView.listen() -> copy mqttlistenLegancyServer to the mqttWebView.listen()<br>
+ 
+ test the build : directory --> ./mqttwebfrontend --> error legacyin is required --> ./mqttwebfrontend legacyin local --port 1883 tlsin  local --port 8883 legacyun local --path /tmp/mqttwebfrontend mqttwebview local --port 8080 -w<br>
+ 
+the command : ./mqttwebfrontend can now be used because there is a config file present<br>
+
+in the file mqttwebfrontend.cpp: <br>
+ --> mqttWebView.get("/test", [] APPLICATION(req, res){<br>
+ VLOG(0) << "#############" << "Here we are" << req.originalUrl;<br>
+ res.send("Response FROM MQTTWebView");<br>
+ });<br>
+ 
+ mqttfrontend --> right click --> add new  --> c/c++ --> c++ Class --> specify name ('MqttModel')<br><br><br>
+ line 51 --> add MqttModel.cpp<br><br>
+ line 53 --> add MqttModel.h<br>
+ 
+ **build application**
+ 
+ file MqttModel.h<br>
+ include 'iot/mqtt/packets/Connect.h'<br>
+ --> private : add MqttModel()<br>
+ --> public : <br>
+    --> static MqttModel & instance(); --> righ click -> refacor -> add definiation MqttModel.cpp<br>
+    --> void addConnectedClient(iot::mqtt::packets::Connect& connect); -> right click -> refactor<br>
+ 
+ MqttModel&MqttModel::create(){<br>
+ static MqttModel mqttModel;<br>
+ --> static means only one time created  <br>
+ return mqttModel;<br>
+ }<br>
+ 
+ in the file SocketContext.h:<br>
+ 
+ add includ 'iot/mqtt/server/broker/Broker.h'<br>
+ 
+ --> private : <br>
+    --> void onConnect(iot::mqtt::packets::Connect& connect) override{<br>
+      --> connectionList.push_back(connect);<br>
+      }<br>
+    --> void onPlublish(iot::mqtt::packets::Publish& publish) override;<br>
+    
+ refactor fase <br>
+ 
+ onConnect method:<br>
+    --> MqttModel::instance().addConnectedClient(connect);<br>
+    
+ implement method addConnectedClient<br>
+ 
+ in the file MqttModel.h<br>
+ 
+ add include <list><br>
+ 
+ --> public<br>
+    --> const std::list<iot::mqtt::packets::Connect>& getConnectedClients();<br>
+ 
+ --> protected:<br>
+    --> std::list<iot::mqtt::packets::Connect> connectionList;<br>
+ 
+ in the file MqqtModel.cpp :<br>
+ 
+ --> const std::list<iot::mqtt::packets::Connect>& MqttModel::getConnectedClients(){<br>
+ return connectionList;<br>
+ }<br>
+ 
+ in the file mqttwebfrontend.cpp<br>
+ 
+ --> mqttWebView.get("/clients", [] APPLICATION(req, res){<br>
+ const std::list<iot::mqtt:packets::Connect>& connectList = MqttModel::instance().getConnectedClients();<br>
+ MqttModel::instance().getConnectedClients();<br>
+ std::string responseString;<br>
+ 
+ for(const iot::mqtt:packets::Connect& connection : connectionList){<br>
+  connection.getClientId();<br>
+ });<br>
+ 
+ res.send(responseString);<br>
+ });<br>
+ 
+ --> header file is missing <br>
+ 
+ --> add an include 'MqttModel.h<br>
+ 
+ 
+ <img src="images/Code_example.jpg" alt="drawing" width="500"/> <br>
  
 # Week 3
 
