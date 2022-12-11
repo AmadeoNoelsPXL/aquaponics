@@ -349,7 +349,7 @@ in the file mqttwebfrontend.cpp: <br>
  --> add an include 'MqttModel.h<br>
  
  
- <img src="images/Code_example.jpg" alt="drawing" width="500"/> <br>
+ <img src="Images/Code_example.jpg" alt="drawing" width="500"/> <br>
  
 ## 23/11/2022
 
