@@ -199,9 +199,14 @@ compiling snodec:
  
 </ul>
 
-install mqttbroker:
+# install mqttbroker and install httpserver and analzing the cde:
+
+After examining the snode.c and MQTTbroker source code. One of the most crucial ideas was how to establish a web server object and which header file to utilize. Right down to the app, creating a http server object is fairly similar to that of node.js and express framework. At the conclusion, pay attention.
+The anatomy of the "app" dot functions, such as app.get, app.post, app.use, and app.listen, was then discussed by the sir. App dot functions are essentially the application's foundation; you provide a route in the function and build a request and response, callback method next to it  , then send the desired message.
+
+When we entered "/" in the route field, the application's home page will be displayed, where an index.html file can be received and rendered.
  
-install mqttcreator:
+Also have installed the mqqtbroker device wide and had to run it by using a couple commands such as legcyin and such and entering the port number sp that we can start the broker and we could also save the configuration of the broker to a config file
 
 # Week 3
  
