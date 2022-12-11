@@ -10,6 +10,12 @@
  
 # Week 1 
 
+## 7/11
+
+### The kit - table
+ 
+This the <a href= https://docs.google.com/document/d/1s6Q4YwDniuX3-o7bFId8eT2VyiTMTn_2Ks8KojxuRqM/edit >link <a/> to our table which staes all the devices. 
+ 
 ## 9/11
 
 ### IoT Architecture
