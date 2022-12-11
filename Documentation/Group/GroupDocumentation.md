@@ -98,6 +98,8 @@ compiling snodec:
 
 installeren mqtbroker:
 installeren mqtcreator:
+
+# Week 3
  
 ## 21/11/2022
 
@@ -240,7 +242,21 @@ in the file mqttwebfrontend.cpp: <br>
  
  <img src="images/Code_example.jpg" alt="drawing" width="500"/> <br>
  
-# Week 3
+## 23/11/2022
+
+### We have to stop mqtt boot to not being started during boot.<br> ##
+-> have to edit the iot>lib>system_boot>raspi-boot.sh file on the rpi. <br>
+delete: <br>
+new-window -d -n MQTT<br>
+su- $IOTEMPOWER_USER -c 'echo iot exec mqtt broker' <br>
+new-window -d -n cloudcm <br>
+su - $IOTEMPOWER_USER -c 'echo iot exec cloudmd_starter'<br>
+
+command cd .local/bin <br>
+command ./nodered_starter <br>
+command ps -aef | grep node-red <br>
+command node-red <br>
+command mqttbroker
 
 ## 24/11
 
