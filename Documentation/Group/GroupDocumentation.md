@@ -96,10 +96,87 @@ Please find all the images blow of the hardware implementation.
 Also please find the node red flow for the entire implementation.
 
 <img src="Images/noderedintegrationnode3.png" width=700 height=250/>
+ 
+## 16/11
 
+### IoT Scenaios 
+
+We presented all our IoT scenarios, here are both : 
+ 
+Scenario 1 
+Personnel :
+Owner: Mara sells fresh vegetables and fish at markets, which come from her aquaponics unit in a rural area. Employee: Jon is a farmer and has been taking care of Mara's aquaponics unit since 5 years. He is also a chain smoker. Technican: Paul is a young student who is currently working as a part-time technican for Mara's aquaponics unit.
+
+Facility IOT Devices :
+Soil Moisture Sensor - Detects over-saturated patches of soil Pump - Measures how much water flows into a tank Flame sensor - Detects flames within the facility.
+Temp Metre - detect and regulate temperature in the facility Motion Sensors - Scattered around the facility for movement detection. Rfid tag scanner - Placed by the entrance to the facility and within the motion sensors around the facility. Weight sensor - To measure the weight of the fish in the tank.
+
+Tuesday, 10.01.2022
+Mara and Paul were awakened in the morning by a notification on their phone. The soil moistire sensor has detected that the plants don't have enough water. Paul gets to the aquaponics facility and scans his rfid tag. The door unlocks and at the same time Mara gets a notification on her phone that Paul has arrived at the aquaponics facility. Paul looks at his phone and sees that the pumps and the temp metre are working properly. Paul takes a closer look at the facility and discovers that a pipe is leaking, which means less water is getting to the plants. Paul repairs the pipe and adds a report on his application. Mara gets a notification that the problem with the soil moistire has been solved.
+
+Monday, 20.04.2022
+Jon arrives at the aquaponics facility and scans his rfid tag. Mara gets a notification that that Jon has arrived at the aquaponics facility. Jon monitors all the aquaponics devices from his mobile phone while smoking a cigarette.
+After that Jon starts his farmwork by harvesting lettuce and tomatoes.
+While at work, Jon continues to smoke and be careless. He throws his cigarette on a pile of hay and fire starts. Mara gets an notification from the flame sensor that flames has been detected at the facility. At the same time an emergency call is sent to the fire department. Mara checks the application and sees that the a motion sensor has detected a lot of movement in the facility, so she knows, that the firefighters have arrived. In the mean time the firefighters manages to extinguish the fire.
+Jon adds a report on the application that the fire has been put out. He also enters a command that he is very sorry about the incident and that luckily nothing was damaged. Jon continues his farmwork without smoking any cigarettes anymore. In the evening Mara is lying in her bed and takes a look at the reports which has been posted on the application. Shaking her head, she falls asleep and wonders what is in store for her tomorrow.
+
+Friday, 02.08.2022
+Jon arrives at the aquaponics facility. Jon takes the fish out of the tank to prepare them for the market and puts in new young fish. Mara gets a notfication from the weight sensor, because the weight of the tank has changed drastically. Now she knows that Jon has prapered the fish for the market. At 5 o'clock Jon signs out via his rfid tag. Mara receives a notification that Jon has left the facility. 
+
+Scenario 2:
+
+Aquaponics 
+
+Personnel : 
+Owner: Phil is a small business owner and owns an aquaponics unit in a rural area. 
+Technician: Bob is a rookie technician and on his way to his first job. 
+Criminal: James is an aspiring criminal and is well on his way to paying off his student loans by selling stolen fish.
+Security: Carlos is a retired police officer and is currently working as a part-time security guard for Phil's aquaponics unit.
+
+Facility IOT Devices : 
+Motion Sensors - Scattered around the facility for movement detection.
+Rfid tag scanner - Placed by the entrance to the facility and within the motion sensors around the facility. 
+Smoke detector - Detects smoke and sends a notification to the owner that there is a fire or the possibly of one.
+CO2 detector - constantly runs and monitors co2 levels through the facility and are placed in as many locations as possible and co2 levels can be monitored within the application in real time.
+
+Bob gets to the aquaponics facility and scans his rfid tag.
+The door unlocks. 
+Phil gets a notification on his phone that the new technician has arrived at the aquaponics facility.
+Both Phil and Bob receive a notifcation that the pump in tank two is malfunctioning.
+The notification has data on waterflow levels for the past 2 hours and it seems waterflow has been degrading steadily.
+Bob arrives and fixes the malfunction.
+Bob adds a report on his application and posts it. 
+Phil receives a notification that Bob has fixed the malfunctioning pump and sees the report that Bob made. 
+Phil also receives a reccommendation on replacement pumps and common problems.
+Bob walks around the facility and the rfid tag on his person pings his relative location to the motion Sensors around the fish tank area and other sections of the facility.
+The Motion Sensor has a rfid scanner that identifies Bob as a technican based on the rfid tag he has on his person.
+Bob continues monitoring all the aquaponics devices from his mobile phone whilst sipping an esspresso. 
+Bob signs out via his rfid tag since it is now 5 o'clock and quitting time.
+Phil receives a notification that Bob has left the facility.
+Phil can see a detailed report of how many hours Bob has worked this week.
+Phil can also see which problems Bob has solved so far.
+As Bob leaves the facility the locks on the door as well as motion sensors activate.
+After Bob has left, James sees his chance to break into the facility.
+James tries to enter through the front door but finds that it is locked.
+Next, James breaks a window and climbs through.
+A motion sensor detects movement near tank five due to the rfid scanner not detecting any valid tag when movement was detected.
+The motion sensor sends a notfication to Phil as well as Carlos.
+Carlos receives the notfication and goes to investigate the disturbance.
+Motion sensors update Carlos on the position of the disturbance at his request.
+It seems that the disturbance has moved from tank five to tank four. 
+Carlos deduces that the next disturbance will be at tank three.
+Carlos catches James stealing fish from the tanks and detains him.
+Carlos writes a report and submits it on the application.
+Phil receives the notification that Carlos has detained a criminal.
+Phil also receives the report that Carlos has submitted.
+
+### Current State of Project
+ 
+We presented the current state of project which is <a href=https://docs.google.com/presentation/d/1AB9427Mz43Jxqp1JAkuUrCHxulFLlcXiawb3ESTPtyg/edit#slide=id.gc6f9e470d_0_0>here<a/>
+ 
 ## 17/11
-
-# Checkout, compile and install SNode.C and the MQTTBrkoer on the Rasperry-PI
+ 
+### Checkout, compile and install SNode.C and the MQTTBrkoer on the Rasperry-PI
 
 install on the raspberry pi
 
