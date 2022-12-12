@@ -52,6 +52,12 @@ Today we started introducing ourselves to the teacher. Then we got to work on ma
 
 </p>
 
+***23/11/2022***
+<p>
+  
+[23/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/Group/GroupDocumentation.md#23112022)
+</p>
+
 ***24/11/2022***
 <p>
   
