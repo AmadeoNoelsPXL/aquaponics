@@ -8,7 +8,7 @@ I expect to learn a lot of new things from the classes, because I haven't done a
 ***7/11/2022***
 <p>
 Today I came across all kinds of attributes for creating different types of smart devices. I am lucky to be in a group with people like Josh, Luthando and Kyle, who I can go to and ask all my questions I had about all these new attributes.
-[[8/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/Group/GroupDocumentation.md#711)
+[8/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/Group/GroupDocumentation.md#711)
 </p>
 
 ***8/11/2022***
