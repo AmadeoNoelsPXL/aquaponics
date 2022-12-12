@@ -75,6 +75,7 @@ Today we started introducing ourselves to the teacher. Then we got to work on ma
 
 ***25/11/2022***
 <p>
+Today in class we connected a server and client using certificates involves generating and installing private keys and signed certificates on both the server and client, and configuring each side to trust the other's certificate. This ensures that the server and client can securely identify each other and communicate over a secure connection.
   
 [25/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L%26A/L%26A_Documentation.md#25112022)
 </p>
