@@ -43,7 +43,8 @@ ESP8266
 Why esp8266? Has changed his live. You can easily program this network and attach LEDs sensors etc. to it. Everything is affordable. It’s the bridge from software to hardware.
 
 
-What is personally inspiring for you? It makes it possible for everyone to create new things, no matter how much money you have.
+What is personally inspiring for you? 
+With an quite cheap instrument you can achieve a a nice product that can fulfill your desires.
 
 
 What is the connection to coffee? Espresso Light was the first version – changed how we design and build things because it’s so cheap. It’s the same price as the price of a coffee.
