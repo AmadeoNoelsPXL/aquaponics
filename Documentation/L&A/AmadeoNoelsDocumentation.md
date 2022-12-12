@@ -69,6 +69,7 @@ Today we started introducing ourselves to the teacher. Then we got to work on ma
 
 ***24/11/2022***
 <p>
+Today in class we were creating a root CA, end certificate, and using these certificates to secure the communication between an MQTT broker and the mosquitto_sub/pub task involves generating and installing private keys and signed certificates on the root CA, MQTT broker, and mosquitto_sub/pub task, and configuring each entity to trust the root CA's certificate. This ensures that the MQTT broker and the mosquitto_sub/pub task can securely identify each other and communicate over a secure connection.
   
 [24/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/Group/GroupDocumentation.md#2411)
 </p>
