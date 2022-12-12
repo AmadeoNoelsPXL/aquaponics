@@ -68,19 +68,6 @@ It makes it possible for everyone to create new things, no matter how much money
 <br>What is the connection to coffee?
 Espresso Light was the first version – changed how we design and build things because it’s so cheap. It’s the same price as the price of a coffee.  
 
-**The Kit**<br>
-Take a look at our table.
-
-**Gateway setup log**<br>
-We started of by downloading the image for the raspberry pi which our professors provide for us. After some problems we were able to flash the image via the flashing software balena etcher to the rpi. Then we were able to connect the rpi with the wifi and so we had our own local network.
-
-It was also very exciting to set up our own IoTempower gateway. This will certainly help us in our project, since we want to work with a Raspberry Pi. However, we also had problems, because the flashing of the pi image to the SD card crashed every time. In the end it turned out that our wifi card was unfortunately broken. 
-
-**Gateway service offered**<br>
-
-After that we took a look at the provided services. We have now access to IoTempower via a web browser. Via ioTempower we are able to use Node-RED and the Node-RED UI as well as the file-system of IoTempower and a documentation about everything. 
-
-
 **Reflection:**<br>
 Today I got my first insight into working with IoT. I had nothing to do with it before. It was exciting to see the different components of a network and to learn about them. I didn't know there were so many different sensors and I'm impressed with what's possible. My teammates Josh, Kyle and Luthando were very helpful because they could explain some things to me and Amadeo in more detail since they have already worked with it. We worked together on the list and created a good overview of everything through it. The video about the Espresso Light and esp8266 was also very interesting. The video brought everything important to the point and you can take a lot from it.
 
@@ -88,7 +75,7 @@ Today I got my first insight into working with IoT. I had nothing to do with it 
 
 ## Lecture 2 – 08.11.2022
 
-The task descriptions can be found in our <a href=https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L&A/L&A_Documentation.md#8112022>Pair-Report</a>. 
+The task descriptions can be found in our <a href= https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L&A/L&A_Documentation.md#8112022> Pair-Report </a>. 
 
 **Reflection**<br>
 Our first day was not exactly optimal. We got acquainted with the hardware and the programs, which took quite a long time and still not everything was clear to us. But we got through it and when we put our hands on everything it got a lot better. The professor was also very supportive. It was especially difficult for us to understand the professor's assignment correctly. Therefore, it often happened that we did something wrong or did something completely different than we should have done. But the professor always brought us back on the right track and also supported us with our "extra tasks". But also our colleagues Josh and Malu supported us well and always came to our aid when we were stuck. at the end of the day we definitely knew our way around a lot better. [...]  We learned how to make a light on an ESP8266 shine, how to set up a web client and server, and how to (almost) break an ESP8266. Be careful with the 5 Volt.
@@ -249,13 +236,15 @@ Today we have looked very closely at how to learn to use SNode.C to "link" a MQT
 ## Lecture 9 - 23.11.2022
 
 **Reflection**<br>
-Today we started of by editing the raspi-boot.sh, so the mqttbroker doesn't start anymore while booting. Then we manage to start the mqttbroker via our terminal. After that we continued our documentation. 
+Today we started of by editing the raspi-boot.sh, so the mqttbroker doesn't start anymore while booting. Then we manage to start the mqttbroker via our terminal. We have installed libraries to replace the mosquitto MQTT broker on the Raspberry Pi with the Snode.C-based mqttbroker application. Similarly, we downloaded and ran the mqttbroker application. After that, we had to configure it individually and then test it with the mosquitto_sub/pub tasks. Fortunately everything worked as expected, this allowed us to stop the mosquitto MQTT broker and enable the mqttbroker application to start automatically when the Raspberry Pi boots up. After that we continued our documentation. 
 
 ## Lecture 10 - 24.11.2022
 
 **Reflection**<br>
+Today we created a root CA and an end certificate and used these certificates to secure the connections of an MQTT broker and the mosquitto_sub/pub task. For this, we generated and installed a private key and signed certificates on the root CA, the MQTT broker and the mosquitto_sub/pub task. Each entity had to be configured to trust the root CA's certificate in the process. This ensures that the MQTT broker and the mosquitto_sub/pub task can identify each other securely and communicate via a secure connection. Amadeo and I managed this task together. 
+
 
 ## Lecture 11 - 25.11.2022
 
 **Reflection**<br>
-Today we connected a Server and Client with the help of Certificates. We created the certificates and used the mosquitto.
+Today we connected a Server and Client with the help of Certificates. We created the certificates and used the mosquitto. Our professor Volker showed us as well how to program and control devices by using the Alexa Skills Kit from Amazon. This was very fascinating and encouraged us to try it in the future at home. The day went well for us. At the end of the class there was a feedback round, which was partly positive but also negative. For me, the last few weeks have been very instructive. My learning curve was enormous at Hagenberg. In the beginning, I had no idea how to connect hardware with software, how the programming of connections via Wifi of devices works.  After one week, we were all already tinkering with different constellations and using snode.c for that. It was very interesting to learn more about the Raspberry Pi and the Wemos D1 Mini. After that we created our own virtual machine and used the qtcreator to create different connections like: creating an mqqtbrokerwebserver application. Which was also very informative and hopefulwill help us a lot in the future. 
