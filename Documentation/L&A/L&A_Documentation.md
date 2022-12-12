@@ -27,12 +27,10 @@ After we had implemented the server, we got to work on creating a client. We did
 
 
 ***Pull-ups and touch buttons***<br>
+We could not complete this task due to the lack of an understanding of the requirements of the task. But we did enquire of our fellow teammates and they have assisted us with the task.
 
 ***Second ESP8266 with button as Webclient, controlling Webserver*** <br>
-
-***Second LED***<br>
-
-***Second button***<br>
+We could not complete the any objectives to do with the second node and th relevant webserver and client taks because we can't send any requests to our server.
 
 
 <br>***problems we have overcome today:***
@@ -215,17 +213,6 @@ Can be used to create a  rgb device object for an rgb-led connected to the pins 
 -> rgb_single(name, pin_r, pin_g, pin_b, invert=false); <br>
 Example: rgb_single(rgb1, D3, D4, D2); The RGB LED can be switched to red via sending to the mqtt-broker to the topic living room/tvlights/rgb1/rgb/set the command red. <br>
  
- ***text receiver on display***
- <p> 
-For this task, we got to work with showing an entered text on a display. It was not clear to us how to establish connection between the display and the d1. For this we consulted google to look for an example. After this we looked for the right implementations for coding the web server and the OLED display. Unfortunately, we could not get it working so we switched to NODE-RED to provide an implementation for a button that sent a message when pressed. 
-
-We also had to program a function to send entered text from node red to an OLED display connected to the d1. At first it was difficult to get the wiring right. We even had to look for schematics of the OLED display to understand how to connect the thing to the d1 mini. Then we got libraries and coded the web server and the OLED display so it was ready to use, but to no avail: it didn't work at all. I tried to see if it had something to do with the program, we flashed to wemos but still nothing, we asked for help and still nothing. So, while my team/pair partner switched to sending a message via node red via pressing a button. We tried a few more times with the OLED because we were losing time, but finally we gave in and quit and proceeded to create the program for the push button.
-
-We did this by implementing it a button that would cause pressing the button to send a trigger to the setup file so that when it receives this trigger it can push the message to the NODE-RED 
-
-We did not succeed in this task either and so we consulted our colleagues from our other pair in the group. They stood by us with advice and assistance so we still managed to complete this task successfully.
-</p>
- 
  ***Button to sound and notification***
  
  We started declaring the button in directory /home/iot/iot-system/demo01/test01, more specific in the setup.cpp.
@@ -246,7 +233,16 @@ We did not succeed in this task either and so we consulted our colleagues from o
  
  <img src="images/breadboardSound.png" alt="drawing" width="200"/>
  
-  ***Text receiver***
+ ***text receiver on display***
+ <p> 
+For this task, we got to work with showing an entered text on a display. It was not clear to us how to establish connection between the display and the d1. For this we consulted google to look for an example. After this we looked for the right implementations for coding the web server and the OLED display. Unfortunately, we could not get it working so we switched to NODE-RED to provide an implementation for a button that sent a message when pressed. 
+
+We also had to program a function to send entered text from node red to an OLED display connected to the d1. At first it was difficult to get the wiring right. We even had to look for schematics of the OLED display to understand how to connect the thing to the d1 mini. Then we got libraries and coded the web server and the OLED display so it was ready to use, but to no avail: it didn't work at all. I tried to see if it had something to do with the program, we flashed to wemos but still nothing, we asked for help and still nothing. So, while my team/pair partner switched to sending a message via node red via pressing a button. We tried a few more times with the OLED because we were losing time, but finally we gave in and quit and proceeded to create the program for the push button.
+
+We did this by implementing it a button that would cause pressing the button to send a trigger to the setup file so that when it receives this trigger it can push the message to the NODE-RED 
+
+We did not succeed in this task either and so we consulted our colleagues from our other pair in the group. They stood by us with advice and assistance so we still managed to complete this task successfully.
+</p>
   
  
 ![Tux, the Linux mascot](images/textNodeRedScheme.png)
@@ -275,24 +271,16 @@ We dowloaded the template of node-red-contrib-discord-advanced after this we ins
 <p>
 We started flashing our RFID reader. Unfortunately, we had no idea on how to send the data we obtained from reader to the MQTT. We did not get it working despite suspecting our RFID reader might be broken and so we tried to do the same with another group's RFID reader. This did work.
 
-We had the help of us other pair in the group to complete this task. Problems that came up with this task were: an RFID reader that did not work, soldering the wemos incorrectly. 
-</p>
-
-
-
+We had the help of our other pair in the group to complete this task. Problems that came up with this task were: an RFID reader that did not work, soldering the wemos incorrectly. 
  
- 
- 
- 
+The Integration of the RRID reader can be found in the integration task as it came of better importance there. As there weill be a repeat reference image of how the hardware looks as well as the setup.cpp file. Some of the tags work and some do not work. Also the original reader we received was fault and it had to be re - soldered.
+</p> 
   
  ***touch sensor***
  
  We created a touch sensor by putting a wire into the analog pin of the ESP8266.
  
   <img src="images/TouchSensor.png" alt="drawing" width="200"/>
- 
- 
- 
  
  
  We created a new folder in the home directory under /home/iot/iot-systems/demo01/TouchSensor
@@ -312,10 +300,19 @@ After that we deployed it to the ESP8266. We went to the Node-red where we creat
   - there is not enough space on the raspberry pi
   -> solution : resizing and crunching the firmware on the raspbarry pi to make it smaller  
 
- ***Moisture Sensor***
+ ***Moisture Sensor + Voltage Divider***
  <p>
- Jon helped us with the setup. Just to make sure we don't fuck it up again.
+ We built the moisture sensor and cofigured to receive data and readings node red. There are visual refernce of the moisture sensor and our node red flow in the images folder. We connected the Moisture Sensor as followed: 
+
  </p>
+ 
+  <img src="images/Moisture_Sensor.png" alt="drawing" width="200"/>
+
+We connected our Node Red Flow as followed: <br>
+ <img src="images/MoistureSensorflow.png" alt="drawing" width="200"/>
+ 
+There are some sensors that need more voltage then what the wemos can provide and to send all the voltage at once would fry the components, so we included the Voltage Divider.  
+
  
  ## 15/11/2022
  
