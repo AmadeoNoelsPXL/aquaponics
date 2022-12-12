@@ -8,6 +8,47 @@ I expect to learn a lot of new things from the classes, because I haven't done a
 ***7/11/2022***
 <p>
 Today I came across all kinds of attributes for creating different types of smart devices. I am lucky to be in a group with people like Josh, Luthando and Kyle, who I can go to and ask all my questions I had about all these new attributes.
+
+What does the Internet of Things entail? A simple Internet of Things definition is that it is a huge worldwide network of connected objects. These 'things' are embedded with sensors, processors and software to collect and share data about the way they are used and about the environment around them. An Internet of Things platform integrates data from the different devices and applies analytics to share the most valuable information with applications built to address specific needs. https://www.nanowerk.com/smart/internet-of-things-explained.php
+
+Domains:
+Industrial - IIoT monitors the quality of any product at each stage, from procurement to the final delivery. Moreover, it corrects and prevents risks in the product lifecycle.
+
+Medical - tracking how many patients are in a hospital, receiving the correct medicine for a patient, and monitoring their health at a distance, also known as Telemedicine
+
+Building and House Automation - users can manage wireless instruments from anywhere.
+
+Protocols:
+The benefit and value of IoT comes from enabling the components to communicate. This communication happens via IoT protocols, which ensure that data sent from endpoint devices, such as sensors, is received and understood by the next and subsequent steps in the connected environment, whether the next step for that data is to another endpoint device or a gateway or an application.
+
+AMQP Short for Advanced Message Queuing Protocol, AMQP is an open standard protocol used for more message-oriented middleware.
+
+Bluetooth is a short-range wireless technology that uses short-wavelength, ultrahigh-frequency radio waves.
+
+Cellular provides high bandwidth and reliable communication. It's capable of sending high quantities of data, which is an important capability for many IoT deployments.
+
+Typical Devices:
+Home Security - The key driver behind smart and secure homes is IoT. A variety of sensors, lights, alarms and cameras (all of which can be controlled from a smartphone) are connected via IoT to provide 24x7 security.
+
+Activity Trackers - Smart home security cameras provide alerts and peace of mind. Activity trackers are sensor devices that can monitor and transmit key health indicators in real-time. You can track and manage your blood pressure, appetite, physical movement and oxygen levels.
+
+#LikeABosch
+Wearables – Smartphone connected with fridge Smart Cities – autonomous cars
+
+Benefits of IoT: Better use of resources and assets Cost-effective operation Improved work safety Efficiency and productivity Improved experience
+
+Challenges IoT: Security flaws Power supply dependence Network dependence Associated costs
+
+ESP8266
+Why esp8266? Has changed his live. You can easily program this network and attach LEDs sensors etc. to it. Everything is affordable. It’s the bridge from software to hardware.
+
+
+What is personally inspiring for you? It makes it possible for everyone to create new things, no matter how much money you have.
+
+
+What is the connection to coffee? Espresso Light was the first version – changed how we design and build things because it’s so cheap. It’s the same price as the price of a coffee.
+
+ 
   
 [the kit table](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/Group/GroupDocumentation.md#711)
 </p>
