@@ -55,6 +55,7 @@ Today we started introducing ourselves to the teacher. Then we got to work on ma
 
 ***21/11/2022***
 <p>
+What we did today was creating an mqqtbrokerwebserver application involves installing a web server, MQTT library, writing the code for the application, testing it, and deploying it to a production environment. Once deployed, users will be able to access the mqqtbrokerwebserver application through a web browser and use it to connect to an MQTT broker, publish and subscribe to topics, and view the data.
   
 [21/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L%26A/L%26A_Documentation.md#21112022)
 
