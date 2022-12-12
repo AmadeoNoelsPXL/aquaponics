@@ -30,7 +30,7 @@ Today I got to work on the basics of Node-Red. I started by sending simple messa
 
 ***11/11/2022***
 <p>
-Vandaag was een moeilijke dag, onze leerkracht had voor de hele klas iets voorbereid wat we samen gingen installeren. Helaas lukte dit niet en is er heel wat tijd overheen gegaan vooraleer de les terug hervat kon worden. Vandaag hebben we ons vooral bezig gehouden met het implementeren van een discord bot wat ons eigenlijk zeer goed afging. We vonden op youtube een zeer goede tutorial die ons makkelijk doorheen het hele proces leidde. 
+Today was a difficult day, our teacher had prepared something for the whole class that we were going to install together. Unfortunately, this did not work out and a lot of time passed before class could resume. Today we mainly focused on implementing a Discord bot which actually went very well for us. We found a very good tutorial on youtube that easily guided us through the whole process.
 
 [11/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/L%26A/L&A_Documentation.md/#11112022)
 </p>
