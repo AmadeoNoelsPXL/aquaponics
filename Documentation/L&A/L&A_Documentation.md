@@ -134,8 +134,35 @@ The switch leads to two changes which change the value to On or Off. This change
 **Fog:** This refers to a layer located between the cloud and the edge. Fog is in the ability to capture information from the edge layer before it reaches the cloud. This aims to decide which driven information is relevant and which is not. This allows the relevant data to be stored in the cloud while the unnecessary information can be removed.<br>
  
 ***HVAC in hardware with MQTT - temperature reporter***
+We started with installing an MQTT broker on a server or device that will be accessible to both the temperature sensor and the temperature display. This will allow the sensor and display to communicate with each other through the broker.
+
+ After this we connect a temperature sensor to a microcontroller or single-board computer (SBC) like the Raspberry Pi. This will allow the microcontroller or SBC to read the temperature from the sensor.
+
+Then we write code for the microcontroller or SBC that will read the temperature from the sensor and publish it to a specified topic on the MQTT broker. This will allow the temperature data to be sent to the display.
+ 
+After that we connect a display to a separate microcontroller or SBC. This will allow the display to receive and show the temperature data.
+
+Next we Write code for the microcontroller or SBC that will subscribe to the topic on the MQTT broker where the temperature data is being published. This will allow the display to receive the temperature data and show it to the user.
+
+After that we test the temperature reporter by running the code on the microcontroller or SBC and verifying that the temperature data is being published to the MQTT broker and received by the display.
+
+If everything is working as expected, you can integrate the temperature reporter into your HVAC system and use it to monitor and control the temperature in your space.
  
 ***HVAC in hardware with MQTT - relay switch***
+
+First we install an MQTT broker on a server or device that will be accessible to both the relay switch and the control device. This will allow the relay switch and control device to communicate with each other through the broker.
+
+Second we connect a relay switch to a microcontroller or single-board computer (SBC) like the Raspberry Pi. This will allow the microcontroller or SBC to control the relay switch.
+
+Next we Write code for the microcontroller or SBC that will receive commands from the control device through the MQTT broker and use them to control the relay switch. For example, the code could receive a "turn on" command and use it to activate the relay switch and turn on the HVAC system.
+
+Then we connect a control device like a smartphone or tablet to the same network as the MQTT broker. This will allow the control device to send commands to the relay switch.
+
+After this we Write code for the control device that will allow the user to send commands to the relay switch through the MQTT broker. For example, the code could include buttons for "turn on" and "turn off" that the user can press to control the relay switch.
+
+we ended with testing the relay switch by running the code on the microcontroller or SBC and control device, and verifying that the relay switch is responding to commands from the control device.
+
+If everything is working as expected, you can integrate the relay switch into your HVAC system and use it to control the system using the control device.
 
  
 ## 11/11/2022 
