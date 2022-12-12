@@ -63,6 +63,7 @@ Today we started introducing ourselves to the teacher. Then we got to work on ma
 
 ***23/11/2022***
 <p>
+What we did today in class: replacing the mosquitto MQTT broker on the Raspberry Pi with the Snode.C-based mqttbroker application involves installing the necessary libraries, downloading and running the mqttbroker application, configuring it to your liking, and testing it with the mosquitto_sub/pub tasks. Once everything is working as expected, you can stop the mosquitto MQTT broker and set the mqttbroker application to start automatically when the Raspberry Pi boots.
   
 [23/11/2022](https://github.com/AmadeoNoelsPXL/aquaponics/blob/IoT-Documentation-Branch/Documentation/Group/GroupDocumentation.md#23112022)
 </p>
