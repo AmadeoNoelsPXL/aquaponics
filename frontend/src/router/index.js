@@ -20,9 +20,9 @@ const routes = [
     }*/
   },
   {
-    path: '/AccountView',
+    path: '/TestView',
     name: 'accountView',
-    component: () => import('../views/AccountView.vue'),
+    component: () => import('../views/TestView.vue'),
     /*meta:{
       requiresAuth:true,
     }*/

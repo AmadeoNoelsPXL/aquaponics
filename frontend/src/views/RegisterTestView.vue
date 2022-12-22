@@ -30,13 +30,13 @@
                         </b-form-row>
                         <b-form-row>
                         <b-button @click="submitAction" id="registerbtn" variant="success" class="ml-1 mr-1 w-100 mt-5" style="background-color:#1FBE85; border-color:#1FBE85">Sign Up</b-button>
-                        
+                        <div>
+                            {{ this.constraintsFirstname }}
+                        </div>
                         </b-form-row>
                     </b-form>
                 </b-col>
-
-            </b-row>
-            
+            </b-row>            
         </b-row>
     </b-container>
 </template>
@@ -49,11 +49,13 @@ export default {
         lastName: null,
         phoneNumber: null,
         email: null,
+        constraintsFirstname : null,
         responseApi : null
     }
   },
   methods:{
     async submitAction(){
+         var passedAction = true;
         await axios.post("http://localhost:8081/user/newUser",{
             firstName: this.firstName,
             lastName: this.lastName,
@@ -62,17 +64,25 @@ export default {
         })
         .then((res)  => this.responseApi = res.data)
         .catch((error) => {
-            this.responseApi = error.response.data
-        })}
+            console.log(error)
+            console.log(error.response.data.firstName)
+            this.constraintsFirstname = error.response.data
+            passedAction = false
+        })
+
+        if(passedAction){
+            this.$router.push("/TestView")
+        }
+    }
 
         
-    }
+    }   
   }
 </script>
 
 
 
-<style>
+<style scoped>
 body{
     background-color: #ededed;
 }
