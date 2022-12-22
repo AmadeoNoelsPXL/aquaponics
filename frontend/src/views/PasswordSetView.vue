@@ -1,51 +1,35 @@
 <template>
     <div id="app">
-      <div id="alert" v-if="alert">{{ alert }}</div>
-      <form @submit.prevent="checkAndResetPassword">
-        <table>
-            <tr>
-                        <label id="label1">
-                        Password
-                        <input type="password" v-model="password" id="input1"/>
-                        </label>
-            </tr>
-            <tr>
-                <label id="label2">
-          Re-type password
-          <input type="password" v-model="passwordVerify" id="input2"/>
-        </label>
-            </tr>
-        </table>
-        <button type="submit" variant="success">Reset password</button>
-      </form>
+      <label for="password"></label>
+      <input type="password" v-model="password" id="input1"/>
+
+      <button v-on:click="addPassword" type="submit" variant="success">Reset password</button>      
     </div>
   </template>
   
   <script> 
-  import Userfront from "@userfront/core";
-    Userfront.init("demo1234");
+  import axios from 'axios'
     export default {
       data() {
         return {
           password: "",
           passwordVerify: "",
-          alert: "",
+          
         };
       },
       methods: {
-        checkAndResetPassword() {
-          this.alert = "";
-          if (this.password !== this.passwordVerify) {
-            this.alert = "Passwords must match";
-            return;
-          }
-          Userfront.resetPassword({
-            password: this.password,
-          }).catch((error) => {
-            this.alert = error.message;
-          });
-        },
+        async addPassword(){
+          console.log(this.$route.query.token)
+
+          axios.put('http://localhost:8080/user/setPassword?token='+this.$route.query.token, { password: this.password });
+        }
       },
+      computed:{
+        token(){
+          console.log(this.$route.query.token)
+          return this.$route.query.token
+        }
+      }
     };
   </script>
   

@@ -33,7 +33,7 @@
                     </thead>
                 </table>
             </b-row>
-            <div v-for="item in items" :key="item">
+            <div v-for="item in getAllUsers" :key="item">
                 <b-row class="shadow p-2 p-4 mt-4 bg-white rounded text-center" >
                     <b-col md="auto">
                         <div class="d-flex flex-row">                    
@@ -116,21 +116,23 @@
   </template>
   
   <script>
-  import { mapState } from 'vuex';
+import axios from 'axios';
+
     export default {
         data() {
             return {
-            items: [
-                { name:  'Amadeo Noels', email: '11702320@student.pxl.be', role: "admin"},
-                { name: 'Josh Hofmann', email: 'Josh.hoffman@gmail.com', role: "President"},
-            
-            ]
             }
         },
-        mounted(){
-            this.$store.dispatch('loadUsers')
-        },
-        computed: mapState(['users'])
+        mounted:{
+            getAllUsers(){
+                return axios.get('http://localhost:8080/user/getAllUsers').then((response) =>{   
+                    console.log(response)                 
+                    response.json();
+                })
+            }
+
+        }
+
     }
   </script>
   <style>

@@ -1,0 +1,10 @@
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'aquaponics'
+      MYSQL_ROOT_PASSWORD: 'pxl'
+    ports:
+      - '3306:3306'
+    

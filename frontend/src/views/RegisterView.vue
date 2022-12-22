@@ -19,29 +19,29 @@
                 <b-form-row class="mb-2">
                 <b-col>
                     <label for="firstname" class="justify-content-start" >Firstname</label>
-                    <b-form-input placeholder="John" type="text">
+                    <b-form-input placeholder="John" type="text" v-model="firstName">
                     </b-form-input>
                 </b-col>
                 <b-col>
                     <label for="Surname" class="justify-content-start" >Surname</label>
-                    <b-form-input placeholder="Doe" type="text">
+                    <b-form-input placeholder="Doe" type="text" v-model="lastName">
                     </b-form-input>
                 </b-col>
                 </b-form-row>
                 <b-form-row class="mb-2">
                 <b-col>
                     <label for="number" class="justify-content-start" >Phone Number</label>
-                    <b-form-input placeholder="+31 111 111 111" type="tel">
+                    <b-form-input placeholder="+31 111 111 111" type="tel" v-model="phoneNumber">
                     </b-form-input>
                 </b-col>
                 <b-col>
                     <label for="email" class="justify-content-start" >Email</label>
-                    <b-form-input placeholder="johndoe@email.com" type="email">
+                    <b-form-input placeholder="johndoe@email.com" type="email" v-model="email">
                     </b-form-input>
                 </b-col>
                 </b-form-row>
                 <b-form-row>
-                <b-button id="registerbtn" variant="success" class="ml-1 mr-1 w-100" style="background-color:#1FBE85; border-color:#1FBE85">Register</b-button>
+                <b-button v-on:click="registerPerson" id="registerbtn" variant="success" class="ml-1 mr-1 w-100" style="background-color:#1FBE85; border-color:#1FBE85">Register</b-button>
                 <b-tooltip target="registerbtn" triggers="hover">
                     <p>Press here to register</p>
                     </b-tooltip>
@@ -52,4 +52,35 @@
         </b-row>
     </b-container>
 </template>
+<script>
+import axios from 'axios'
+export default {
+  data() {
+    return {
+      firstName: null,
+      lastName: null,
+      email: null,
+      phoneNumber: null,
+    }
+  },
+  methods:{
+    async registerPerson(){
+      console.log(this.firstName)
+        axios.post('http://localhost:8080/user/registerNewUser', {
+          firstname: this.firstName,
+          surname: this.lastName,
+          phoneNumber: this.phoneNumber,
+          email: this.email
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+        
+    }
+  }
+}
+</script>
 

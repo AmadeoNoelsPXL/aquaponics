@@ -1,104 +1,149 @@
 <template>
-    <div class="container">
-      <b-button v-b-modal.modal-center class="shadow" style="background-color:#1FBE85; border-color:#1FBE85"><img src="../assets/filter-2.png" width="20"> </b-button>
-      <b-modal id="modal-center" hide-header hide-footer>
-        <b-container>
+  <b-container>
+    <b-row style="border-bottom: 4px solid green" class="m-4">
+      <b-col>
+        <b-row>
+          <b-col>
+            <b-img fluid center src="../assets/ownDesign.png" style="width:120px"></b-img>
+          </b-col>
+          <b-col class="pb-3 align-self-end">
+            AQUAPONICS
+          </b-col>
+        </b-row>
+      </b-col>
+      <b-col cols="4" class="pb-2 align-self-end">
+        <b-button variant="success">
           <b-row>
-            <h4>Filter</h4>
-          </b-row>
-          <b-row class="mb-2">
-            <b-col>
-              <div>DATA</div>
+            <b-col cols="4" class="align-self-center">
+              <b-img fluid center src="../assets/plus.png" style="width:20px"></b-img>           
             </b-col>
-            <b-col>
-              <div>PERIOD</div>
+            <b-col cols="8" class="pl-0" style="color:black">
+              Add user
             </b-col>
-          </b-row>         
-          <b-row class="mb-4">
-            <b-col class="shadow rounded mr-2">
-              <div v-for="item in items" :key="item">                          
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
-                <label class="form-check-label" for="defaultCheck1">
-                  {{item}}
-                </label>
-              </div>
-              </div>
+          </b-row>          
+        </b-button>
+      </b-col>
+      <b-col cols="4" class="pb-2 align-self-end">
+        <b-button style="background-color:white; border:none">
+          <b-row>
+            <b-col cols="8" class="pl-0 pr-0" style="color:black">
+              Admin
             </b-col>
-            <b-col class="shadow rounded">
-              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+            <b-col cols="4" class="align-self-center pl-0">
+              <b-img fluid center src="../assets/man-user.png" style="width:40px"></b-img>           
             </b-col>            
-          </b-row> 
-          <b-row class="justify-content-center">
-            <b-button style="background-color:#1FBE85; border-color:#1FBE85">
-              Set Filter
-            </b-button>
           </b-row>
-        </b-container>
-      </b-modal>
-      <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-  
-</button>
-<button v-on:click="retrieveAllDataTypes()"></button>
+        </b-button>
+      </b-col>      
+    </b-row>
+    <b-row>
+      <b-table
+        id="my-table"
+        :items="getAllUsers"
+        :per-page="perPage"
+        :current-page="currentPage"
+        :fields="fields"
+        small>
+        <template #cell(icon)>
+            <div>
+                <b-avatar>A</b-avatar>
+            </div>
+        </template>
+        <template  #cell(actions)="data">
+              <b-row class="justify-content-center p-0">
+                <b-col sm="2" class="mr-2">
+                  <b-button @click="infoSelectedUser(data)" style="background-color:white;border:none">
+                    <img src="../assets/trash.png" style="width:20px;color:gray">
+                  </b-button>
+                </b-col>
+                <b-col sm="2">
+                  <b-button @click="getAllUsers" style="background-color:white;border:none" class="ml-2">
+                    <img src="../assets/edit.png" style="width:20px;color:gray">
+                  </b-button>
+                </b-col>
+              </b-row>
+        </template>
+      </b-table>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-  
-</div>
+      <b-pagination
+        v-model="currentPage"
+        :per-page="perPage"
+        aria-controls="my-table"
+      ></b-pagination>
 
-    </div>
+    </b-row>
 
-</template>
+    <b-modal id="deleteUserModal" @ok="test('success')">
+      <template #modal-title>
+        Delete {{ selectedUser }}
+      </template>
+      Are you sure you want to delete this user?
+  </b-modal>
+
+    
+
+  </b-container>
+  </template>
   
   <script>
+import axios from 'axios';
+
     export default {
       data() {
         return {
-          items: []          
-          };
-        },
-      methods:{
-        async retrieveAllDataTypes(){
-          const response = await fetch('http://localhost:8080/data');
+          messageDeletedUser: null,
+          selectedUser: null,
+          selectedId: null,
+          perPage: 10,
+          currentPage: 1,
+          fields:['icon','firstName', 'lastName','phoneNumber','email','role','actions']
 
-          const data = await response.json();
-          console.log(data)
-          return data
         }
       },
-      created(){
-        fetch('http://localhost:8080/data').then(async response => {
-          const data = await response.json();
+      computed: {
+      },
+      methods:{
+        removeButton(item){
+          this.items .filter(a => a.first_name == item);
+          console.log(item)
+        },
+        async getAllUsers(){
+          const data = await axios.get("http://localhost:8081/user/getAllUsers")           
+          .then(resp =>resp.data);
 
-          this.items = data;
+          return data            
+        },
+        makeToast(variant = null) {
+        this.$bvToast.toast('The user is deleted successfully', {
+          title: `User action`,
+          variant: variant,
+          solid: true
         })
+      },
+      async deleteSelectedUser(){
+        const response = await axios.delete("http://localhost:8081/user/deleteUser/"+this.selectedId).then(resp => resp.data)
+        this.messageDeletedUser = response;
+    },
+      test(color){
+        this.deleteSelectedUser();
+        this.$bvToast.toast(this.messageDeletedUser, {
+          title: `User action`,
+          variant: color,
+          solid: true
+      })
 
-      }
+      this.$root.$emit('bv::refresh::table', 'my-table')
+    },
+    infoSelectedUser(data){
+      this.selectedUser = `${data.item.firstName} ${data.item.lastName}`
+      this.$bvModal.show('deleteUserModal')
+      this.selectedId = data.item.id;
+      console.log(data.item.id)
+      console.log("http://localhost:8081/user/deleteUser/"+data.item.id)
+
+      console.log(this.selectedUser)
     }
+  }
+}
+    
   </script>
-  <style>
-  </style>
