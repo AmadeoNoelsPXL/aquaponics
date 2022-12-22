@@ -3,6 +3,7 @@ package be.pxl.backend.domain;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 
 @Entity
 @Table(name = "users")
@@ -10,6 +11,7 @@ public class User {
     @Id
     @GeneratedValue
     private Long Id;
+    @Pattern(regexp="^[A-Za-z]*$",message = "The input only accept alphabet")
     @NotBlank(message = "The firstname needs to be filled in")
 
     private String firstName;

@@ -10,22 +10,34 @@
                     <b-form>
                         <b-form-row class="mb-2">
                         <b-col class="mb-3">
-                            <b-form-input id="inputField" style="background-color:#F5F5F5" placeholder="Firstname" type="text" v-model="firstName" outline>
+                            <b-form-input id="input-firstName" style="background-color:#F5F5F5" placeholder="Firstname" type="text" v-model="firstName">
                             </b-form-input>
+                            <div style="color:red;font-size: 0.875em">
+                                {{constraintsFirstnameRemarks}}
+                            </div>
                         </b-col>
                         <b-col>
                             <b-form-input placeholder="Surname" type="text" v-model="lastName">
                             </b-form-input>
+                            <div style="color:red;font-size: 0.875em">
+                                {{constraintsLastnameRemarks}}
+                            </div>
                         </b-col>
                         </b-form-row>
                         <b-form-row class="mb-2">
                         <b-col>
                             <b-form-input placeholder="Phone number" type="tel" v-model="phoneNumber">
                             </b-form-input>
+                            <div style="color:red;font-size: 0.875em">
+                                {{constraintsPhoneNumberRemarks}}
+                            </div>
                         </b-col>
                         <b-col>
                             <b-form-input placeholder="Email" type="email" v-model="email">
                             </b-form-input>
+                            <div style="color:red;font-size: 0.875em">
+                                {{constraintsEmailRemarks}}
+                            </div>
                         </b-col>
                         </b-form-row>
                         <b-form-row>
@@ -49,9 +61,14 @@ export default {
         lastName: null,
         phoneNumber: null,
         email: null,
-        constraintsFirstname : null,
+        constraintsFirstnameRemarks : null,
+        constraintsLastnameRemarks: null,
+        constraintsPhoneNumberRemarks: null,
+        constraintsEmailRemarks: null,
         responseApi : null
     }
+  },
+  computed:{
   },
   methods:{
     async submitAction(){
@@ -66,7 +83,10 @@ export default {
         .catch((error) => {
             console.log(error)
             console.log(error.response.data.firstName)
-            this.constraintsFirstname = error.response.data
+            this.constraintsFirstnameRemarks = error.response.data.firstName
+            this.constraintsLastnameRemarks = error.response.data.lastName
+            this.constraintsPhoneNumberRemarks = error.response.data.phoneNumber
+            this.constraintsEmailRemarks = error.response.data.email
             passedAction = false
         })
 
