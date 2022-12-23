@@ -4,7 +4,7 @@ const routes = [
   {
     path: '/',
     name: 'loginView',
-    component: () => import('../views/RegisterTestView.vue')
+    component: () => import('../views/OverviewStaticScreen.vue')
   },
   {
     path: '/user/setPassword',
