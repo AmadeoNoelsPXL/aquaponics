@@ -75,12 +75,68 @@
             <b-row align-h="center">
                 <h1 class="mt-4">STATISTICS</h1>
             </b-row>
-            <b-row class="justify-content-center">
-                <b-col class="shadow-lg p-3 mb-5 bg-white rounded">
-                    test
+            <b-row style="position:relative" class="justify-content-center m-5">
+                <b-col v-on:click="test" class="shadow-lg p-3 mb-5 bg-white rounded d-flex justify-content-center">
+                    <chart width="500" type="line" :options="options" :series="series"></chart>
                 </b-col>
+                
+                <div v-on:click="test" class="test"><img class="m-1" src="../assets/thermometer.png" width="50px"></div>
+            </b-row>
+            
+            <b-row style="position:relative" class="justify-content-center m-5">
+                <b-col v-on:click="test" class="shadow-lg p-3 mb-5 bg-white rounded d-flex justify-content-center">
+                    <chart width="500" type="line" :options="options" :series="series"></chart>
+                </b-col>
+                
+                <div v-on:click="test" class="test"><img class="m-1" src="../assets/o2.png" width="50px"></div>
+            </b-row>
+            
+            <b-row style="position:relative" class="justify-content-center m-5">
+                <b-col v-on:click="test" class="shadow-lg p-3 mb-5 bg-white rounded d-flex justify-content-center">
+                    <chart width="500" type="line" :options="options" :series="series"></chart>
+                </b-col>
+                
+                <div v-on:click="test" class="test"><img class="m-1" src="../assets/ph-meter.png" width="50px"></div>
             </b-row>
 
         </b-container>
     </b-container>
 </template>
+<script>
+import chart from 'vue-apexcharts'
+export default{
+    components:{
+        chart
+    }, 
+    data(){
+        return{
+            options:{
+                title:{
+                    text:"test"
+                }
+            },
+            series: [{name: "data from the PH meter", data: [44, 55, 41, 17, 15]}],
+            
+        }
+    },
+    methods: {
+        test(){
+            this.$router.push("/TestView")
+        }
+    }
+}
+</script> }
+}
+<style>
+.test{
+    background-color: lightgreen;
+    position: absolute;
+    top: -30px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #888888;
+
+}
+
+
+
+</style>
