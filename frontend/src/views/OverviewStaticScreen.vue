@@ -23,52 +23,50 @@
                 <h1 class="mt-4">LIVE DATA</h1>
             </b-row>
             <b-row cols="3">
-                <b-col class="border 2px solid">
-                    <div class="border 4px solid">
-                        <h5>TEMPERATURE</h5>
-                    <b-row class="justify-content:center">
-                        <b-col offset="3" class="p-0">
-                            <h3 class="m-0">20.3 °C</h3>
-                        </b-col>
-                        <b-col class="p-0" style="w-auto">
-                            <div align="left">
-                                <img src="../assets/thermometer.png" alt="Left image" style="width:40px"/>
-                            </div>
-                        </b-col>
-                    </b-row>
-                    </div>                    
-                </b-col>
-                <b-col class="border 2px solid">
-                    <div class="border 4px solid">
-                        <h5>DIOXIGEN</h5>
-                    <b-row class="justify-content:center">
-                        <b-col offset="3" class="p-0">
-                            <h3 class="m-0">20.3 O2</h3>
-                        </b-col>
-                        <b-col class="p-0" style="w-auto">
-                            <div align="left">
-                                <img src="../assets/o2.png" alt="Left image" style="width:40px"/>
-                            </div>
-                        </b-col>
-                    </b-row>
-                    </div>                    
-                </b-col>
-                <b-col class="border 2px solid">
-                    <div class="border 4px solid">
-                        <h5>POTENTIAL OF HYDROGEN</h5>
-                    <b-row class="justify-content:center">
-                        <b-col offset="3" class="p-0">
-                            <h3 class="m-0">20.3 PH</h3>
-                        </b-col>
-                        <b-col class="p-0" style="w-auto">
-                            <div align="left">
-                                <img src="../assets/ph-meter.png" alt="Left image" style="width:40px"/>
-                            </div>
-                        </b-col>
-                    </b-row>
-                    </div>                    
-                </b-col> 
+                <b-row class="justify-content-center">
+                    <b-col xl="auto" class="liveData border 2px solid m-0">
+                        <b-row class="p-2">
+                            <b-col cols="auto" class="p-0">
+                                <h5>TEMPERATURE</h5>
+                            </b-col>                        
+                        </b-row>
+                        <b-row class="justify-content-center m-0">
+                            <b-col cols="auto" class="p-0">
+                                <h5>20.3 °C</h5>
+                            </b-col>                        
+                        </b-row>               
+                    </b-col>                
+                </b-row>
+                <b-row class="justify-content-center">
+                    <b-col xl="auto" class="liveData border 2px solid m-0">
+                        <b-row class="p-2">
+                            <b-col cols="auto" class="p-0">
+                                <h5>TEMPERATURE</h5>
+                            </b-col>                        
+                        </b-row>
+                        <b-row class="justify-content-center m-0">
+                            <b-col cols="auto" class="p-0">
+                                <h5>20.3 °C</h5>
+                            </b-col>                        
+                        </b-row>               
+                    </b-col>                
+                </b-row>
+                <b-row class="justify-content-center">
+                    <b-col xl="auto" class="liveData border 2px solid m-0">
+                        <b-row class="p-2">
+                            <b-col cols="auto" class="p-0">
+                                <h5>TEMPERATURE</h5>
+                            </b-col>                        
+                        </b-row>
+                        <b-row class="justify-content-center m-0">
+                            <b-col cols="auto" class="p-0">
+                                <h5>20.3 °C</h5>
+                            </b-col>                        
+                        </b-row>               
+                    </b-col>                
+                </b-row>
             </b-row>
+            
             <b-row class="mt-4" align-h="center">
                 <p>last updated : 23/12/2022 17:44 </p>
             </b-row>
@@ -76,7 +74,7 @@
                 <h1 class="mt-4">STATISTICS</h1>
             </b-row>
             <b-row style="position:relative" class="justify-content-center m-5">
-                <b-col v-on:click="test" class="shadow-lg p-3 mb-5 bg-white rounded d-flex justify-content-center">
+                <b-col v-on:click="test" class="dikke shadow-lg p-3 mb-5 bg-white rounded d-flex justify-content-center">
                     <chart width="500" type="line" :options="options" :series="series"></chart>
                 </b-col>
                 
@@ -84,7 +82,7 @@
             </b-row>
             
             <b-row style="position:relative" class="justify-content-center m-5">
-                <b-col v-on:click="test" class="shadow-lg p-3 mb-5 bg-white rounded d-flex justify-content-center">
+                <b-col v-on:click="test" class="dikke shadow-lg p-3 mb-5 bg-white rounded d-flex justify-content-center">
                     <chart width="500" type="line" :options="options" :series="series"></chart>
                 </b-col>
                 
@@ -92,7 +90,7 @@
             </b-row>
             
             <b-row style="position:relative" class="justify-content-center m-5">
-                <b-col v-on:click="test" class="shadow-lg p-3 mb-5 bg-white rounded d-flex justify-content-center">
+                <b-col v-on:click="test" class="dikke shadow-lg p-3 mb-5 bg-white rounded d-flex justify-content-center">
                     <chart width="500" type="line" :options="options" :series="series"></chart>
                 </b-col>
                 
@@ -135,6 +133,17 @@ export default{
     border-radius: 5px;
     box-shadow: 5px 10px 18px #888888;
 
+}
+
+.col.dikke:hover{
+    background-color: yellow !important;
+}
+
+.liveData{
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 5px;
+    background-color: lightgreen;
+    border-style: solid;
 }
 
 

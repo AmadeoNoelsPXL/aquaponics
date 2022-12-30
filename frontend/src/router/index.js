@@ -4,7 +4,7 @@ const routes = [
   {
     path: '/',
     name: 'loginView',
-    component: () => import('../views/OverviewStaticScreen.vue')
+    component: () => import('../views/LoginView.vue')
   },
   {
     path: '/user/setPassword',
@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/registerView',
     name: 'registerView',
-    component: () => import('../views/RegisterView.vue'),
+    component: () => import('../views/RegisterTestView'),
     /*meta:{
       requiresAuth:true,
     }*/

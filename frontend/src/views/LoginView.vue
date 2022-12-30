@@ -1,71 +1,262 @@
 <template>
-    <b-container fluid style="max-width:fit-content">
-    <b-row>
-      <b-col style="max-width:fit-content">
-        <b-img fluid center src="../assets/aquaponics.jpg" style="max-height: inherit;"></b-img>
-      </b-col>
-      <b-col>
-        <b-row>
-          <div class="d-flex justify-content-start align-middle">
-            <p class="mr-3" ><b>Sign In</b></p>
-            <img src="../assets/ownDesign.png" width="100" height="100">
-          </div>
-          <div>
-            <div style='border-bottom:4px solid #1FBE85'></div>
-          </div>
-        </b-row>
-        <b-row>
-          <b-form>
-            <b-form-row class="mb-2">
-              <b-col>
-                <label for="email" class="justify-content-start" >Email</label>
-                <b-form-input placeholder="johndoe@email.com" type="email" v-model="email">
-                </b-form-input>
-              </b-col>
-            </b-form-row>
-            <b-form-row class="mb-2">
-              <b-col>
-                <label for="password" class="justify-content-start" >Password</label>
-                <b-form-input placeholder="johndoe123" type="password" v-model="password">
-                </b-form-input>
-              </b-col>
-            </b-form-row>
-            <b-form-row>
-              <b-button v-on:click="loginPerson" id="loginbtn" variant="success" class="ml-1 mr-1 w-100" style="background-color:#1FBE85; border-color:#1FBE85">Login</b-button>
-              <b-tooltip target="loginbtn" triggers="hover">
-                  <p>Press here to log in</p>
-                </b-tooltip>
-            </b-form-row>
-          </b-form>
-        </b-row>
-      </b-col>
+  <b-container>
+    <b-row class="justify-content-center mt-2">
+      <h1>aquaponics</h1>
     </b-row>
+      <b-row align-v="start" align-h="center">
+          <b-row class="shadow-lg p-0 mb-5 bg-white rounded" style="background-color:white">
+              <b-col class="p-0">
+                  <img class="rounded" src="../assets/testAquaponics.png" alt="" height="500" width="500">
+              </b-col>
+              <b-col class="p-5">
+                  <h3 class="mb-5" style="color:#1FBE85">Sign In</h3>                  
+                    <b-form>
+                      <b-form-row>
+                      <b-col class="mb-3">
+                          <b-form-input class="form__input" type="text" v-model="email"></b-form-input>
+                          <label for="feedback-user">Email</label>
+                          <div style="color:red;font-size: 0.875em">
+                            {{constraintsEmailRemarks}}
+                        </div>
+                      </b-col>
+                      </b-form-row>
+                      <b-form-row>
+                      <b-col>
+                          <b-form-input type="text" v-model="password"></b-form-input>
+                          <label  for="feedback-user">Password</label>                          
+                          <div style="color:red;font-size: 0.875em">
+                              {{constraintsPasswordRemarks}}
+                          </div>
+                      </b-col>
+                      </b-form-row>                      
+                      <b-button @click="submitAction" id="registerbtn" variant="success" class="ml-1 mr-1 w-100 mt-5" style="background-color:#1FBE85; border-color:#1FBE85">Log in</b-button>                      
+                  </b-form>
+              </b-col>
+          </b-row>  
+          
+          <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+          </div>          
+      </b-row>
+      
   </b-container>
 </template>
 <script>
-import axios from 'axios'
+import axios from 'axios';
 export default {
-  data() {
-    return {
-      password: null,
+  components:{
+  },
+data() {
+  return {
+      firstName: null,
+      lastName: null,
+      phoneNumber: null,
       email: null,
+      constraintsLastnameRemarks: null,
+      constraintsPhoneNumberRemarks: null,
+      constraintsEmailRemarks: null,
+      responseApi : null
+  }
+},
+computed:{
+},
+methods:{
+  async submitAction(){
+       var passedAction = true;
+      await axios.post("http://localhost:8081/user/newUser",{
+          firstName: this.firstName,
+          lastName: this.lastName,
+          phoneNumber: this.phoneNumber,
+          email: this.email
+      })
+      .then((res)  => this.responseApi = res.data)
+      .catch((error) => {
+          console.log(error)
+          console.log(error.response.data.firstName)
+          this.constraintsLastnameRemarks = error.response.data.lastName
+          this.constraintsPhoneNumberRemarks = error.response.data.phoneNumber
+          this.constraintsEmailRemarks = error.response.data.email
+          passedAction = false
+      })
+
+      if(passedAction){
+          this.$router.push("/TestView")
+      }
+  },
+  async test() {
+    if(this.firstName && this.firstName.length == 4){
+      this.firstName = this.firstName + " ";
+    }
+
+    if(this.firstName.length > 4){
+      if(this.firstName.replaceAll(" ","").length % 2 == 0){
+        
+      this.firstName = this.firstName + " ";
+      }
     }
   },
-  methods:{
-    async loginPerson(){
-      await axios.post('http://localhost:8080/user/login', {
-          email: this.email,
-          password: this.password,
-  }).then((response) =>{
-    console.log(response)
-    localStorage.setItem('token',response.data)
-    this.$router.push("/HomeView")
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-        
-    }
-  }
+  
+
+} 
 }
 </script>
+
+
+
+<style>
+body{
+  background: linear-gradient(to right, #00A4E4,#FEFEFE);
+  overflow-y: hidden;
+  
+
+}
+
+body::before{
+  background-color: white;
+  top: -50%;
+  left: 50%;
+  position: absolute;
+}
+
+body::after{
+  border-radius: 45%;
+}
+
+label{
+  display: block;
+  position: absolute;
+  font-size: 14px;
+  line-height: 14px;
+  color: #aaa;
+  top: 50%;
+  margin-top: -7px;
+  left: 14px;
+  cursor: text;
+  transition: 0.3s;
+  padding: 0 3px;
+}
+
+.col input:focus{
+  box-shadow: none;
+  border-color: #1FBE85;
+
+}
+
+ input:focus + label, input:not(:placeholder-shown) + label {
+  top: -1px;
+  background-color: white;
+  color: #1FBE85;
+}
+
+h1{
+  font-size: 8em;
+	font-family: arial;  
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 2px #167caa;
+}
+
+
+
+.bubble{
+  opacity: 0.80;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 0 20px 30px rgb(0,0,0,0.5), inset 0px 10px 30px 5px rgb(60, 125, 230) ;
+  border-radius: 50%;
+  z-index: 5;
+  
+  animation: flying 10s infinite ease-in;
+}
+
+.bubble:nth-child(1){  
+  width:50px;
+  height: 50px;
+  left: 10%;
+  animation-duration: 4s;
+}
+
+.bubble:nth-child(2){  
+  width:55px;
+  height: 55px;
+  left: 20%;
+  animation-duration: 4.5s;
+}
+
+.bubble:nth-child(3){  
+  width:60px;
+  height: 60px;
+  left: 35%;
+  animation-duration: 4s;
+}
+.bubble:nth-child(4){  
+  width:65px;
+  height: 65px;
+  left: 50%;
+  animation-duration: 4.5s;
+}
+
+.bubble:nth-child(5){  
+  width:70px;
+  height: 70px;
+  left: 55%;
+  animation-duration: 5s;
+}
+.bubble:nth-child(6){  
+  width:80px;
+  height: 80px;
+  left:65%;
+  animation-duration: 5.5s;
+}
+.bubble:nth-child(7){  
+  width:85px;
+  height: 85px;
+  left:75%;
+  animation-duration: 6s;
+}
+.bubble:nth-child(8){  
+  width:90px;
+  height: 90px;
+  left:80%;
+  animation-duration: 5s;
+}
+.bubble:nth-child(9){  
+  width:95px;
+  height: 95px;
+  left:70%;
+  animation-duration: 6.5s;
+}
+.bubble:nth-child(10){  
+  width:100px;
+  height: 100px;
+  left:85%;
+  animation-duration: 7s;
+}
+
+@keyframes flying {
+  0%{
+    bottom: -100px;
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(-100px);
+  }
+
+  100%{
+    bottom: 1080px;
+    transform: translateX(0);
+  }
+  
+}
+
+
+</style>
