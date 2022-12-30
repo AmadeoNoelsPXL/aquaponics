@@ -16,7 +16,7 @@
                           <b-form-input class="form__input" type="text" v-model="email"></b-form-input>
                           <label for="feedback-user">Email</label>
                           <div style="color:red;font-size: 0.875em">
-                            {{constraintsEmailRemarks}}
+                            {{constraintsEmail}}
                         </div>
                       </b-col>
                       </b-form-row>
@@ -25,7 +25,7 @@
                           <b-form-input type="text" v-model="password"></b-form-input>
                           <label  for="feedback-user">Password</label>                          
                           <div style="color:red;font-size: 0.875em">
-                              {{constraintsPasswordRemarks}}
+                              {{constraintsPassword}}
                           </div>
                       </b-col>
                       </b-form-row>                      
@@ -57,14 +57,11 @@ export default {
   },
 data() {
   return {
-      firstName: null,
-      lastName: null,
-      phoneNumber: null,
       email: null,
-      constraintsLastnameRemarks: null,
-      constraintsPhoneNumberRemarks: null,
-      constraintsEmailRemarks: null,
-      responseApi : null
+      password: null,
+      responseApi: null,
+      constraintsEmail: null,
+      constraintsPassword: null
   }
 },
 computed:{
@@ -72,21 +69,20 @@ computed:{
 methods:{
   async submitAction(){
        var passedAction = true;
-      await axios.post("http://localhost:8081/user/newUser",{
-          firstName: this.firstName,
-          lastName: this.lastName,
-          phoneNumber: this.phoneNumber,
-          email: this.email
+      await axios.post("http://localhost:8081/user/login",{
+          email: this.email,
+          password: this.password
       })
-      .then((res)  => this.responseApi = res.data)
-      .catch((error) => {
-          console.log(error)
-          console.log(error.response.data.firstName)
-          this.constraintsLastnameRemarks = error.response.data.lastName
-          this.constraintsPhoneNumberRemarks = error.response.data.phoneNumber
-          this.constraintsEmailRemarks = error.response.data.email
-          passedAction = false
-      })
+      .then((res)  =>  {
+        const accessToken = res.data
+        this.responseApi = accessToken;
+        sessionStorage.setItem('TEST_BLABLA', this.responseApi = res.data)
+      }).catch((error) => {
+            this.constraintsEmail = error.response.data.email
+            this.constraintsPassword = error.response.data.password
+            passedAction = false
+        })
+      
 
       if(passedAction){
           this.$router.push("/TestView")

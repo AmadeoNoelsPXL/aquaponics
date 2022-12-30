@@ -108,7 +108,12 @@ import axios from 'axios';
           console.log(item)
         },
         async getAllUsers(){
-          const data = await axios.get("http://localhost:8081/user/getAllUsers")           
+          const data = await axios.get("http://localhost:8081/getAllUsers",
+          { 
+            headers: {
+              'Authorization': `Bearer ${sessionStorage.getItem('TEST_BLABLA')}`
+            }
+          })           
           .then(resp =>resp.data);
 
           return data            
@@ -121,11 +126,18 @@ import axios from 'axios';
         })
       },
       async deleteSelectedUser(){
-        const response = await axios.delete("http://localhost:8081/user/deleteUser/"+this.selectedId).then(resp => resp.data)
+        const response = await axios.delete("http://localhost:8081/deleteUser/"+this.selectedId,
+        {
+          headers: {
+              'Authorization': `Bearer ${sessionStorage.getItem('TEST_BLABLA')}`
+            }
+        }
+         ).then(resp => resp.data).catch(error => console.log(error))
+         
         this.messageDeletedUser = response;
     },
-      test(color){
-        this.deleteSelectedUser();
+      async test(color){
+        await this.deleteSelectedUser();
         this.$bvToast.toast(this.messageDeletedUser, {
           title: `User action`,
           variant: color,
@@ -139,7 +151,7 @@ import axios from 'axios';
       this.$bvModal.show('deleteUserModal')
       this.selectedId = data.item.id;
       console.log(data.item.id)
-      console.log("http://localhost:8081/user/deleteUser/"+data.item.id)
+      console.log("http://localhost:8081/user/"+data.item.id)
 
       console.log(this.selectedUser)
     }

@@ -1,10 +1,12 @@
-package be.pxl.backend.repo;
+package com.example.security.repo;
 
-import be.pxl.backend.domain.User;
+import com.example.security.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-
+   Optional<User> findByEmail(String username);
 }

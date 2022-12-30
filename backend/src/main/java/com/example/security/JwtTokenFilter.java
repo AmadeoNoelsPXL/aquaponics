@@ -1,5 +1,4 @@
 package com.example.security;
-
 import com.example.security.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

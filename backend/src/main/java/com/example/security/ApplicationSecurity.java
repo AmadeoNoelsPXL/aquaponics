@@ -1,6 +1,5 @@
 package com.example.security;
 
-
 import com.example.security.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -14,6 +13,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsUtils;
 
 @EnableWebSecurity
 public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
@@ -36,9 +36,13 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.authorizeRequests()
-                .antMatchers("/user/**").permitAll()
-                .anyRequest().authenticated().and()
-                .csrf().disable();
+                .antMatchers("/user/**")
+                .permitAll()
+                .and()
+                .authorizeRequests()
+                .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
+                .anyRequest()
+                .authenticated();
 
         http.addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);
     }

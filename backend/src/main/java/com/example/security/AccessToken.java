@@ -1,4 +1,4 @@
-package com.example.security;
+package be.pxl.backend.config;
 
 public class AccessToken {
     private String token;

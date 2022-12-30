@@ -1,3 +1,4 @@
+import axios from 'axios'
 import VueRouter from 'vue-router'
 
 const routes = [
@@ -5,11 +6,13 @@ const routes = [
     path: '/',
     name: 'loginView',
     component: () => import('../views/LoginView.vue')
+    
   },
   {
     path: '/user/setPassword',
     name: 'setPassword',
-    component: () => import('../views/PasswordSetView.vue')
+    component: () => import('../views/PasswordSetView.vue'),
+    meta: {correctToken: true}
   },
   {
     path: '/registerView',
@@ -23,11 +26,12 @@ const routes = [
     path: '/TestView',
     name: 'accountView',
     component: () => import('../views/TestView.vue'),
-    /*meta:{
-      requiresAuth:true,
-    }*/
+    
   }
 ]
+
+
+
 
 const router = new VueRouter({
   mode: 'history',
@@ -35,15 +39,38 @@ const router = new VueRouter({
   routes
 })
 
-/*router.beforeEach( (to, from, next) => {
-  if(to.matched.some((record) => record.meta.requiresAuth)){
-    if(localStorage.getItem('token') == null){
+router.beforeEach(async (to, from,next) => {
+  if (to.matched.some(record => record.meta.correctToken)) {
+    const result = await verifyToken()
+    if(result){
+      next()
+    }else{
       next({
-        path: "/"
-      });
+        path: '/'
+      })
     }
   }
   next()
-})*/
+  
+
+})
+
+async function verifyToken(){
+  if(!sessionStorage.getItem("token")){
+    return false
+  } else{
+    const result = await axios.post("http://localhost:8081/user/checkJwtToken",{
+    token : sessionStorage.getItem("token")
+  }).then(res => res.data)
+    return result;
+  }
+
+  }
+  
+
+
+
+
+
 
 export default router
