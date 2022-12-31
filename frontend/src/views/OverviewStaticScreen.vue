@@ -54,7 +54,7 @@
                 <b-row cols="3" class="m-0">
                     <b-row class="justify-content-center">
                         <b-col xl="auto" class="liveData 
-                         2px solid m-0">
+                         m-0">
                             <b-row class="p-2">
                                 <b-col cols="auto" class="p-0">
                                     <h5>TEMPERATURE</h5>
@@ -68,7 +68,7 @@
                         </b-col>                
                     </b-row>
                     <b-row class="justify-content-center">
-                        <b-col xl="auto" class="liveData border 2px solid m-0">
+                        <b-col xl="auto" class="liveData m-0">
                             <b-row class="p-2">
                                 <b-col cols="auto" class="p-0">
                                     <h5>TEMPERATURE</h5>
@@ -82,7 +82,7 @@
                         </b-col>                
                     </b-row>
                     <b-row class="justify-content-center">
-                        <b-col xl="auto" class="liveData border 2px solid m-0">
+                        <b-col xl="auto" class="liveData m-0">
                             <b-row class="p-2">
                                 <b-col cols="auto" class="p-0">
                                     <h5>TEMPERATURE</h5>
@@ -180,6 +180,7 @@ export default{
     border-radius: 5px;
     background-color: lightgreen;
     border-style: solid;
+    border-color: lightgreen;
 }
 
 .row{
