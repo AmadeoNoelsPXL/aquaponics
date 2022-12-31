@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div class="layout">
         <b-container>
             <b-row align-h="between" align-v="center" style="border-bottom: 4px solid green" class="m-0 justify-between">
                 <b-col class="p-0">
@@ -47,15 +47,15 @@
                     </b-dropdown>           
                 </b-col>      
             </b-row>
-            <b-container class="mt-4" style="background-color:#F5F5F5">
-                <b-row align-h="center">
+            <b-container class="data mt-4" style="background-color:#F5F5F5">
+                <b-row class="livedata" align-h="center">
                     <h1 class="mt-4">LIVE DATA</h1>
                 </b-row>
                 <b-row cols="3" class="m-0">
                     <b-row class="justify-content-center">
                         <b-col xl="auto" class="liveData 
                          m-0">
-                            <b-row class="p-2">
+                            <b-row class="p-2 livedata">
                                 <b-col cols="auto" class="p-0">
                                     <h5>TEMPERATURE</h5>
                                 </b-col>                        
@@ -103,7 +103,7 @@
                 <b-row align-h="center">
                     <h1 class="mt-4">STATISTICS</h1>
                 </b-row>
-                <b-row style="position:relative" class="justify-content-center m-5">
+                <b-row style="position:relative" class="line justify-content-center m-5">
                     <b-col v-on:click="test" class="dikke shadow-lg p-3 mb-5 bg-white rounded d-flex justify-content-center">
                         <chart width="500" type="line" :options="options" :series="series"></chart>
                     </b-col>
@@ -142,6 +142,12 @@ export default{
     data(){
         return{
             options:{
+                chart:{
+                    toolbar:{
+                        show: false
+                    }
+
+                },
                 title:{
                     text:"test"
                 }
@@ -162,6 +168,11 @@ export default{
 }
 </script>
 <style scoped>
+
+.layout{
+    background: linear-gradient(to right, #00A4E4,#FEFEFE);
+}
+
 .test{
     background-color: lightgreen;
     position: absolute;
@@ -212,11 +223,22 @@ export default{
 #profile__dropdown__BV_toggle_, #profile__dropdown__BV_toggle_:hover, #profile__dropdown__BV_toggle_:active, #profile__dropdown__BV_toggle_:focus {
     border: none !important;
     box-shadow: none;
-    background-color: white !important;
+    background-color: transparent;
     border: none;
 }
 
 #profile__dropdown__BV_toggle_::after {
     content: none;    
 }
+
+.data{
+    background: rgba(255, 255, 255, 0.26) !important;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+
+
 </style>
