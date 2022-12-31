@@ -1,54 +1,55 @@
 <template>
-  <b-container>
-    <b-row class="justify-content-center mt-2">
-      <h1>aquaponics</h1>
-    </b-row>
-      <b-row align-v="start" align-h="center">
-          <b-row class="shadow-lg p-0 mb-5 bg-white rounded" style="background-color:white">
-              <b-col class="p-0">
-                  <img class="rounded" src="../assets/testAquaponics.png" alt="" height="500" width="500">
-              </b-col>
-              <b-col class="p-5">
-                  <h3 class="mb-5" style="color:#1FBE85">Sign In</h3>                  
-                    <b-form>
-                      <b-form-row>
-                      <b-col class="mb-3">
-                          <b-form-input class="form__input" type="text" v-model="email"></b-form-input>
-                          <label for="feedback-user">Email</label>
-                          <div style="color:red;font-size: 0.875em">
-                            {{constraintsEmail}}
-                        </div>
-                      </b-col>
-                      </b-form-row>
-                      <b-form-row>
-                      <b-col>
-                          <b-form-input type="text" v-model="password"></b-form-input>
-                          <label  for="feedback-user">Password</label>                          
-                          <div style="color:red;font-size: 0.875em">
-                              {{constraintsPassword}}
-                          </div>
-                      </b-col>
-                      </b-form-row>                      
-                      <b-button @click="submitAction" id="registerbtn" variant="success" class="ml-1 mr-1 w-100 mt-5" style="background-color:#1FBE85; border-color:#1FBE85">Log in</b-button>                      
-                  </b-form>
-              </b-col>
-          </b-row>  
-          
-          <div class="bubbles">
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-          </div>          
+  <div class="layout">
+    <b-container>
+      <b-row class="justify-content-center mt-2">
+        <h1>aquaponics</h1>
       </b-row>
-      
-  </b-container>
+        <b-row align-v="start" align-h="center">
+            <b-row class="shadow-lg p-0 mb-5 bg-white rounded" style="background-color:white">
+                <b-col class="p-0">
+                    <img class="rounded" src="../assets/testAquaponics.png" alt="" height="500" width="500">
+                </b-col>
+                <b-col class="p-5">
+                    <h3 class="mb-5" style="color:#1FBE85">Sign In</h3>                  
+                      <b-form>
+                        <b-form-row>
+                        <b-col class="mb-3">
+                            <b-form-input class="form__input" type="text" v-model="email"></b-form-input>
+                            <label for="feedback-user">Email</label>
+                            <div style="color:red;font-size: 0.875em">
+                              {{constraintsEmail}}
+                          </div>
+                        </b-col>
+                        </b-form-row>
+                        <b-form-row>
+                        <b-col>
+                            <b-form-input type="text" v-model="password"></b-form-input>
+                            <label  for="feedback-user">Password</label>                          
+                            <div style="color:red;font-size: 0.875em">
+                                {{constraintsPassword}}
+                            </div>
+                        </b-col>
+                        </b-form-row>                      
+                        <b-button @click="submitAction" id="registerbtn" variant="success" class="ml-1 mr-1 w-100 mt-5" style="background-color:#1FBE85; border-color:#1FBE85">Log in</b-button>                      
+                    </b-form>
+                </b-col>
+            </b-row>         
+        </b-row>
+        
+        <div class="bubbles">
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+        </div> 
+    </b-container>
+  </div>
 </template>
 <script>
 import axios from 'axios';
@@ -85,7 +86,7 @@ methods:{
       
 
       if(passedAction){
-          this.$router.push("/TestView")
+          this.$router.push("/OverviewStatics")
       }
   },
   async test() {
@@ -108,24 +109,13 @@ methods:{
 
 
 
-<style>
-body{
+<style scoped>
+.layout {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
   background: linear-gradient(to right, #00A4E4,#FEFEFE);
-  overflow-y: hidden;
-  
-
-}
-
-body::before{
-  background-color: white;
-  top: -50%;
-  left: 50%;
-  position: absolute;
-}
-
-body::after{
-  border-radius: 45%;
-}
+} 
 
 label{
   display: block;
@@ -161,8 +151,6 @@ h1{
   -webkit-text-stroke: 2px #167caa;
 }
 
-
-
 .bubble{
   opacity: 0.80;
   position: absolute;
@@ -170,7 +158,6 @@ h1{
   box-shadow: 0 20px 30px rgb(0,0,0,0.5), inset 0px 10px 30px 5px rgb(60, 125, 230) ;
   border-radius: 50%;
   z-index: 5;
-  
   animation: flying 10s infinite ease-in;
 }
 
@@ -240,7 +227,7 @@ h1{
 
 @keyframes flying {
   0%{
-    bottom: -100px;
+    bottom: 0;
     transform: translateX(0);
   }
   50%{
@@ -248,11 +235,9 @@ h1{
   }
 
   100%{
-    bottom: 1080px;
+    bottom: 100%;
     transform: translateX(0);
   }
   
 }
-
-
 </style>

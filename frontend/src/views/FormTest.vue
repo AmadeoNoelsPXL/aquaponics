@@ -6,7 +6,7 @@
         </div>
       </b-form-row>
 </template>
-<style>
+<style scoped>
 
 *,
 *::before,

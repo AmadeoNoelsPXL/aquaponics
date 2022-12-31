@@ -1,6 +1,6 @@
-import axios from 'axios'
-import VueRouter from 'vue-router'
 
+import VueRouter from 'vue-router'
+import axios from 'axios'
 const routes = [
   {
     path: '/',
@@ -9,9 +9,9 @@ const routes = [
     
   },
   {
-    path: '/user/setPassword',
-    name: 'setPassword',
-    component: () => import('../views/PasswordSetView.vue'),
+    path: '/OverviewStatics',
+    name: 'overviewStatic',
+    component: () => import('../views/OverviewStaticScreen.vue'),
     meta: {correctToken: true}
   },
   {
@@ -41,7 +41,9 @@ const router = new VueRouter({
 
 router.beforeEach(async (to, from,next) => {
   if (to.matched.some(record => record.meta.correctToken)) {
+    
     const result = await verifyToken()
+    console.log(result)
     if(result){
       next()
     }else{
@@ -56,14 +58,18 @@ router.beforeEach(async (to, from,next) => {
 })
 
 async function verifyToken(){
-  if(!sessionStorage.getItem("token")){
+  const token = sessionStorage.getItem("TEST_BLABLA") == null ? null : sessionStorage.getItem("TEST_BLABLA")
+  
+  if(token == null){
     return false
   } else{
     const result = await axios.post("http://localhost:8081/user/checkJwtToken",{
-    token : sessionStorage.getItem("token")
+    token : sessionStorage.getItem("TEST_BLABLA")
   }).then(res => res.data)
     return result;
   }
+
+  
 
   }
   

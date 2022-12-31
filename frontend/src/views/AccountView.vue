@@ -135,7 +135,7 @@ import axios from 'axios';
 
     }
   </script>
-  <style>
+  <style scoped>
     .h2{
         margin: 26px 0px 8px;
     }
