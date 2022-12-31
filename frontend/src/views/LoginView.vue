@@ -23,7 +23,7 @@
                         </b-form-row>
                         <b-form-row>
                         <b-col>
-                            <b-form-input type="text" v-model="password"></b-form-input>
+                            <b-form-input type="password" v-model="password"></b-form-input>
                             <label  for="feedback-user">Password</label>                          
                             <div style="color:red;font-size: 0.875em">
                                 {{constraintsPassword}}
@@ -69,7 +69,7 @@ computed:{
 },
 methods:{
   async submitAction(){
-       var passedAction = true;
+      var passedAction = true;
       await axios.post("http://localhost:8081/user/login",{
           email: this.email,
           password: this.password
